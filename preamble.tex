@@ -1,7 +1,17 @@
 \usepackage[margin=1in]{geometry}
+\usepackage{csquotes}
 \usepackage{fancyhdr}
 \usepackage{marginnote}
+\usepackage{enumitem}
+\usepackage[style=apa]{biblatex}
+\usepackage{tikz}
+\usepackage{siunitx}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{mhchem,chemfig}
 \usepackage[hidelinks]{hyperref}
+
+\MakeOuterQuote{"}
 
 \fancypagestyle{main}{
     \fancyhf{}
@@ -15,5 +25,17 @@
 }
 
 \reversemarginpar
+
+\setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\addbibresource{../main.bib}
+\DefineBibliographyStrings{english}{bibliography={References}}
+
+\colorlet{rex}{magenta}
+
+\sisetup{range-phrase=--,range-units=single}
+
+\setchemfig{atom sep=2em,fixed length=true,bond offset=3pt,cram width=3pt}
+\setcharge{extra sep=3pt}
 
 \usepackage{subfiles}

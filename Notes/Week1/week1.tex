@@ -16,5 +16,154 @@
 
 
 
+\section{Chapter 9: Nuclear Magnetic Resonance and Mass Spectroscopy}
+\emph{From \textcite{bib:SolomonsEtAl}.}
+\begin{itemize}
+    \item \textbf{Nuclear magnetic resonance spectrum}: A graph that shows the characteristic energy absorption frequencies and intensities for a sample in a magnetic field. \emph{Also known as} \textbf{NMR spectrum}.
+    \item The chemical shift of a signal gives important clues about molecular structure.
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|lc|lc|}
+            \hline
+            \rule{0pt}{2em}\textbf{Type of Proton} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}} & \textbf{Type of Proton} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}}\\
+            $\ang{1}$ Alkyl, {\sf\ce{RC{\color{rex}H}3}} & \numrange{0.8}{1.2} & Alkyl bromide, {\sf\ce{RC{\color{rex}H}2}Br} & \numrange{3.4}{3.6}\\
+            $\ang{2}$ Alkyl, {\sf\ce{RC{\color{rex}H}2R}} & \numrange{1.2}{1.5} & Alkyl chloride, {\sf\ce{RC{\color{rex}H}2}Cl} & \numrange{3.6}{3.8}\\
+            $\ang{3}$ Alkyl, {\sf\ce{R3C{\color{rex}H}}} & \numrange{1.4}{1.8} & Vinylic, {\sf\ce{R2C=C{\color{rex}H}2}} & \numrange{4.6}{5.0}\\
+            Allylic, {\sf\ce{R2C=CR-C{\color{rex}H}3}} & \numrange{1.6}{1.9} & Vinylic, {\sf\ce{R2C=CR{\color{rex}H}}} & \numrange{5.2}{5.7}\\
+            Ketone, {\sf\ce{RCOC{\color{rex}H}3}} & \numrange{2.1}{2.6} & Aromatic, {\sf\ce{Ar{\color{rex}H}}} & \numrange{6.0}{8.5}\\
+            Benzylic, {\sf\ce{ArC{\color{rex}H}3}} & \numrange{2.2}{2.5} & Aldehyde, {\sf\ce{RCO{\color{rex}H}}} & \numrange{9.5}{10.5}\\
+            Acetylenic, {\sf\ce{RC#C{\color{rex}H}}} & \numrange{2.5}{3.1} & Alcohol hydroxyl, {\sf\ce{RO{\color{rex}H}}} & \numrange{0.5}{6.0}\textsuperscript{*}\\
+            Alkyl iodide, {\sf\ce{RC{\color{rex}H}2I}} & \numrange{3.1}{3.3} & Amino, {\sf\ce{R-N{\color{rex}H}2}} & \numrange{1.0}{5.0}\textsuperscript{*}\\
+            Ether, {\sf\ce{ROC{\color{rex}H}2R}} & \numrange{3.3}{3.9} & Phenolic, {\sf\ce{ArO{\color{rex}H}}} & \numrange{4.5}{7.7}\textsuperscript{*}\\
+            Alcohol, {\sf\ce{HOC{\color{rex}H}2R}} & \numrange{3.3}{4.0} & Carboxylic, {\sf\ce{RCOO{\color{rex}H}}} & \numrange{10}{13}\textsuperscript{*}\\
+            \hline
+            \multicolumn{4}{l}{\footnotesize\textsuperscript{*}The chemical shifts of these protons vary in different solvents and with temperature and concentration.}
+        \end{tabular}
+        \caption{Approximate proton chemical shifts.}
+        \label{tab:protonChemicalShifts}
+    \end{table}
+    \item "In \ce{{}^13C} NMR spectroscopy, signal area is not relevant in routine analyses" \parencite[396]{bib:SolomonsEtAl}.
+    \item \textbf{Coupling}: The magnetic effect of nonequivalent hydrogen atoms that are within 2 or 3 bonds of the hydrogens producing the signal that splits individual \textbf{signals} into multiple \textbf{peaks}. \emph{Also known as} \textbf{signal splitting}, \textbf{signal multiplicity}.
+    \item \textbf{Vicinal} (hydrogens): Hydrogens on adjacent carbons.
+    \item \textbf{Geminal} (hydrogens): Hydrogens bonded to the same carbon.
+    \begin{itemize}
+        \item Coupling occurs between geminal hydrogens in chiral/conformationally restricted molecules, specifically diastereotopic hydrogens.
+    \end{itemize}
+    \item Interpreting NMR spectra:
+    \begin{enumerate}
+        \item Count the number of signals in the spectrum to determine how many distinct proton environments there are in the molecule.
+        \item Use chemical shift tables (such as Table \ref{tab:protonChemicalShifts}) to correlate the chemical shifts of the signals with possible structural environments.
+        \item Determine the relative area of each signal, as compared with the area of other signals, as an indication of the relative number of protons producing the signal.
+        \item Interpret the splitting pattern for each signal to determine how many hydrogen atoms are present on carbon atoms adjacent to those producing the signal and sketch possible molecular fragments.
+        \item Join the fragments to make a molecule in a fashion that is consistent with the data.
+    \end{enumerate}
+    \item The external magnetic field causes the $\sigma$ (and $\pi$, if applicable) electrons in the viscinity of each proton to circulate, producing a small local magnetic field that can serve to either increase or decrease the external magnetic field experienced by the proton.
+    \begin{itemize}
+        \item Increasing the effective field causes a larger chemical shift (it takes a higher energy photon/less magnetic field to induce a spin flip).
+        \item Decreasing the effective field causes a smaller chemical shift (it takes less energy/more magnetic field to induce a spin flip).
+    \end{itemize}
+    \item \textbf{Shielded} (proton): A proton for which the induced local magnetic field opposes the external magnetic field to a relatively large degree. 
+    \item \textbf{Deshielded} (proton): A proton for which the induced local magnetic field opposes the external magnetic field to a relatively small degree (or even reinforces the external magnetic field).
+    \begin{itemize}
+        \item For example, the $\pi$ electrons of benzene circulate in such a way that the external magnetic field at the aromatic hydrogens is \emph{augmented}.
+    \end{itemize}
+    \item "Chemically equivalent protons are chemical shift equivalent in \ce{{}^1H} NMR spectra" \parencite[403]{bib:SolomonsEtAl}.
+    \item \textbf{Homotopic} (atoms): A set of atoms on some molecule such that replacing different ones with the same group gives the same compound.
+    \begin{itemize}
+        \item For example, the six hydrogens of ethane are homotopic since replacing any of them with chlorine (for instance) gives the same compound: chloroethane.
+        \item Homotopic hydrogens are chemical shift equivalent.
+    \end{itemize}
+    \item \textbf{Heterotopic} (atoms): A set of atoms on some molecule such that replacing different ones with the same group gives different compounds.
+    \begin{itemize}
+        \item For example, in chloroethane, the \ce{CH2} hydrogens are heterotopic to the \ce{CH3} hydrogens since replacing the former yields 1,1-dichloroethane and replacing the latter yields 1,2-dichloroethane.
+        \item Heterotopic atoms are \emph{not} chemical shift equivalent.
+    \end{itemize}
+    \item \textbf{Enantiotopic} (atoms): Two atoms on some molecule such that replacing different atoms with the same group gives enantiomers.
+    \begin{itemize}
+        \item Example: The \ce{CH2} hydrogens of bromoethane.
+        \item Enantiotopic atoms are chemical shift equivalent, except possibly when the compound in question is dissolved in a chiral solvent.
+    \end{itemize}
+    \item \textbf{Diastereotopic} (atoms): Two atoms on some molecule such that replacing different atoms with the same group gives diastereomers.
+    \begin{itemize}
+        \item Example: The \ce{CH2} hydrogens of 2-butanol.
+        \item Diastereotopic atoms are \emph{not} chemical shift equivalent (the asymmetry of the chirality center ensures this), except possibly by coincidence.
+    \end{itemize}
+    \item \textbf{Coupling constant}: The separation in hertz between each peak of a signal. \emph{Denoted by} $\bm{J}$.
+    \begin{itemize}
+        \item On the order of $\SIrange{6}{8}{\hertz}$.
+    \end{itemize}
+    \item The reciprocity of coupling constants: The coupling constants of coupled atoms are the same.
+    \begin{itemize}
+        \item In more complicated molecules, noting that two signals have the same coupling constant means the protons to which they correspond are likely coupled.
+    \end{itemize}
+    \item \textbf{Dihedral angle} (between vicinal groups): The angle between viscinal groups as seen on the Newman projection through the bond connecting their parent atoms. \emph{Denoted by} $\bm{\phi}$.
+    \item \textbf{Karplus correlation}: The dependence of the coupling constant on dihedral angles.
+    \begin{itemize}
+        \item Discovered by Martin Karplus of Harvard.
+        \item Useful for identifying cyclohexane conformations, and thus for determining which conformation is lower energy.
+    \end{itemize}
+    \item An NMR spectrometer is a camera with a relatively slow shutter speed, in that it blurs pictures of rapidly occurring molecular processes.
+    \item Examples of rapid processes that occur in organic molecules.
+    \begin{itemize}
+        \item Chemical exchanges cause spin decoupling.
+        \begin{itemize}
+            \item Consider ethanol.
+            \item Based on its structure, we'd predict that the signal corresponding to the hydroxyl proton would be a triplet.
+            \item However, it only appears as a triplet in very pure ethanol, where \textbf{chemical exchange} is slower due to the reduction in impurity-assisted chemical exchange catalysis common in normal ethanol.
+            \item Rapid chemical exchange means that neighboring protons don't have enough time to couple; thus, the hydroxyl proton appears as a singlet in relatively impure ethanol.
+            \item Occurs in the \ce{{}^1H} NMR spectra of alcohols, amines, and carboxylic acids; the signals of \ce{OH} and \ce{NH} protons are normally unsplit and broad.
+            \item "Protons that undergo rapid chemical exchange\dots can be easily detected by placing the compound in \ce{D2O}. The protons are rapidly replaced by deuterons, and the proton signal disappears from the spectrum" \parencite[413]{bib:SolomonsEtAl}.
+        \end{itemize}
+        \item Conformational changes.
+        \begin{itemize}
+            \item If, for example, we could isolate staggered bromoethane, the \ce{CH3} hydrogens would be split into two signals, as the one anti-periplanar hydrogen is in a different chemical environment from its two geminal neighbors.
+            \item But we can't, so all three \ce{CH3} hydrogens contribute to one peak.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Chemical exchange}: The swapping of identical atoms between molecules.
+    \item \textbf{Exchangeable proton}: A proton that can engage in rapid chemical exchange.
+    \item We now switch gears to \ce{{}^13C} NMR spectroscopy.
+    \item Although \ce{{}^13C} does not occur naturally with nearly the same frequency as \ce{{}^12C}, it is important for its application to NMR spectroscopy.
+    \item Simplifications from \ce{{}^1H} NMR spectroscopy.
+    \begin{itemize}
+        \item Each distinct carbon produces one signal in a \ce{{}^13C} NMR spectrum.
+        \item Splitting of \ce{{}^13C} signals into multiple peaks is not observed in routine \ce{{}^13C} NMR spectra.
+    \end{itemize}
+    \item No (technically just very little) carbon-carbon coupling since coupling only occurs for adjacent carbons and only 1 in 100 carbon atoms is \ce{{}^13C} ($\SI{1.1}{\percent}$ natural abundance).
+    \item Carbon-proton coupling can occur, however, splitting \ce{{}^13C} signals into multiplets.
+    \item \textbf{Broadband proton decoupled} (spectrum): A \ce{{}^13C} NMR spectrum in which \ce{{}^1H}-\ce{{}^13C} coupling is eliminated by choosing instrumental parameters to decouple the proton-carbon interactions. \emph{Also known as} \textbf{BB proton decoupled}.
+    \item Shielding and deshielding works the same way.
+    \begin{table}[h!]
+        \centering
+        \small
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|lc|}
+            \hline
+            \rule{0pt}{2em}\textbf{Type of Proton} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}}\\
+            $\ang{1}$ Alkyl, {\sf\ce{R{\color{rex}C}H3}} & \numrange{0}{40}\\
+            $\ang{2}$ Alkyl, {\sf\ce{R{\color{rex}C}H2R}} & \numrange{10}{50}\\
+            $\ang{3}$ Alkyl, {\sf\ce{R{\color{rex}C}HR2}} & \numrange{15}{50}\\
+            Alkyl halide or amine, {\sf\ce{R3{\color{rex}C}X}} ($\ce{X}=\ce{Cl},\ce{Br},\ce{NR$'$2}$) & \numrange{10}{65}\\
+            Alcohol or ether, {\sf\ce{R3{\color{rex}C}OR$'$}} & \numrange{50}{90}\\
+            Alkyne, {\sf\ce{R{\color{rex}C}#R$'$}} & \numrange{60}{90}\\
+            Alkene, {\sf\ce{R2{\color{rex}C}=R$'$}} & \numrange{100}{170}\\
+            Aryl, {\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}\chemfig[atom sep=1.4em]{[:30]**6(--{\color{rex}C}(-R)----)}} & \numrange{100}{170}\\
+            Nitrile, {\sf\ce{R{\color{rex}C}#N}} & \numrange{120}{130}\\
+            Amide, {\sf\ce{R{\color{rex}C}ONR$'$2}} & \numrange{150}{180}\\
+            Carboxylic acid or ester, {\sf\ce{R{\color{rex}C}OOR$'$}} & \numrange{160}{185}\\
+            Aldehyde or ketone, {\sf\ce{R{\color{rex}C}OR$'$}} & \numrange{182}{215}\\
+            \hline
+        \end{tabular}
+        \caption{Approximate carbon-13 chemical shifts.}
+        \label{tab:carbonChemicalShifts}
+    \end{table}
+    \item In addition to the TMS peak, \ce{{}^13C} spectra have a \ce{CDCl3} solvent peak at $\delta\ 77$.
+    \item \textbf{DEPT \ce{{}^13C} NMR spectrum}: A \ce{{}^13C} NMR spectrum that indicates how many hydrogen atoms are bonded to each carbon, while also providing the chemical shift information contained in a broadband proton-decoupled \ce{{}^13C} NMR spectrum. \emph{Also known as} \textbf{distortionless enhancement by polarization transfer}.
+\end{itemize}
+
+
+
 
 \end{document}

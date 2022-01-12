@@ -81,11 +81,49 @@
 
 
 
+\section{Office Hours (Snyder)}
+\begin{itemize}
+    \item Reviews degrees of unsaturation.
+    \item Talks about resonance, too.
+    \item Make sure you know your functional groups!
+    \item Alkene-based reactions are the most important to review.
+    \item Glucose and mannose are diastereomers.
+    \item Global vs. local symmetry.
+    \begin{itemize}
+        \item Helps you determine how many signals you will see in a \ce{{}^13C} NMR spectrum.
+        \item Acetone only has 2 \ce{{}^13C} NMR signals (the methyl and the carbonyl one).
+        \item The ability to draw a mirror plane tells you that certain signals are equivalent.
+        \item You can rotate hexane into a conformation in which it will have a mirror plane.
+        \begin{figure}[h!]
+            \centering
+            \begin{tikzpicture}
+                \node (1) {\chemfig{-[:30]-[:-30]-[:30]-[:-30]-[:30]}};
+                \node (2) at (5,0) {\chemfig{--[:60]--[:-60]-}}
+                    edge [<-,shorten <=4mm,shorten >=4mm] (1)
+                ;
+        
+                \draw [gray,dashed] (5,-1) -- ++(0,2);
+            \end{tikzpicture}
+            \caption{Mirror plane in hexane.}
+            \label{fig:hexaneMirrorPlane}
+        \end{figure}
+        \item No symmetry, such as in 1-bromo-2,5-dichloro-3,4,6-trimethylbenzene, means all (nine) distinct signals.
+        \item Local symmetry (think an isopropyl group).
+        \begin{itemize}
+            \item Look for branch points.
+            \item You must have consistency of structure for the entirety of branches.
+        \end{itemize}
+        \item para-dibromobenzene has only 2 signals since it has \emph{two} mirror planes.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Chapter 9: Nuclear Magnetic Resonance and Mass Spectroscopy}
 \emph{From \textcite{bib:SolomonsEtAl}.}
 \begin{itemize}
     \item \textbf{Nuclear magnetic resonance spectrum}: A graph that shows the characteristic energy absorption frequencies and intensities for a sample in a magnetic field. \emph{Also known as} \textbf{NMR spectrum}.
-    \item The chemical shift of a signal gives important clues about molecular structure.
+    \item The chemical shift of a signal gives important clues about molecular structure (see Table \ref{tab:protonChemicalShifts}).
     \begin{table}[h!]
         \centering
         \small
@@ -199,7 +237,7 @@
     \item No (technically just very little) carbon-carbon coupling since coupling only occurs for adjacent carbons and only 1 in 100 carbon atoms is \ce{{}^13C} ($\SI{1.1}{\percent}$ natural abundance).
     \item Carbon-proton coupling can occur, however, splitting \ce{{}^13C} signals into multiplets.
     \item \textbf{Broadband proton decoupled} (spectrum): A \ce{{}^13C} NMR spectrum in which \ce{{}^1H}-\ce{{}^13C} coupling is eliminated by choosing instrumental parameters to decouple the proton-carbon interactions. \emph{Also known as} \textbf{BB proton decoupled}.
-    \item Shielding and deshielding works the same way.
+    \item Shielding and deshielding works the same way (see Table \ref{tab:carbonChemicalShifts}).
     \begin{table}[h!]
         \centering
         \small

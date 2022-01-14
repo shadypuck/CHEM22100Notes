@@ -119,12 +119,76 @@
 
 
 
+\section{NMR}
+\begin{itemize}
+    \item \marginnote{1/13:}He is going to try and present a different perspective from the book because otherwise, why take the class.
+    \item There is no preset curve for this class --- everyone can get an A.
+    \item The right and left boards will be there for the whole class, every class.
+    \item \ce{H3O+} workup.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{=_[:30]-[:-30]-[:30]=^[2]O}
+            \arrow{->[\ce{Nu-}]}
+            \chemleft{[}
+                \chemfig{=_[:30]-[:-30]-[:30](-[2]\charge{45:3pt=$\ominus$}{O})(-[:-30]Nu)}
+            \chemright{]^-}
+            \arrow{->[\ce{H3O+}][workup]}[,1.2]
+            \chemfig{=_[:30]-[:-30]-[:30](-[2]OH)(-[:-30]Nu)}
+        \schemestop
+        \caption{\ce{H3O+} workup.}
+        \label{fig:H3Oworkup}
+    \end{figure}
+    \begin{itemize}
+        \item Don't think acid-catalyzed hydration. Acid-catalyzed hydration is a very specific reaction. Organic chemists don't really use it because those conditions are so acidic that no other functional groups survive it.
+        \item An \ce{H3O+} workup is adding \ce{H3O+} at the end of a reaction to neutralize the structure and excess nucleophile in solution without affecting other groups.
+    \end{itemize}
+    \item Next three lectures: Tools for characterizing molecules, e.g., determining what we have in solution.
+    \item It could take decades or even centuries to determine the structure of molecules in the early days of chemistry.
+    \begin{itemize}
+        \item It would also take large quantites for experiments.
+        \item Now we can determine the structures of quantities we can only isolate milligrams of.
+    \end{itemize}
+    \item IR can only identify the presence of some functional groups and maybe the identity of a compound that's already been determined (i.e., from the fingerprint region and an online database).
+    \item NMR.
+    \begin{itemize}
+        \item Such machines exist in hospitals as MRI.
+        \item We have dropped the "N" in NMRI because of nuclear's negative connotation, even though MRI machines have nothing to do with radioactivity.
+    \end{itemize}
+    \item Any nucleus that has an odd atomic number will have a dipole moment.
+    \begin{itemize}
+        \item The four most significant ones for organic chemistry are \ce{{}^1H}, \ce{{}^13C}, \ce{{}^15N}, and \ce{{}^17O}.
+        \item The last three are all not commonly occurring isotopes. Oxygen, especially, can barely be measured. Hydrogen will be the most useful because \ce{{}^1H} is the most commonly occurring isotope.
+        \item For \ce{{}^13C}, we will need a longer experiment since only 1/1000 carbon atoms is \ce{{}^13C}.
+    \end{itemize}
+    \item Theory-lite for NMR.
+    \begin{itemize}
+        \item Parallel spins are lower energy, but the difference in energy from anti-parallel is very small (approximately $\SI[per-mode=symbol]{5e-6}{\kilo\calorie\per\mole}$).
+        \item $\SIrange{1}{20}{\milli\gram}$ of compound is needed in $\SI{0.75}{\milli\liter}$ of solvent.
+        \item This is a non-destructive process --- we can recover our compound after running the experiment.
+        \item We typically use \ce{CDCl3} as our solvent.
+        \item A part per million (ppm) is a Hz/MHz.
+    \end{itemize}
+    \item George Van Dyke Tiers, a grad student at UChicago, determined in 1958 that TMS might be the best standard (low chemical shift, chemically inert, easily removed, etc.).
+    \item Goes over examples from office hours.
+    \item DEPT: Changes the angle of the magnetic field to distinguish \ce{CH}, \ce{CH2}, and \ce{CH3} groups.
+    \begin{itemize}
+        \item DEPT 90 changes the angle by $\ang{90}$; DEPT 135 by $\ang{135}$.
+        \item In DEPT 90, we'll only see \ce{CH} carbons.
+        \item In DEPT 135, \ce{CH} and \ce{CH3} groups will peak in the positive direction, and \ce{CH2} groups will peak in the negative direction.
+        \item Neither experiment will show carbons that aren't bonded to any hydrogens.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Chapter 9: Nuclear Magnetic Resonance and Mass Spectroscopy}
 \emph{From \textcite{bib:SolomonsEtAl}.}
 \begin{itemize}
-    \item \textbf{Nuclear magnetic resonance spectrum}: A graph that shows the characteristic energy absorption frequencies and intensities for a sample in a magnetic field. \emph{Also known as} \textbf{NMR spectrum}.
+    \item \marginnote{1/11:}\textbf{Nuclear magnetic resonance spectrum}: A graph that shows the characteristic energy absorption frequencies and intensities for a sample in a magnetic field. \emph{Also known as} \textbf{NMR spectrum}.
     \item The chemical shift of a signal gives important clues about molecular structure (see Table \ref{tab:protonChemicalShifts}).
-    \begin{table}[h!]
+    \begin{table}[H]
         \centering
         \small
         \renewcommand{\arraystretch}{1.4}

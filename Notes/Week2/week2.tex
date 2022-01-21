@@ -36,10 +36,130 @@
 
 
 
+\section{NMR}
+\begin{itemize}
+    \item \marginnote{1/18:}With a $\SI{1400}{\mega\hertz}$ NMR spectrometer, we can see 3D structure.
+    \item Goes over an example of sketching a \ce{{}^13C} spectrum, DEPT 90, and DEPT 135 spectrum for a given molecule.
+    \item You can flip groups in a problem, but you have to be consistent.
+    \begin{itemize}
+        \item If you have closely spaced peaks in a sketch, be consistent with identifying a certain peak as \ce{CH}, \ce{CH2}, or \ce{CH3}. But it doesn't matter which of the peaks you identify which way.
+    \end{itemize}
+    \item There can be variation in signal height, but we won't discuss this.
+    \item Transition to \ce{{}^1H} NMR spectroscopy.
+    \item A typical \ce{{}^13C} NMR experiment takes 1-2 hours (for about $\SI{5}{\milli\gram}$ of material) to build appropriate peaks since there are so few \ce{{}^13C} atoms interspersed.
+    \begin{itemize}
+        \item On a strong field machine, though, a \ce{{}^1H} spectrum can be done in seconds.
+    \end{itemize}
+    \item Goes over typical chemical shifts (see Table \ref{tab:protonChemicalShifts}).
+    \item Goes over an example of sketching a \ce{{}^1H} spectrum.
+    \item Neighboring spins parallel to the magnetic field increase ppm (deshielding).
+    \item Introduces the coupling constant $J$.
+    \item Splitting can happen in \ce{{}^13C} spectra, but it can't be observed on the time scale on which we measure.
+    \item Terminology: Singlet, doublet, triplet, quartet, pentet, and sextet.
+    \item Multiple neighbors? Multiply!
+    \begin{itemize}
+        \item If you have 3 neighbors on one side and 2 on the other, for instance, you will have $(3+1)(2+1)=12$ peaks.
+        \item Note that this is our predicted value --- due to overlap, we may see fewer, but we will always go with the predicted value in this class.
+    \end{itemize}
+    \item Count neighbors even on non-carbon atoms.
+    \item Hybridization.
+    \begin{itemize}
+        \item Don't get bothered by the hybridization of parent carbons if it doesn't restrict conformations. For example, the $sp^2$ carbon in an aldehyde behaves the same as any other parent carbon.
+        \item Do worry about hybridization if it makes hydrogens nonequivalent. In 1-butene for example, the two terminal hydrogens on the alkene are nonequivalent.
+        \begin{itemize}
+            \item We will not worry about multiplicity due to this effect, though the rules are similar to what we've seen.
+        \end{itemize}
+    \end{itemize}
+    \item Benzenes.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{*6(-(-[,,,,white]\phantom{Cl})=-=(-Br)-=)}\\[1em]
+            \begin{tikzpicture}
+                \path (0,0) -- (0,1);
+                \draw (-1,0) -- (1,0);
+    
+                \draw [rex,semithick] (-0.5,0)
+                    \foreach \x in {-0.45,-0.4,...,0.45} {
+                        -- (\x,0.5+0.5*rand)
+                    }
+                -- (0.5,0);
+            \end{tikzpicture}
+            \caption{}
+            \label{fig:benzeneH1NMRa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{*6(-(-[,,,,white]\phantom{Cl})=-(-Cl)=(-Br)-(-[,,,,white]\phantom{Cl})=)}\\[1em]
+            \begin{tikzpicture}
+                \path (0,0) -- (0,1);
+                \draw (-1,0) -- (1,0);
+    
+                \draw [rex,semithick] (-0.5,0)
+                    \foreach \x in {-0.45,-0.4,...,0.45} {
+                        -- (\x,0.4+0.4*rand)
+                    }
+                -- (0.5,0);
+            \end{tikzpicture}
+            \caption{}
+            \label{fig:benzeneH1NMRb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{*6((-[,,,,white]\phantom{Cl})-(-[,,,,white]\phantom{Cl})=(-Cl)-=(-Br)-=)}\\[1em]
+            \begin{tikzpicture}
+                \path (0,0) -- (0,1);
+                \draw (-1,0) -- (1,0);
+    
+                \draw [rex,semithick] (-0.5,0) -- (-0.45,1) -- (-0.4,0) -- (-0.3,0)
+                    \foreach \x in {-0.25,-0.2,...,0.45} {
+                        -- (\x,0.3+0.3*rand)
+                    }
+                -- (0.5,0);
+            \end{tikzpicture}
+            \caption{}
+            \label{fig:benzeneH1NMRc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.2\linewidth}
+            \centering
+            \chemfig{*6(-(-Cl)=-=(-Br)-=)}\\[1em]
+            \begin{tikzpicture}
+                \path (0,0) -- (0,1);
+                \draw (-1,0) -- (1,0);
+    
+                \draw [rex,semithick] (-0.5,0) -- (-0.45,1) -- (-0.4,0) -- (-0.35,1) -- (-0.3,0) -- (0.3,0) -- (0.35,1) -- (0.4,0) -- (0.45,1) -- (0.5,0);
+            \end{tikzpicture}
+            \caption{}
+            \label{fig:benzeneH1NMRd}
+        \end{subfigure}
+        \caption{Benzenes in \ce{{}^1H} NMR spectroscopy.}
+        \label{fig:benzeneH1NMR}
+    \end{figure}
+    \begin{itemize}
+        \item We can predict a bunch of splitting and peaks, but often there is so much overlap that we more just get a jagged blob (see Figures \ref{fig:benzeneH1NMRa} and \ref{fig:benzeneH1NMRb}).
+        \item If you can find a clear singlet, perhaps separated a bit from the rest, integration can tell you how many substituents you have (see Figure \ref{fig:benzeneH1NMRc}).
+        \item The pattern in Figure \ref{fig:benzeneH1NMRd} is a dead giveaway for para substituents.
+    \end{itemize}
+    \item Alkene coupling constants.
+    \begin{itemize}
+        \item \emph{cis}-alkenes typically have $J=\SIrange{6}{10}{\hertz}$.
+        \item \emph{trans}-alkenes typically have $J=\SIrange{12}{18}{\hertz}$.
+        \item These are identifiable, diagnostic signals.
+    \end{itemize}
+    \item Enantiomers are identical in NMR experiments.
+    \begin{itemize}
+        \item Remember that all of their physical properties are the same (including the various forms of spectroscopy) except optical rotation.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Chapter 9: Nuclear Magnetic Resonance and Mass Spectroscopy}
 \emph{From \textcite{bib:SolomonsEtAl}.}
 \begin{itemize}
-    \item \marginnote{1/18:}\textbf{Mass spectrometry}: The formation of ions in a mass spectrometer followed by separation and detection of the ions according to mass and charge.
+    \item \textbf{Mass spectrometry}: The formation of ions in a mass spectrometer followed by separation and detection of the ions according to mass and charge.
     \item \textbf{Mass spectrum}: A graph that on the $x$-axis represents the formula weights of the detected ions, and on the $y$-axis represents the abundance of each detected ion.
     \begin{figure}[h!]
         \centering
@@ -231,7 +351,7 @@
             \label{fig:resonanceFragLonepair}
         \end{figure}
         \item Carbon-carbon bonds next to the carbonyl group of an aldehyde or ketone break readily because resonance-stabilized ions called \textbf{acylium ions} are produced.
-        \begin{figure}[H]
+        \begin{figure}[h!]
             \centering
             \footnotesize
             \schemestart
@@ -263,7 +383,7 @@
             \item Note that either the \ce{C-R} or the \ce{C-R$'$} bond could break.
         \end{itemize}
         \item Alkyl substituted benzenes ionize by loss of a $\pi$ electron and undergo loss of a hydrogen atom or methyl group to yield the relatively stable \textbf{tropylium ion}. This fragmentation gives a prominent peak (sometimes the base peak) at $m/z=91$.
-        \begin{figure}[h!]
+        \begin{figure}[H]
             \centering
             \footnotesize
             \setchemfig{autoreset cntcycle=false}

@@ -50,6 +50,11 @@
     \begin{itemize}
         \item On a strong field machine, though, a \ce{{}^1H} spectrum can be done in seconds.
     \end{itemize}
+    \item \ce{{}^1H} NMR offers better resolution with respect to some functional groups than \ce{{}^13C} NMR.
+    \begin{itemize}
+        \item Aldehydes and carboxylic acids will be clearly resolved.
+        \item Benzenes and alkenes will be better separated, too.
+    \end{itemize}
     \item Goes over typical chemical shifts (see Table \ref{tab:protonChemicalShifts}).
     \item Goes over an example of sketching a \ce{{}^1H} spectrum.
     \item Neighboring spins parallel to the magnetic field increase ppm (deshielding).
@@ -156,10 +161,145 @@
 
 
 
+\section{Mass / IR Spectrometry}
+\begin{itemize}
+    \item \marginnote{1/20:}\textcite{bib:SolomonsEtAl} says to add (not multiply) in the $n+1$ rule for multiple types of neighboring hydrogens.
+    \begin{itemize}
+        \item What accounts for this inconsistency is the \textbf{Pascal approach}.
+        \item \textcite{bib:SolomonsEtAl} assumes that the coupling constants in the NMR instruments we use will be equal for both neighboring groups. This leads to overlap in the second splitting.
+        \begin{itemize}
+            \item This is often a good assumption, but not always.
+        \end{itemize}
+        \item The multiplicative approach gives you the maximum number of signals you might see.
+        \begin{itemize}
+            \item You will often see more signals on better machines, i.e., ones that can distinguish coupling constants to decimal places instead of just whole numbers.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Pascal approach}: A mode of analysis in which we explicitly draw splitting of NMR peaks.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[yscale=0.5]
+                \path (-3.5,0) -- (3.5,0);
+                \draw [very thick]
+                    (0,5) -- ++(0,-1)
+                    (-1.5,3) -- ++(0,-1)
+                    (-0.5,3) -- ++(0,-1)
+                    (0.5,3) -- ++(0,-1)
+                    (1.5,3) -- ++(0,-1)
+                    (-2,1) -- ++(0,-1) node[below]{1}
+                    (-1,1) -- ++(0,-1) node[below]{2}
+                    (0,1)  -- ++(0,-1) node[below]{3}
+                    (1,1)  -- ++(0,-1) node[below]{4}
+                    (2,1)  -- ++(0,-1) node[below]{5}
+                ;
+                \draw
+                    (0,4) -- (-1.5,3)
+                    (0,4) -- (-0.5,3)
+                    (0,4) -- (0.5,3)
+                    (0,4) -- (1.5,3)
+                    (-2,1) -- (-1.5,2) -- (-1,1) -- (-0.5,2) -- (0,1) -- (0.5,2) -- (1,1) -- (1.5,2) -- (2,1)
+                ;
+                \node at (3,2.5) {$\SI{7}{\hertz}$};
+                \node at (3,0.5) {$\SI{7}{\hertz}$};
+            \end{tikzpicture}
+            \caption{Additive rule.}
+            \label{fig:pascala}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.49\linewidth}
+            \centering
+            \begin{tikzpicture}[yscale=0.5]
+                \path (-3.5,0) -- (3.5,0);
+                \draw [very thick]
+                    (0,5) -- ++(0,-1)
+                    (-1.8,3) -- ++(0,-1)
+                    (-0.6,3) -- ++(0,-1)
+                    (0.6,3) -- ++(0,-1)
+                    (1.8,3) -- ++(0,-1)
+                    (-2.2,1) -- ++(0,-1) node[below]{1}
+                    (-1.4,1) -- ++(0,-1) node[below]{2}
+                    (-1.0,1) -- ++(0,-1) node[below]{3}
+                    (-0.2,1) -- ++(0,-1) node[below]{4}
+                    (0.2,1)  -- ++(0,-1) node[below]{5}
+                    (1.0,1)  -- ++(0,-1) node[below]{6}
+                    (1.4,1)  -- ++(0,-1) node[below]{7}
+                    (2.2,1)  -- ++(0,-1) node[below]{8}
+                ;
+                \draw
+                    (0,4) -- (-1.8,3)
+                    (0,4) -- (-0.6,3)
+                    (0,4) -- (0.6,3)
+                    (0,4) -- (1.8,3)
+                    (-2.2,1) -- (-1.8,2) -- (-1.4,1)
+                    (-1.0,1) -- (-0.6,2) -- (-0.2,1)
+                    (0.2,1)  -- (0.6,2)  -- (1.0,1)
+                    (1.4,1)  -- (1.8,2)  -- (2.2,1)
+                ;
+                \node at (3,2.5) {$\SI{7.2}{\hertz}$};
+                \node at (3,0.5) {$\SI{6.8}{\hertz}$};
+            \end{tikzpicture}
+            \caption{Multiplicative rule.}
+            \label{fig:pascalb}
+        \end{subfigure}
+        \caption{Pascal approach.}
+        \label{fig:pascal}
+    \end{figure}
+    \begin{itemize}
+        \item The analyses in Figure \ref{fig:pascal} refer to a hydrogen with three neighbors to one side and one to the other (thus we split into $3+1=4$ peaks and then again into $1+1=2$ subpeaks per peak).
+        \item Notice how in Figure \ref{fig:pascala}, a less sensitive instrument displays peak overlapping and thus an additive rule works, while in Figure \ref{fig:pascalb}, a more sensitive instrument resolves individual peaks.
+        \item Dr. Snyder always wants us to use the multiplicative rule on homeworks and tests.
+    \end{itemize}
+    \item Reconstructs meta-bromomethylbenzene from its NMR spectrum.
+    \item How spectroscopy is used in modern research.
+    \begin{itemize}
+        \item X-ray crystallography was the first type of spectroscopy on the scene, being able to identify the position of every atom save hydrogen. Yet it was restricted to crystalline solids.
+        \item NMR is kind of the holy grail of today.
+        \item How we extract chemicals from natural materials: We look for things that are stationary (because they have to be able to repel things through chemical means). Then we dry them, grind them down, and add an organic solvent.
+        \item We then rotavap and use column chromatography.
+    \end{itemize}
+    \item Mass spectrometry is a destructive process, but you only need a very tiny amount.
+    \item Goes over theory of EI and hexane as an example.
+    \begin{itemize}
+        \item Note that after EI, ions are accelerated around a corner where they bend in proportion to their mass to charge ratio (heavier ions bend less; ions with more charge bend more).
+    \end{itemize}
+    \item We want to train our eyes to pick out the most dominant signals in a mass spectrum.
+    \item A pattern of $-14,-14,-14$ is indicative of a linear alkane that's losing a \ce{CH2} group each time.
+    \item Alcohols will either have $\alpha$-cleavage or dehydration.
+    \item We should be able to detect bromine and chlorine.
+    \item $m/z=77$ is a dead giveaway for a phenyl cation.
+    \item Now IR spectroscopy.
+    \item Misc. IR notes.
+    \begin{itemize}
+        \item Tighter bonds vibrate faster (e.g., $\ce{C#C}>\ce{C=C}>\ce{C-C}$).
+        \item Bonds that are more polar also have higher wave numbers.
+        \item Esters usually have higher carbonyl stretches than ketones.
+        \item Putting a double bond next to a ketone lowers it's stretching frequency due to resonance detracting from the double bond character of the \ce{C=O} bond.
+        \item Sometimes you can tell benzene because it has a smaller \ce{C-H} peak.
+        \item Hydroxyl groups in alcohols, carboxylic acids, and phenols have different peaks, properties, and reactivity.
+    \end{itemize}
+    \item IR summary.
+    \begin{itemize}
+        \item A great tool to determine functional groups on small molecules.
+        \item Non-destructive.
+        \item You should be able to understand why each bond is positioned at a specific wavenumber range, learn that range, and then be able to identify all of the following functional groups from an individual IR spectrum.
+        \begin{itemize}
+            \item Carbonyls (aldehydes, ketones, esters, carboxylic acids).
+            \item Alkynes.
+            \item Nitriles/cyanides.
+            \item Alcohols.
+            \item Primary and secondary amines.
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Chapter 9: Nuclear Magnetic Resonance and Mass Spectroscopy}
 \emph{From \textcite{bib:SolomonsEtAl}.}
 \begin{itemize}
-    \item \textbf{Mass spectrometry}: The formation of ions in a mass spectrometer followed by separation and detection of the ions according to mass and charge.
+    \item \marginnote{1/18:}\textbf{Mass spectrometry}: The formation of ions in a mass spectrometer followed by separation and detection of the ions according to mass and charge.
     \item \textbf{Mass spectrum}: A graph that on the $x$-axis represents the formula weights of the detected ions, and on the $y$-axis represents the abundance of each detected ion.
     \begin{figure}[h!]
         \centering
@@ -220,8 +360,8 @@
     \end{itemize}
     \item \textbf{Base peak}: The tallest peak in a mass spectrum.
     \begin{itemize}
+        \item Usually caused by an easily formed fragment of the original compound.
         \item Relative ion abundance on the $y$-axis is either expressed as a percentage of the base peak or directly as the number of detected ions.
-        \item Usually an easily formed fragment of the original compound.
         \item The base peak in Figure \ref{fig:MSpropane} corresponds to the \ce{C2H5+} ion, $m/z=29=2\cdot 12+5\cdot 1$.
     \end{itemize}
     \item \textbf{Molecular ion}: The ion with the formula weight of the original compound.
@@ -237,7 +377,7 @@
     \end{itemize}
     \item Note that there are ionization methods other than EI, but it is the most common.
     \item Localizing the radical and charge along the structure.
-    \begin{figure}[h!]
+    \begin{figure}[H]
         \centering
         \footnotesize
         \begin{subfigure}[b]{0.24\linewidth}
@@ -324,7 +464,7 @@
             \label{fig:resonanceFragAlkene}
         \end{figure}
         \item Carbon-carbon bonds next to an atom with a lone pair usually break readily because the resulting carbocation is resonance stabilized.
-        \begin{figure}[h!]
+        \begin{figure}[H]
             \centering
             \footnotesize
             \schemestart
@@ -383,7 +523,7 @@
             \item Note that either the \ce{C-R} or the \ce{C-R$'$} bond could break.
         \end{itemize}
         \item Alkyl substituted benzenes ionize by loss of a $\pi$ electron and undergo loss of a hydrogen atom or methyl group to yield the relatively stable \textbf{tropylium ion}. This fragmentation gives a prominent peak (sometimes the base peak) at $m/z=91$.
-        \begin{figure}[H]
+        \begin{figure}[h!]
             \centering
             \footnotesize
             \setchemfig{autoreset cntcycle=false}

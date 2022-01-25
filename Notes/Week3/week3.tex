@@ -1,0 +1,327 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{2}
+
+\begin{document}
+
+
+
+
+\chapter{More Types of Reactions}
+\section{Radical Chemistry}
+\begin{itemize}
+    \item \marginnote{1/25:}Reviews mass spectroscopy.
+    \item Radical chemistry allows us to do some reactions that we cannot do in a two-electron manifold.
+    \begin{itemize}
+        \item If we want to attach a nucleophile to the C2 position of propane, heat alone will not make the hydrogen on that position leave (hydrides are terrible leaving groups).
+    \end{itemize}
+    \item Presents how easy (in terms of $\Delta H$) it is to homolytically cleave various \ce{C-H} bonds in alkanes.
+    \item Radical stability is the same as carbocation stability.
+    \begin{itemize}
+        \item In terms of decreasing stability,
+        \begin{equation*}
+            \text{benzylic} \approx \text{allylic}
+            > \text{tertiary}
+            > \text{secondary}
+            > \text{primary}
+            > \text{methyl}
+        \end{equation*}
+        \item Note that a benzylic or allylic \emph{primary} radical is still more stable than a tertiary radical with no resonance stabilization.
+    \end{itemize}
+    \item Three steps (initiation, propagation, and termination).
+    \begin{itemize}
+        \item Initiation is either started by light ($h\nu$) or heat ($\Delta$).
+    \end{itemize}
+    \item You can lose \ce{CO2} in a radical mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-=-(-(=[2]O)-[:-30]@{O1a}O-[@{sb1}:30]@{O1b}O-[:-30](=[6]O)-[:30]*6(=-=-=-))=-=)}
+            \arrow{->[$h\nu$][$\Delta$]}
+            \large\chemfig{2}\footnotesize\arrow{0}[,0.2]
+            \chemfig{*6(-=-@{C2}(-[@{sb2a}](=[2]O)-[@{sb2b}:-30]@{O2}\charge{90=\.,0=\:,-90=\:}{O})=-=)}
+            \arrow
+            \large\chemfig{2}\footnotesize\arrow{0}[,0.2]
+            \chemfig{*6(-=-\charge{45=\.}{}=-=)}
+            \arrow{0}[,0]\+{1.5em}
+            \large\chemfig{2}\footnotesize\arrow{0}[,0.2]
+            \chemfig{O=C=O}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[bend right=90,looseness=3] (O1a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[bend right=90,looseness=3] (O1b);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb2a) to[bend right=90,looseness=3] (C2);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb2a) to[bend right=60,looseness=2] (sb2b);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (O2) to[out=90,in=70,looseness=2.5] (sb2b);
+        }
+        \caption{Losing \ce{CO2} in a radical mechanism.}
+        \label{fig:CO2radical}
+    \end{figure}
+    \begin{itemize}
+        \item The second step is strongly favored by entropy ($\Delta S$).
+    \end{itemize}
+    \item Chlorination of alkanes.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{@{Cl1a}Cl-[@{sb1}]@{Cl1b}Cl}
+                \arrow{->[$h\nu$]}
+                \chemfig{\charge{0=\.}{Cl}}
+                \+{1em,1em}
+                \chemfig{\charge{180=\.}{Cl}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[bend right=60,looseness=2] (Cl1a);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[bend left=60,looseness=2] (Cl1b);
+            }
+            \caption{Initiation.}
+            \label{fig:alkaneChlorinationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]@{C1}-[@{sb1}:30]H}
+                \arrow{0}[,0.6]
+                \chemfig{@{Cl2}\charge{180=\.}{Cl}}
+                \arrow
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]\charge{0=\.}{}}
+                \arrow{0}[,0]\+{1.5em,0.8em}
+                \chemfig{HCl}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[out=-80,in=-90,looseness=5] (C1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[out=100,in=90,looseness=2] ++(0.79,0.15);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] ([xshift=-1mm]Cl2.west) to[bend right=80,looseness=2.5] ++(-0.49,-0.15);
+            }
+            \rule{0.9em}{0pt}\\[2em]
+            \schemestart
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]@{C1}\charge{0=\.}{}}
+                \arrow{0}[,0.6]
+                \chemfig{Cl-[@{sb2}]@{Cl2}Cl}
+                \arrow
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]-[:30]Cl}
+                \arrow{0}[,0]\+{1em,1.2em}
+                \chemfig{\charge{180=\.}{Cl}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]C1.east) to[bend left=80,looseness=3] ++(0.49,0.1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[bend right=80,looseness=2] ++(-0.9,-0.32);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[out=80,in=110,looseness=2.8] (Cl2);
+            }
+            \caption{Propagation.}
+            \label{fig:alkaneChlorinationb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]@{C1}\charge{0=\.}{}}
+                \arrow{0}[,0.7]
+                \chemfig{@{Cl2}\charge{180=\.}{Cl}}
+                \arrow
+                \chemfig{-[:30](-[:70])(-[:110])-[:-30]-[:30]Cl}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]C1.east) to[bend left=90,looseness=3] ++(0.42,0.2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] ([xshift=-1mm]Cl2.west) to[bend right=90,looseness=3] ++(-0.4,-0.21);
+            }
+            \caption{Termination.}
+            \label{fig:alkaneChlorinationc}
+        \end{subfigure}
+        \caption{Chlorination of alkanes.}
+        \label{fig:alkaneChlorination}
+    \end{figure}
+    \begin{itemize}
+        \item If multiple types of \ce{C-H} bonds are present, they will all be functionalized but in differing amounts.
+        \begin{itemize}
+            \item The mechanism is sensitive both to the number of available hydrogens of each type, how sterically accessible hydrogens are, and (most importantly) radical stability.
+        \end{itemize}
+        \item You can also get polychlorinated products.
+        \item Take-home message: If we use this, we only do so when all hydrogens are symmetric and we use excess starting material.
+    \end{itemize}
+    \item Bromination of alkanes is basically the same.
+    \begin{itemize}
+        \item One difference is that bromination is incredibly sensitive to radical stability, so whatever is the most stable radical will be the brominated one.
+    \end{itemize}
+    \item Multistep synthesis example.
+    \begin{itemize}
+        \item Propane to propane-1,2-diol.
+        \item Use radical bromination to put a bromine on C2, then $\beta$-elimination, then dihydroxylation.
+    \end{itemize}
+    \item Allylic/benzylic halogenation.
+    \item General form.
+    \begin{equation*}
+        \ce{=- ->[Br2][h\nu] =--Br}
+    \end{equation*}
+    % \begin{figure}[h!]
+    %     \centering
+    %     \footnotesize
+    %     \begin{subfigure}[b]{\linewidth}
+    %         \centering
+    %         \schemestart
+    %             \chemfig{@{Br1a}Br-[@{sb1}]@{Br1b}Br}
+    %             \arrow{->[$h\nu$]}
+    %             \chemfig{\charge{0=\.}{Br}}
+    %             \+{1em,1em}
+    %             \chemfig{\charge{180=\.}{Br}}
+    %         \schemestop
+    %         \chemmove{
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[bend right=60,looseness=2] (Br1a);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[bend left=60,looseness=2] (Br1b);
+    %         }
+    %         \caption{Initiation.}
+    %         \label{fig:allylicHalogenationa}
+    %     \end{subfigure}\\[2em]
+    %     \begin{subfigure}[b]{\linewidth}
+    %         \centering
+    %         \schemestart
+    %             \chemfig{=_[:30]-[:-30]@{C1}-[@{sb1}:30]H}
+    %             \arrow{0}[,0.6]
+    %             \chemfig{@{Br2}\charge{180=\.}{Br}}
+    %             \arrow
+    %             \chemfig{=_[:30]-[:-30]\charge{0=\.}{}}
+    %             \arrow{0}[,0]\+{1.5em,0.8em}
+    %             \chemfig{HBr}
+    %         \schemestop
+    %         \chemmove{
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[out=-80,in=-90,looseness=5] (C1);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[out=100,in=90,looseness=2] ++(0.8,0);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] ([xshift=-1mm]Br2.west) to[bend right=80,looseness=2.5] ++(-0.5,-2pt);
+    %         }
+    %         \rule{0.9em}{0pt}\\[2em]
+    %         \schemestart
+    %             \chemfig{=_[:30]-[:-30]@{C1}\charge{0=\.}{}}
+    %             \arrow{0}[,0.6]
+    %             \chemfig{Br-[@{sb2}]@{Br2}Br}
+    %             \arrow
+    %             \chemfig{=_[:30]-[:-30]-[:30]Br}
+    %             \arrow{0}[,0]\+{1em,1.2em}
+    %             \chemfig{\charge{180=\.}{Br}}
+    %         \schemestop
+    %         \chemmove{
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]C1.east) to[bend left=80,looseness=3] ++(0.5,0);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[bend right=80,looseness=2] ++(-0.91,-0.12);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[out=80,in=110,looseness=2.8] (Br2);
+    %         }
+    %         \caption{Propagation.}
+    %         \label{fig:allylicHalogenationb}
+    %     \end{subfigure}\\[2em]
+    %     \begin{subfigure}[b]{\linewidth}
+    %         \centering
+    %         \schemestart
+    %             \chemfig{=_[:30]-[:-30]@{C1}\charge{0=\.}{}}
+    %             \arrow{0}[,0.7]
+    %             \chemfig{@{Br2}\charge{180=\.}{Br}}
+    %             \arrow
+    %             \chemfig{=_[:30]-[:-30]-[:30]Br}
+    %         \schemestop
+    %         \chemmove{
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]C1.east) to[bend left=90,looseness=3] ++(0.41,0.06);
+    %             \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] ([xshift=-1mm]Br2.west) to[bend right=90,looseness=3] ++(-0.41,-0.05);
+    %         }
+    %         \caption{Termination.}
+    %         \label{fig:allylicHalogenationc}
+    %     \end{subfigure}
+    %     \caption{Allylic/benzylic halogenation.}
+    %     \label{fig:allylicHalogenation}
+    % \end{figure}
+    \begin{itemize}
+        \item A possible side reaction is bromination of the alkene, but this requires a high temperature and low concentration.
+        \item The mechanism is entirely analogous to that of chlorination.
+    \end{itemize}
+    \item \ce{HBr} addition to alkenes.
+    \begin{itemize}
+        \item The hydrohalogenation mechanism produces the Markovnikov product.
+        \item Morris Kharasch at UChicago in 1933 proposed that a radical mechanism produced the anti-Markovnikov product.
+        \begin{itemize}
+            \item In particular, when run in the presence of air, it proceeds quickly even at low temperatures and with the help of an organic peroxide.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R@{O1a}O-[@{sb1}]@{O1b}OR}
+                \arrow{->[$h\nu$]}
+                \chemfig{R\charge{0=\.}{O}}
+                \+{1em,1em}
+                \chemfig{\charge{180=\.}{O}R}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (sb1) to[bend right=60,looseness=2] (O1a);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[bend left=60,looseness=2] (O1b);
+            }
+            \caption{Initiation.}
+            \label{fig:radicalHydrohalogenationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R@{O1}\charge{0=\.}{O}}
+                \arrow{0}[,0.6]
+                \chemfig{H-[@{sb2}]@{Br2}Br}
+                \arrow
+                \chemfig{ROH}
+                \arrow{0}[,0]\+{1.5em,0.8em}
+                \chemfig{\charge{180=\.}{Br}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]O1.east) to[bend left=80,looseness=2.5] ++(0.45,-0.1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[bend right=80,looseness=1.7] ++(-0.82,-0.1);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[out=80,in=110,looseness=2.5] (Br2);
+            }\\[2em]
+            \schemestart
+                \chemfig{@{Br1}\charge{0=\.}{Br}}
+                \arrow{0}[,0.6]
+                \chemfig{=_[@{db2}:30]@{C2}-[:-30]}
+                \arrow
+                \chemfig{Br-[:-30]-[:30]\charge{90=\.}{}-[:-30]}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=1mm]Br1.east) to[bend left=90,looseness=3] ++(0.4,0);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (db2) to[out=120,in=80,looseness=2.2] ++(-0.62,-0.03);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (db2) to[out=100,in=100,looseness=4] (C2);
+            }
+            \caption{Propagation.}
+            \label{fig:radicalHydrohalogenationb}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Br-[:-30]-[:30]@{C1}\charge{90=\.}{}-[:-30]}
+                \arrow{0}[,0.6]
+                \chemfig{H-[@{sb2}]@{Br2}Br}
+                \arrow
+                \chemfig{Br-[:-30]-[:30](-[2]H)-[:-30]}
+                \arrow{0}[,0]\+{1em,1em}
+                \chemfig{\charge{0=\.}{Br}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] (C1) to[bend left=80,looseness=2] ++(0.93,0);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[bend right=80,looseness=2] ++(-1.0,0.05);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[out=70,in=110,looseness=2] (Br2);
+            }
+            \caption{Termination/propagation.}
+            \label{fig:radicalHydrohalogenationc}
+        \end{subfigure}
+        \caption{Radical hydrohalogenation.}
+        \label{fig:radicalHydrohalogenation}
+    \end{figure}
+    \begin{itemize}
+        \item In hydrohalogenation, the hydrogen adds into the double bond to form the most stable carbocation.
+        \item In this mechanism, the bromine adds into the double bond to form the most stable radical.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

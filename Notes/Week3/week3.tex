@@ -62,6 +62,7 @@
     \end{figure}
     \begin{itemize}
         \item The second step is strongly favored by entropy ($\Delta S$).
+        \item Note that this two-step reaction is a two-step initiation step. The radical produced could then react with ethene to form a primary ethylbenzene radical. Two of these species could then couple in a termination step.
     \end{itemize}
     \item Chlorination of alkanes.
     \begin{figure}[h!]
@@ -133,7 +134,7 @@
             \caption{Termination.}
             \label{fig:alkaneChlorinationc}
         \end{subfigure}
-        \caption{Chlorination of alkanes.}
+        \caption{Chlorination of alkanes mechanism.}
         \label{fig:alkaneChlorination}
     \end{figure}
     \begin{itemize}
@@ -239,8 +240,9 @@
         \item The hydrohalogenation mechanism produces the Markovnikov product.
         \item Morris Kharasch at UChicago in 1933 proposed that a radical mechanism produced the anti-Markovnikov product.
         \begin{itemize}
-            \item In particular, when run in the presence of air, it proceeds quickly even at low temperatures and with the help of an organic peroxide.
+            \item In particular, when run in the presence of air at low temperatures, organic peroxides are formed; these molecules allow the reaction to proceed.
         \end{itemize}
+        \item Note that it is only \ce{HBr}, not \ce{HCl} or \ce{HI}, that does this chemistry.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -260,7 +262,7 @@
                 \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb1) to[bend left=60,looseness=2] (O1b);
             }
             \caption{Initiation.}
-            \label{fig:radicalHydrohalogenationa}
+            \label{fig:radicalHydrobrominationa}
         \end{subfigure}\\[2em]
         \begin{subfigure}[b]{\linewidth}
             \centering
@@ -291,7 +293,7 @@
                 \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (db2) to[out=100,in=100,looseness=4] (C2);
             }
             \caption{Propagation.}
-            \label{fig:radicalHydrohalogenationb}
+            \label{fig:radicalHydrobrominationb}
         \end{subfigure}\\[2em]
         \begin{subfigure}[b]{\linewidth}
             \centering
@@ -310,10 +312,10 @@
                 \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon]}] (sb2) to[out=70,in=110,looseness=2] (Br2);
             }
             \caption{Termination/propagation.}
-            \label{fig:radicalHydrohalogenationc}
+            \label{fig:radicalHydrobrominationc}
         \end{subfigure}
-        \caption{Radical hydrohalogenation.}
-        \label{fig:radicalHydrohalogenation}
+        \caption{Non-Markovnokov addition of \ce{HBr} to an alkene mechanism.}
+        \label{fig:radicalHydrobromination}
     \end{figure}
     \begin{itemize}
         \item In hydrohalogenation, the hydrogen adds into the double bond to form the most stable carbocation.
@@ -325,7 +327,7 @@
 
 \section{Office Hours (Snyder)}
 \begin{itemize}
-    \item \marginnote{1/26:}We use excess substrate in radical chlorination reactions to avoid polychlorination --- kinetically, we make it more likely for a chloride radical to collide with the reactant than the product.
+    \item \marginnote{1/26:}We use excess (like $1000:1$ ratio) substrate in radical chlorination reactions to avoid polychlorination --- kinetically, we make it more likely for a chloride radical to collide with the reactant than the product.
     \item Problem set 1, Question 6.
     \begin{itemize}
         \item Six is greater than exam strength.
@@ -333,6 +335,473 @@
         \item From the \ce{{}^13C} NMR, we have 4 peaks in the aromatic region, so it is not a disubstituted asymmetric aryl ring. It's at least symmetric.
         \item Once we get reasonably close, draw all possible structures and then analyze.
         \item For isomer A, the two easiest lost groups are \ce{CH3} and \ce{Cl}, which both form benzylic carbocations. We also have that lower down primary methyl peak in the \ce{{}^13C} NMR.
+    \end{itemize}
+\end{itemize}
+
+
+
+\section{Diels-Alder Reaction}
+\begin{itemize}
+    \item \marginnote{1/27:}Discusses exam.
+    \item Reviews radical chemistry from last time.
+    \item Radicals are different species, but they behave much like carbocations.
+    \item Initiation: Breaking a bond between two atoms that are exactly the same.
+    \item Propagation: Using a radical to make a new radical.
+    \begin{itemize}
+        \item Two half arrows make a new bond; one half arrow becomes the new radical.
+        \item You can make the product during the propagation step.
+    \end{itemize}
+    \item Termination: Bringing two radicals together, eliminating radicals from solution.
+    \item Bromination and allylic/benzylic halogenation have broad synthetic utility.
+    \item Chlorination, less so.
+    \begin{itemize}
+        \item Polychlorination happens because the product is even more reactive than the starting material --- a radical at the $\alpha$ carbon gains extra stability from the nearby EWG (chlorine).
+    \end{itemize}
+    \item \ce{Br*} reacts with a hydrogen in propene in allylic halogenation, but adds into the alkene in non-Markovnokov addition of \ce{HBr} to an alkene.
+    \begin{itemize}
+        \item The reason for this difference comes down to reaction conditions. Radical mechanisms are very sensitive to conditions, and having the strongly acidic \ce{HBr} present in solution for the latter mechanism makes the former mechanism much less likely.
+    \end{itemize}
+    \item Why bromination of alkanes is more selective than chlorination.
+    \begin{itemize}
+        \item Consider the Maxwell-Boltzmann distribution.
+        \begin{itemize}
+            \item To run a reaction, we need sufficient energy, and raising the temperature gives us more molecules with higher energy.
+            \item Having more molecules with sufficient energy means the reaction runs faster.
+        \end{itemize}
+        \item Chemists have determined that propagation (specifically \ce{C-H} activation) is the RDS of halogenation of alkanes, so let's analyze that step.
+        \begin{table}[h!]
+            \centering
+            \renewcommand{\arraystretch}{1.4}
+            \small
+            \begin{tabular}{c|c}
+                \textbf{Reaction} & $\bm{E_A}$ \textbf{($\text{kcal}\bm{/}\text{mol}$)}\\
+                \hline
+                \footnotesize\rule{0pt}{6mm}
+                \schemestart
+                    \chemfig{-[:30]-[:-30]}
+                    \arrow{0}[,0]\+{1em,1em}
+                    \chemfig{\charge{180=\.}{Cl}}
+                    \arrow
+                    \chemfig{-[:30]\charge{90=\.}{}-[:-30]}
+                    \arrow{0}[,0]\+{1.2em}
+                    \chemfig{HCl}
+                \schemestop
+                & \small 3\\
+                \footnotesize\rule{0pt}{6mm}
+                \schemestart
+                    \chemfig{-[:30]-[:-30]}
+                    \arrow{0}[,0]\+{1em,1em}
+                    \chemfig{\charge{180=\.}{Cl}}
+                    \arrow
+                    \chemfig{-[:30]-[:-30]\charge{0=\.}{}}
+                    \arrow{0}[,0]\+{1.2em}
+                    \chemfig{HCl}
+                \schemestop
+                & \small 4\\
+                \footnotesize\rule{0pt}{6mm}
+                \schemestart
+                    \chemfig{-[:30]-[:-30]}
+                    \arrow{0}[,0]\+{1em,1em}
+                    \chemfig{\charge{180=\.}{Br}}
+                    \arrow
+                    \chemfig{-[:30]\charge{90=\.}{}-[:-30]}
+                    \arrow{0}[,0]\+{1.2em}
+                    \chemfig{HBr}
+                \schemestop
+                & \small 13\\
+                \footnotesize\rule{0pt}{6mm}
+                \schemestart
+                    \chemfig{-[:30]-[:-30]}
+                    \arrow{0}[,0]\+{1em,1em}
+                    \chemfig{\charge{180=\.}{Br}}
+                    \arrow
+                    \chemfig{-[:30]-[:-30]\charge{0=\.}{}}
+                    \arrow{0}[,0]\+{1.2em}
+                    \chemfig{HBr}
+                \schemestop
+                & \small 16
+            \end{tabular}
+            \caption{Analyzing the RDS of halogenation of alkanes.}
+            \label{tab:RDShalogenation}
+        \end{table}
+        \begin{itemize}
+            \item As we can see from Table \ref{tab:RDShalogenation}, the formation of different kinds of radicals for different reactions has different energies of activation.
+            \item The $\SI{1}{\kilo\calorie}$ difference between the chlorination types leads to a $3.7:1$ ratio of products.
+            \item The $\SI{3}{\kilo\calorie}$ difference between the bromination types leads to a $97:1$ ratio.
+            \item Thus, bromination depends much more heavily on forming stable radicals.
+        \end{itemize}
+        \item Additionally, we know that in these mechanisms, \ce{HCl} and \ce{HBr} are formed as byproducts, and the heats of formation for these substances differ.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \begin{subfigure}[b]{0.4\linewidth}
+                \centering
+                \begin{tikzpicture}
+                    \draw (0,3) -- (0,0) -- (4,0);
+        
+                    \draw (0.2,1.5) -- node[below,xshift=1pt]{S.M.} ++(0.6,0);
+                    \draw (3.2,1.0) -- ++(0.6,0) node[right]{\ang{1}};
+                    \draw (3.2,0.7) -- ++(0.6,0) node[right]{\ang{2}};
+        
+                    \draw [rex,semithick] (0.8,1.5)
+                        to[out=0,in=180] (1.5,2.0)
+                        to[out=0,in=180,out looseness=0.5] (3.2,1.0)
+                    ;
+                    \draw [orx,semithick] (0.8,1.5)
+                        to[out=0,in=180] (1.5,1.9)
+                        to[out=0,in=180,out looseness=0.5] (3.2,0.7)
+                    ;
+        
+                    \draw [decorate,decoration={brace,mirror}] (2.5,1.9) -- node[right=2pt]{\SI[per-mode=symbol]{1}{\kilo\calorie\per\mole}} ++(0,0.1);
+                \end{tikzpicture}
+                \caption{Chlorination of alkanes.}
+                \label{fig:rxnDiagramAlkaneHalogenationa}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.4\linewidth}
+                \centering
+                \begin{tikzpicture}
+                    \draw (0,3) -- (0,0) -- (4,0);
+        
+                    \draw (0.2,1.5) -- node[below,xshift=1pt]{S.M.} ++(0.6,0);
+                    \draw (3.2,2.5) -- ++(0.6,0) node[right]{\ang{1}};
+                    \draw (3.2,2.2) -- ++(0.6,0) node[right]{\ang{2}};
+        
+                    \draw [rex,semithick] (0.8,1.5)
+                        to[out=0,in=180,in looseness=0.5] (2.5,2.8)
+                        to[out=0,in=180] (3.2,2.5)
+                    ;
+                    \draw [orx,semithick] (0.8,1.5)
+                        to[out=0,in=180,in looseness=0.5] (2.5,2.5)
+                        to[out=0,in=180] (3.2,2.2)
+                    ;
+        
+                    \draw [decorate,decoration={brace}] (1.7,2.5) -- node[left=2pt]{\SI[per-mode=symbol]{3}{\kilo\calorie\per\mole}} ++(0,0.3);
+                \end{tikzpicture}
+                \caption{Bromination of alkanes.}
+                \label{fig:rxnDiagramAlkaneHalogenationb}
+            \end{subfigure}
+            \caption{Reaction diagrams for the RDS of halogenation of alkanes.}
+            \label{fig:rxnDiagramAlkaneHalogenation}
+        \end{figure}
+        \begin{itemize}
+            \item Forming \ce{HCl} \emph{releases} $\SI[per-mode=symbol]{103}{\kilo\calorie\per\mole}$, and thus is exothermic.
+            \item Forming \ce{HBr} \emph{requires} $\SI[per-mode=symbol]{87}{\kilo\calorie\per\mole}$, and thus is endothermic.
+            \item By Hammond's postulate, the transition state in bromination of alkanes (Figure \ref{fig:rxnDiagramAlkaneHalogenationb}) more closely resembles the products, while the transition state in chlorination of alkanes (Figure \ref{fig:rxnDiagramAlkaneHalogenationa}) more closely resembles the reactants.
+            \item Thus, the transition states in the two bromination reactions, already more energetically separated than their chlorination cousins, are more sensitive to which type of radical is formed than the transition states in the two chlorination reactions.
+        \end{itemize}
+    \end{itemize}
+    \item History of the Diels-Alder reaction.
+    \begin{itemize}
+        \item Discovered in 1928 by Otto Diels and his grad student Kurt Alder.
+        \item Nobel prize (1952).
+        \item Diels and Alder tried to reserve the right to run the reaction to themselves, but they were not successful because it was so powerful.
+        \item This is the last time a grad student won the Nobel prize in chemistry along with their professor.
+        \item They were not the first people to run the reaction, but they were the first to correctly identify the products. Von Euler ran it and even correctly identified them, but said in his paper he wasn't sure he was correct.
+    \end{itemize}
+    \item General form.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{[:-120]*6(=-=)}
+            \arrow{0}[,0]\+{1em,1em,0.7em}
+            \chemfig{=[2]}
+            \arrow
+            \chemfig{*6(-----=)}
+        \schemestop
+        \caption{Diels-Alder general form.}
+        \label{fig:dielsAlderGeneral}
+    \end{figure}
+    \begin{itemize}
+        \item Combines a diene (a $4\pi$-electron component) and a dienophile (a $2\pi$-electron component).
+        \item The real power of this reaction is not the synthesis of the ring, but the ability to synthesize chiral centers and put subsituents where you want in a way that is predictable and controllable.
+        \item Can build a second double bond into the product.
+        \item Can run this intermolecularly or intramolecularly.
+        \item Can synthesize bicyclic compounds.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{[:-180]*6(-[@{nb1,0.2},,,,white]=[@{db1a}]-[@{sb1}]=[@{db1b}]-[@{nb2,0.8},,,,white])}
+            \arrow{0}[,0.3]
+            \chemfig{=[@{db2}2]}
+            \arrow
+            \chemfig{*6(-----=)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db2) to[bend right=60,looseness=1.5] (nb2);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1b) to[bend right=60,looseness=1.5] (sb1);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1a) to[bend right=60,looseness=1.5] (nb1);
+        }
+        \caption{Diels-Alder mechanism.}
+        \label{fig:mechanismDielsAlder}
+    \end{figure}
+    \begin{itemize}
+        \item This is a \textbf{pericyclic} reaction.
+    \end{itemize}
+    \item \textbf{Pericyclic} (reaction): A reaction that proceeds via a concerted mechanism involving a single, cyclic transition state.
+    \item The basics.
+    \begin{enumerate}
+        \item The diene must be composed of two alkenes in conjugation, and those alkenes must be capable of achieving an \textbf{s-cis} orientation.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \schemestart
+                    \chemfig{*6(=---=-)}
+                    \arrow(--.-133){0}[,0.5]
+                    \chemfig{Me-[6]*6(=-=)}
+                \schemestop
+                \caption{Viable dienes.}
+                \label{fig:dieneStructurea}
+            \end{subfigure}
+            \begin{subfigure}[b]{0.45\linewidth}
+                \centering
+                \schemestart
+                    \chemfig{[:-120]*6(=-(~[6]))}
+                    \arrow{0}[,0.5]
+                    \chemfig{*6(=--=--)}
+                    \arrow{0}[,0.5]
+                    \chemfig{*6(-=(*6(----=))----)}
+                \schemestop
+                \caption{Non-viable dienes.}
+                \label{fig:dieneStructureb}
+            \end{subfigure}
+            \caption{Constraints on the diene in a Diels-Alder reaction.}
+            \label{fig:dieneStructure}
+        \end{figure}
+        \begin{itemize}
+            \item How much of the time the diene is in the s-cis orientation affects the reaction rate.
+            \item For example, the diene on the left in Figure \ref{fig:dieneStructurea} is in the s-cis orientation 100\% of the time, but the diene on the right in Figure \ref{fig:dieneStructurea} is in the s-cis orientation only 50\% of the time.
+            \item The dienes in Figure \ref{fig:dieneStructureb}, for one reason or another, are never capable of achieving the s-cis orientation.
+            \item Note that sterics can also prevent or hinder a molecule from achieving the s-cis orientation.
+        \end{itemize}
+        \item The diene and dienophile must be properly activated electronically.
+        \begin{itemize}
+            \item Placing activating substituents on the diene and dienophile can lower the necessary reaction temperature from \SI{200}{\celsius} all the way to \SI{0}{\celsius}.
+            \begin{itemize}
+                \item Moreover, it is preferable to do so because organic molecules are "happier" (less likely to denature) at lower temperatures.
+            \end{itemize}
+            \item This reaction is between the HOMO of the diene and the LUMO of the dienophile.
+            \begin{itemize}
+                \item If you add an EWG to the dienophile, it lowers the LUMO.
+                \item If you add an EDG to the diene, it raises the HOMO.
+                \item Both of these changes lower the $\Delta E$ between the HOMO and LUMO, lowering the necessary temperature of reaction.
+                \item If you have the groups mixed, the reaction will not proceed; you can't go much higher than $\SI{200}{\celsius}$, with the Diels-Alder. Note, however, that alkyl and aryl groups do not deactivate dienophiles enough to prevent reaction; it is the heteroatoms with donatable electron pairs that cause problems.
+            \end{itemize}
+            \item Typical electron-donating substituents are \ce{OR}, \ce{SR}, and \ce{NR2} (all via resonance).
+            \begin{figure}[h!]
+                \centering
+                \footnotesize
+                \schemestart
+                    \chemfig{@{O1}\charge{90=\:,180=\:}{O}R-[@{sb1}6]*6(=[@{db1}]@{C1}-=)}
+                    \arrow{<->}\arrow{0}[,0.3]
+                    \chemfig{\charge{90=\:}{O}R=_[6]*6(-@{C2a}\charge{135=\:}{}-[@{sb2}]=[@{db2}]@{C2b})}
+                    \arrow{<->}\arrow{0}[,0.3]
+                    \chemfig{\charge{90=\:}{O}R=_[6]*6(-=-\charge{0=\:}{})}
+                \schemestop
+                \chemmove{
+                    \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[bend right=90,looseness=3] (sb1);
+                    \draw [rex,semithick,shorten <=4pt,shorten >=3pt] (db1) to[bend left=90,looseness=4] (C1);
+                    \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (C2a) to[out=135,in=180,looseness=5] (sb2);
+                    \draw [rex,semithick,shorten <=4pt,shorten >=3pt] (db2) to[bend left=90,looseness=4] (C2b);
+                }
+                \caption{Diels-Alder EDGs.}
+                \label{fig:dielsAlderEDG}
+            \end{figure}
+            \begin{itemize}
+                \item Other donor groups include \ce{Me} and \ce{Ph} (both via induction). These are much less effective, though.
+            \end{itemize}
+            \item Typical electron-withdrawing substituents are aldehydes, ketones, esters, amides, nitriles, sulfones, maleic anhydride, and making the alkene an alkyne and adding an EWG.
+            \begin{figure}[h!]
+                \centering
+                \footnotesize
+                \schemestart
+                    \chemfig{=_[2]-[:30](=[@{db1}2]@{O1}O)-[:-30]H}
+                    \arrow{<->}
+                    \chemfig{=_[@{db2}2]-[@{sb2}:30]\charge{45:3pt=$\oplus$}{}(-[2]\charge{45:1pt=$\ominus$}{O})-[:-30]H}
+                    \arrow{<->}
+                    \chemfig{\charge{45:3pt=$\oplus$}{}-[2]=_[:30](-[2]\charge{45:1pt=$\ominus$}{O})-[:-30]H}
+                \schemestop
+                \chemmove{
+                    \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1) to[bend left=90,looseness=3] (O1);
+                    \draw [rex,semithick,shorten <=4pt,shorten >=3pt] (db2) to[bend right=60,looseness=1.7] (sb2);
+                }
+                \caption{Diels-Alder EWGs.}
+                \label{fig:dielsAlderEWG}
+            \end{figure}
+            \begin{itemize}
+                \item These all have a $\pi$-system directly attached to your double bond, and electronegativity pulls electrons out towards these $\pi$-systems.
+            \end{itemize}
+        \end{itemize}
+    \end{enumerate}
+    \item \textbf{S-cis}: Alkenes are cis relative to the sigma bond.
+    \item \textbf{S-trans}: Alkenes are trans relative to the sigma bond.
+    \item The Diels-Alder reaction is \textbf{stereospecific}.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Me-[6]*6(=-=(-Me))}
+                \arrow{0}[,0]\+{3.2em,1em,0.8em}
+                \chemfig{=[2]}
+                \arrow\arrow{0}[,0.1]
+                \chemfig{*6(-(<Me)---(<Me)-=)}
+            \schemestop\\[1em]
+            \schemestart
+                \chemfig{Me-[6]*6(=-=(-[:30]Me))}
+                \arrow{0}[,0]\+{1em,1em,0.8em}
+                \chemfig{=[2]}
+                \arrow\arrow{0}[,0.1]
+                \chemfig{*6(-(<:Me)---(<Me)-=)}
+            \schemestop
+            \caption{Stereoselectivity of the diene.}
+            \label{fig:dielsAlderStereoa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{[:-120]*6(=-=)}
+                \arrow{0}[,0]\+{1em,6.1em,2em}
+                \chemfig{CO_2Me-[:150]=_[2]-[:30]CO_2Me}
+                \arrow\arrow{0}[,0.1]
+                \chemfig{*6(--(<CO_2Me)(<:[6]H)-(<CO_2Me)(<:[2]H)--=)}
+            \schemestop\\[1em]
+            \schemestart
+                \chemfig{[:-120]*6(=-=)}
+                \arrow{0}[,0]\+{1em,1em,2em}
+                \chemfig{MeO_2C-[:30]=_[2]-[:30]CO_2Me}
+                \arrow\arrow{0}[,0.1]
+                \chemfig{*6(--(<:CO_2Me)(<[6]H)-(<CO_2Me)(<:[2]H)--=)}
+            \schemestop
+            \caption{Stereoselectivity of the dienophile.}
+            \label{fig:dielsAlderStereob}
+        \end{subfigure}
+        \caption{Diels-Alder stereoselectivity.}
+        \label{fig:dielsAlderStereo}
+    \end{figure}
+    \begin{itemize}
+        \item The reactants are not chiral, but they do have information encoded in their double bonds (e.g., (E)- vs. (Z)-substituents). This information gets translated into whether those substituents are cis or trans in the product.
+    \end{itemize}
+    \item \textbf{Stereospecific} (reaction): A reaction in which the geometry present in the starting material translates directly into the stereochemistry of the product.
+    \item The Diels-Alder reaction is \textbf{diastereoselective}.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}
+            \node {
+                \schemestart
+                    \chemfig{A-[6](-[:-30]B)*6(=-=)}
+                    \arrow(--.170){0}[,0]\+{1em,,-2.16em}
+                    \chemfig{EWG-[:-30]=_[6]}
+                    \arrow(.-10--)
+                \schemestop
+            };
+            \begin{scope}[
+                xshift=3.2cm,yshift=-5mm,
+                yscale=0.5,rotate=15
+            ]
+                \fill [blx,opacity=0.15] (150:0.6) -- (210:0.6) -- (0.3,2.3) -- ++(-0.6,0.15);
+    
+                \draw
+                    (90:1.1) node[above]{A} -- (90:0.6) -- (150:0.6) -- (210:0.6) -- (270:0.6)
+                    (90:0.6) -- ++(-30:0.5) node[right=-1pt,yshift=-1pt]{B}
+                    (90:0.5) -- (150:0.5) (210:0.5) -- (270:0.5)
+                ;
+                \draw [xshift=0.4cm,yshift=2cm]
+                    (-30:0.6) -- (30:0.6) -- ++(150:0.5) node[left=-1pt,yshift=1pt]{EWG}
+                    ([xshift=0.6pt,yshift=-2pt]-30:0.5) -- ([xshift=0.6pt,yshift=-5pt]30:0.5)
+                ;
+    
+                \draw [densely dashed]
+                    (270:0.6) -- ([xshift=0.4cm,yshift=2cm]-30:0.6)
+                    (90:0.6) -- ([xshift=0.4cm,yshift=2cm]30:0.6)
+                ;
+            \end{scope}
+            \node [xshift=5.8cm] {
+                \schemestart
+                    \arrow(--.-162)
+                    \chemfig{*6(---(<EWG)-(<:[:70]B)(<[:110]A)-=)}
+                \schemestop
+            };
+        \end{tikzpicture}
+        \caption{Diels-Alder diastereoselectivity.}
+        \label{fig:dielsAlderDiastereo}
+    \end{figure}
+    \begin{itemize}
+        \item When we add a substituted diene to a substituted dienophile, we might intuitively think that we will form the less sterically encumbered product (via an \textbf{exo} transition state).
+        \item However, we find that in spite of the steric penalty, we form the \textbf{endo} product. This is because there is an additional stabilizing interaction present in the endo transition state that is not present in the exo transition state, namely the one between the $\pi$-orbitals of the EWG and the bond that will be an alkene in the product (this interaction is shown in light blue in Figure \ref{fig:dielsAlderDiastereo}).
+        \item Note that since it is equally likely that the dienophile will attack the diene from the top (as in Figure \ref{fig:dielsAlderDiastereo}) and from the bottom, both enantiomers of the endo product will be formed.
+        \begin{itemize}
+            \item To indicate this on a test question, write $(+/-)$ next to your answer!
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Diastereoselective} (reaction): A reaction in which only one of two possible diastereomers is formed in those cases where two or more stereogenic centers are created.
+    \item \textbf{Endo} (transition state): A transition state in which bulky groups EWGs on the dienophile lie below the dienophile.
+    \item \textbf{Exo} (transition state): A transition state in which bulky groups EWGs on the dienophile lie away from the dienophile.
+    \item Reviews kinetic vs. thermodynamic product.
+    \begin{itemize}
+        \item The endo product is more easily formed (it's the kinetic product), and the exo product is usually more stable (it's the thermodynamic product).
+        \item However, since it's hard to walk the Diels-Alder reaction backwards (especially at low temperatures), this reaction is under kinetic control, and hence the kinetic, endo product is formed.
+    \end{itemize}
+    \item The reaction is regioselective.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{@{O1}\charge{180=\:}{O}Me-[@{sb1a}6]*6(=[@{db1a}]-[@{sb1b}]=[@{db1b}]@{C1})}
+                    \arrow{0}[,0]\+{,1em,0.7em}
+                    \chemfig{=_[@{db2a}2]-[@{sb2}:30](=[@{db2b}2]@{O2}O)-[:-30]H}
+                    \arrow{<->}
+                    \chemfig{\charge{135:3pt=$\oplus$}{O}Me=_[6]*6(-=-@{C3}\charge{-90:2pt=$\ominus$}{})}
+                    \arrow{0}[,0]\+{,1em,0.7em}
+                    \chemfig{@{C4}\charge{-90:2pt=$\oplus$}{}-[2]=^[:30](-[2]\charge{45=$\ominus$}{O})-[:-30]H}
+                }
+            \chemright{]}
+            \arrow
+            \chemleft{[}
+                \chemfig{@{O5a}\charge{135=$\oplus$}{O}Me=[@{db5a}6]*6(@{C5}-=---(=^[@{db5b}](-[@{sb5}2]@{O5b}\charge{45=$\ominus$}{O})-[:-30]H)-[@{nb5},,,,white])}
+            \chemright{]}
+            \arrow
+            \chemfig{*6(---(<(=[2]O)-[:-30]H)-(<OMe)-=)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[bend right=90,looseness=3] (sb1a);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1a) to[bend left=60,looseness=1.8] (sb1b);
+            \draw [rex,semithick,shorten <=4pt,shorten >=3pt] (db1b) to[bend left=90,looseness=4] (C1);
+            %
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db2a) to[bend right=60,looseness=1.8] (sb2);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db2b) to[bend right=90,looseness=3] (O2);
+            %
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (C3) to[bend right=30] (C4);
+            %
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db5a) to[bend left=90,looseness=3] (O5a);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db5b) to[bend right=60,looseness=1.8] (nb5);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (O5b) to[bend left=90,looseness=3] (sb5);
+        }
+        \caption{Diels-Alder regioselectivity.}
+        \label{fig:dielsAlderRegio}
+    \end{figure}
+    \begin{itemize}
+        \item If both reactants are substituted and we draw their resonance states (see Figures \ref{fig:dielsAlderEDG} and \ref{fig:dielsAlderEWG}), we'd like to unite the carbon that is negative and the carbon that is positive.
+        \item This resonance analysis is not really what happens (all electrons move at once as in Figure \ref{fig:mechanismDielsAlder}), but it is quite predictive.
+        \item Note that we can have a diene with an EDG at one end, a diene with an EDG in the interior, or a diene with para EDGs (a so-called \textbf{synergistic eiene} because both EDGs push electrons toward the carbon at the end adjacent to the interior EDG).
+    \end{itemize}
+    \item Does a number of examples.
+    \item When facing a Diels-Alder question on a PSet or test, your first question to ask is "are my reactants appropriate for the Diels-Alder reaction?"
+    \begin{itemize}
+        \item If not, just write "N.R." for "no reaction."
+    \end{itemize}
+    \item We may have to analyze potential products to see if they could be formed by Diels-Alder means.
+    \begin{itemize}
+        \item Sometimes, even if there are multiple potential dienes/dienophiles, only one pathway will work (such as with cyclohex-1,4-diene-1-carbonitrile).
     \end{itemize}
 \end{itemize}
 

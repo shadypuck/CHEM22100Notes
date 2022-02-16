@@ -1,0 +1,314 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{4}
+
+\begin{document}
+
+
+
+
+\chapter{Aromaticity}
+\section{Aromaticity 1}
+\begin{itemize}
+    \item \marginnote{2/8:}Office hours: Tuesday and Friday at 4:00 PM.
+    \item PSet 3 is due 2/17.
+    \item Aromatic compounds are called such because they're often fragrant. They're heavily associated with biological systems.
+    \item History of aromatic comounds.
+    \begin{itemize}
+        \item 1825: Michael Faraday isolated a compound from his oil lamp having a $\ce{C}:\ce{H}$ ratio of $1:1$.
+        \item 1834: Benzoic acid plus heat makes \ce{(CH)_{$n$} + CO2}.
+        \begin{itemize}
+            \item Even hex-1,3,5-triene still has more hydrogens than carbons.
+        \end{itemize}
+        \item Benzene.
+        \begin{itemize}
+            \item There are about 60 possible structures for \ce{C6H6}.
+            \item \textbf{Dewer benzene} is two fused 4-member rings with alkenes on opposing sides.
+            \item But benzene is highly unreactive in alkene reactions\dots
+        \end{itemize}
+        \item 1865: Kekul\'{e} proposed a "cyclohexatriene" structure.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \schemestart
+                \chemfig{*6(-=-=-=)}
+                \arrow{->[\ce{Br2}]}
+                \chemfig{*6(-(-[,,,,white]\phantom{Br})=-(-Br)=(-Br)-=)}
+                \arrow{0}[,0]\+{,,1em}
+                \chemfig{*6(-(-[,,,,white]\phantom{Br})=(-Br)-(-Br)=(-[,,,,white]\phantom{Br})-=)}
+            \schemestop
+            \vspace{-2em}
+            \caption{Bromination of cyclohexatriene.}
+            \label{fig:brominationCyclohexatriene}
+        \end{figure}
+        \begin{itemize}
+            \item Evidence: You would expect bromination of cyclohexatriene to produce two products, but it only produces one (the two molecules must be rapidly interconverting, i.e., via resonance).
+        \end{itemize}
+        \item Chemists began looking for more similar compounds.
+        \item 1911: Cyclooctatriene was made.
+        \begin{itemize}
+            \item It can be hydrogenated, so not consistent with the low reactivity of benzene.
+        \end{itemize}
+        \item Cyclobutadiene was impossible to isolate due to a self-Diels-Alder reaction at any temperature greater than \SI{-260}{\celsius}.
+    \end{itemize}
+    \item Enthalpies of hydrogenation.
+    \begin{itemize}
+        \item Hydrogenation of cyclohexene has $\Delta H=\SI[per-mode=symbol]{-28.6}{\kilo\calorie\per\mole}$.
+        \item Hydrogenation of cyclohex-1,4-diene has $\Delta H=\SI[per-mode=symbol]{-57.2}{\kilo\calorie\per\mole}$.
+        \item Hydrogenation of cyclohex-1,3-diene has $\Delta H=\SI[per-mode=symbol]{-55.4}{\kilo\calorie\per\mole}$.
+        \begin{itemize}
+            \item The \SI[per-mode=symbol]{1.8}{\kilo\calorie\per\mole} difference between the previous two comes from conjugation as predicted by resonance.
+        \end{itemize}
+        \item Hydrogenation of benzene has $\Delta H=\SI[per-mode=symbol]{-49.3}{\kilo\calorie\per\mole}$.
+        \begin{itemize}
+            \item That is a huge stabilization effect.
+        \end{itemize}
+    \end{itemize}
+    \item The bond lengths in benzene are all equally $\SI{1.39}{\angstrom}$.
+    \item MO theory: We need a method to draw the MOs for flat, cyclic conjugated compounds. We will use the \textbf{Frost method}.
+    \item For hexa-1,3,5-triene, six $p$-orbitals combine to make six MOs.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \LARGE
+            \draw [ultra thick]
+                (0,0) -- node{$\upharpoonleft$} ++(0.5,0)
+                ++(0.1,0) -- node{$\upharpoonleft$} ++(0.5,0)
+                ++(0.1,0) -- node{$\upharpoonleft$} ++(0.5,0)
+                ++(0.1,0) -- node{$\upharpoonleft$} ++(0.5,0)
+                ++(0.1,0) -- node{$\upharpoonleft$} ++(0.5,0)
+                ++(0.1,0) -- node{$\upharpoonleft$} ++(0.5,0)
+            ;
+            \draw [loosely dashed] (3.7,0) -- ++(4,0);
+    
+            \draw [ultra thick]
+                (5.45,3)  -- ++(0.5,0)
+                (5.45,2)  -- ++(0.5,0)
+                (5.45,1)  -- ++(0.5,0)
+                (5.45,-1) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                (5.45,-2) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                (5.45,-3) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+            ;
+    
+            \begin{scope}[yshift=3cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [rex,thick,densely dashed]
+                    (7.25,0.4) -- ++(0,-0.8)
+                    (7.75,0.4) -- ++(0,-0.8)
+                    (8.25,0.4) -- ++(0,-0.8)
+                    (8.75,0.4) -- ++(0,-0.8)
+                    (9.25,0.4) -- ++(0,-0.8)
+                ;
+            \end{scope}
+            \begin{scope}[yshift=2cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+                \draw [rex,thick,densely dashed]
+                    (7.25,0.4) -- ++(0,-0.8)
+                    (7.75,0.4) -- ++(0,-0.8)
+                    (8.75,0.4) -- ++(0,-0.8)
+                    (9.25,0.4) -- ++(0,-0.8)
+                ;
+            \end{scope}
+            \begin{scope}[yshift=1cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [rex,thick,densely dashed]
+                    (7.25,0.4) -- ++(0,-0.8)
+                    (8.25,0.4) -- ++(0,-0.8)
+                    (9.25,0.4) -- ++(0,-0.8)
+                ;
+            \end{scope}
+            \begin{scope}[yshift=-1cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+                \draw [rex,thick,densely dashed]
+                    (7.75,0.4) -- ++(0,-0.8)
+                    (8.75,0.4) -- ++(0,-0.8)
+                ;
+            \end{scope}
+            \begin{scope}[yshift=-2cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [rex,thick,densely dashed] (8.25,0.4) -- ++(0,-0.8);
+            \end{scope}
+            \begin{scope}[yshift=-3cm]
+                \draw [semithick] (7,0) -- ++(2.5,0);
+                \filldraw [semithick,fill=grx]
+                    (7,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=120,in=60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=120,in=60,looseness=150] ++(0.01,0)
+                ;
+                \draw [semithick]
+                    (7,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (7.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (8.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9,0)   to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                    (9.5,0) to[out=-120,in=-60,looseness=150] ++(0.01,0)
+                ;
+            \end{scope}
+        \end{tikzpicture}
+        \caption{Hexa-1,3,5-triene MO diagram.}
+        \label{fig:MOhexa-1,3,5-triene}
+    \end{figure}
+    \begin{itemize}
+        \item Three are bonding; three are antibonding. We can guess at what the SALCs look like with a nodal analysis.
+    \end{itemize}
+    \item For benzene, six $p$-orbitals combine to make six different MOs.
+    \begin{itemize}
+        \item See Figures III.1 and III.2 in \textcite{bib:CHEM20100Notes}.
+        \item For conjugated cyclic systems with an even number of atoms, there will always be a single high and single low MO energy level.
+    \end{itemize}
+    \item \textbf{Frost method}: The following procedure for drawing MOs for flat cyclic conjugated compounds.
+    \begin{enumerate}
+        \item Draw a polygon of the molecule without double bonds and with a vertex at the bottom.
+        \item Draw a line halfway through the structure.
+        \item Put an MO at each vertex.
+    \end{enumerate}
+    \item For example, if we want to find the MOs of butadiene, we do the following.
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \node [xshift=0cm] {\chemfig{*4(-=-=)}};
+            \draw [xshift=1cm] [very thick,-stealth] (0.1,0) -- node[above]{1} ++(0.8,0);
+            \draw [xshift=3cm] (0.4,0) -- (0,0.4) -- (-0.4,0) -- (0,-0.4) -- cycle;
+            \draw [xshift=4cm] [very thick,-stealth] (0.1,0) -- node[above]{2} ++(0.8,0);
+            \draw [xshift=6cm] [blx,thick,dashed] (-0.8,0) -- (0.8,0);
+            \draw [xshift=6cm] (0.4,0) -- (0,0.4) -- (-0.4,0) -- (0,-0.4) -- cycle;
+            \draw [xshift=7cm] [very thick,-stealth] (0.1,0) -- node[above]{3} ++(0.8,0);
+            \draw [xshift=9cm] [blx,thick,dashed] (-0.8,0) -- (0.8,0);
+            \draw [xshift=9cm] [ultra thick]
+                (0.2,0) -- ++(0.4,0)
+                (-0.2,0.4) -- ++(0.4,0)
+                (-0.6,0) -- ++(0.4,0)
+                (-0.2,-0.4) -- ++(0.4,0)
+            ;
+        \end{tikzpicture}
+        \caption{Frost method: Butadiene.}
+        \label{fig:frostButadiene}
+    \end{figure}
+    \item We can even apply this to cyclotetradecaheptaene.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \node{\chemfig{[:-60]*6(-=-=(*6(-=-(*6(=-=-(*6(=-=)))))))}};
+    
+            \draw [loosely dashed] (2,0) -- ++(3,0);
+            \large
+            \draw [ultra thick]
+                (3.25,2) -- ++(0.5,0)
+                (2.75,1.5) -- ++(0.5,0) ++(0.5,0) -- ++(0.5,0)
+                (2.75,1) -- ++(0.5,0) ++(0.5,0) -- ++(0.5,0)
+                (2.75,0.5) -- ++(0.5,0) ++(0.5,0) -- ++(0.5,0)
+                (2.75,-0.5) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.5,0) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                (2.75,-1) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.5,0) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                (2.75,-1.5) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0) ++(0.5,0) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+                (3.25,-2) -- node{$\upharpoonleft$\hspace{-1mm}$\downharpoonright$} ++(0.5,0)
+            ;
+        \end{tikzpicture}
+        \caption{Frost method: Cyclotetradecaheptaene.}
+        \label{fig:frostCyclotetradecaheptaene}
+    \end{figure}
+    \item \textbf{$\bm{(4n+2)}$ rule}: If a system has $4n+2$ $\pi$-electrons for $n\in\N_0$, then it is aromatic.
+    \begin{itemize}
+        \item Alternatively, if all bonding orbitals are filled and there are no electrons in non-bonding or anti-bonding orbitals, then the compound is aromatic.
+    \end{itemize}
+    \item \textbf{Anti-aromatic} (molecule): A flat cyclic conjugated molecule with an uninterrupted flow of $p$-orbitals that does not satisfy the $(4n+2)$ rule.
+    \begin{itemize}
+        \item Alternatively, the molecule must have electrons in non-bonding or antibonding orbitals and six or fewer atoms in the cycle.
+    \end{itemize}
+    \item \textbf{Non-aromatic} (molecule): A molecule with electrons in non-bonding or antibonding orbitals and seven or more atoms in the cycle.
+    \item Unpaired electrons in nonbonding orbitals can be very destabilizing.
+    \begin{itemize}
+        \item But since cyclooctatetraene is not flat (it's tub-shaped), it avoids the MO overlap that leads to anti-aromaticity.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

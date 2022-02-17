@@ -1,0 +1,172 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{5}
+
+\begin{document}
+
+
+
+
+\chapter{Electrophilic Aromatic Substitution}
+\section{Electrophilic Aromatic Substitution 1}
+\begin{itemize}
+    \item \marginnote{2/15:}Discusses the aromaticity of fluorescein as an example to review from last class.
+    \item Reactions of aromatic compounds are divided into two classes: Electrophilic and nucleophilic aromatic substitutions.
+    \item Example:
+    \begin{itemize}
+        \item \ce{C6H6 ->[H3O+] C6H6} means no reaction?
+        \item \ce{C6H6 ->[D3O+] C6D6}; thus, a substitution is occurring.
+    \end{itemize}
+    \item Mechanism:
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-=-=[@{db1}]-=)}
+            \arrow{->[\chemfig{@{D2}\charge{45=$\oplus$}{D}}]}[,1.3]
+            \chemfig{*6(-=-(-[@{sb3a}:10]@{H3}H)(-[:50]D)-[@{sb3b}]\charge{90:3pt=$\oplus$}{}-=)}
+            \arrow{->[\chemfig{@{O4}\charge{90=\:}{O}D_2}][-\ce{HD2O+}]}[,1.3]
+            \chemfig{*6(-=-(-D)=-=)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db1) to[bend left=60,looseness=1.5] (D2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[out=90,in=60,looseness=2] (H3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3a) to[bend left=90,looseness=3] (sb3b);
+        }
+        \caption{Electrophilic aromatic substitution mechanism.}
+        \label{fig:EASmechanism}
+    \end{figure}
+    \begin{itemize}
+        \item To begin, one of the $\pi$-bonds of benzene attacks \ce{D+}. This causes the loss of aromaticity, but the carbocation is highly resonance delocalized.
+        \item Although we \emph{could} make an alcohol at this point, this would lead to the loss of aromaticity in the product, so we won't do that.
+        \item Instead, we do an E\textsubscript{1}-type reaction.
+        \item The first step is the RDS.
+        \item The intermediate in this mechanism is called the \textbf{arenium ion}, the \textbf{Wheland intermediate}, or the \textbf{sigma complex}.
+        \item Note that the electrophile used in this reaction has to be a very special, very reactive, very strong electrophile in order to make up the energy gap.
+    \end{itemize}
+    \item We know that the sigma complex exists because we can trap the intermediate.
+    \item Whether or not we see the product react again depends on whether the product or starting material is more nucleophilic.
+    \item Adding an EDG to the benzene makes the reaction proceed faster.
+    \begin{itemize}
+        \item A good EDG will stabilize the arenium ion, lowering the activation barrier of the first step (the RDS).
+    \end{itemize}
+    \item Halogenation.
+    \item General form.
+    \begin{equation*}
+        \ce{PhH + Br2 ->[\text{cat.} FeBr3] PhBr + HBr}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{Br2} is too unreactive to have chemistry with benzene on its own.
+        \item In particular, when we say that \ce{Br2} is too unreactive, we mean that there is not enough \ce{Br+} character, i.e., it is not a good enough electrophile.
+        \item To overcome the problem, we add \ce{Br2} to \ce{FeBr3}, a good Lewis acid with an open valence site. It follows that \ce{Br-Br^+-Fe^-Br3} is a super awesome electrophile!
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-=-=-=)}
+            \arrow{0}[,0.1]\+
+            \chemfig{Br-@{Br2}\charge{90=\:}{Br}}
+            \arrow{->[\chemfig{@{Fe3}FeBr_3}]}[,1.1]
+            \chemfig{*6(-=-=[@{db4}]-=)}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{Br5a}Br-[@{sb5}]@{Br5b}\charge{90:3pt=$\oplus$}{Br}-\charge{90:3pt=$\ominus$}{Fe}Br_3}
+            \arrow
+            \subscheme{
+                \chemfig{*6(-=(-[:-50,,,,white]\phantom{Br})-(-[:10]H)(-[:50]Br)-\charge{90:3pt=$\oplus$}{}-=)}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{Br7}Br-[@{sb7}]\charge{90:3pt=$\ominus$}{Fe}Br_3}
+            }
+            \arrow(.south--.north){->[*{0}-\ce{FeBr3}]}[-90]
+            \subscheme{
+                \chemfig{*6(-=(-[:-50,,,,white]\phantom{Br})-(-[@{sb8a}:10]@{H8}H)(-[:50]Br)-[@{sb8b}]\charge{90:3pt=$\oplus$}{}-=)}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{Br9}\charge{45:2pt=$\ominus$}{Br}}
+            }
+            \arrow(.west--.east)[180]
+            \subscheme{
+                \chemfig{*6(-=(-[,,,,white]\phantom{Br})-(-Br)=-=)}
+                \arrow{0}[,0.1]\+
+                \chemfig{HBr}
+            }
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Br2) to[bend left=80,looseness=2.5] (Fe3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db4) to[bend left=60,looseness=1.5] (Br5a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5) to[bend right=70,looseness=2.5] (Br5b);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb7) to[bend right=90,looseness=3] (Br7);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (Br9) to[bend right=60,looseness=1.5] (H8);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8a) to[bend left=90,looseness=3] (sb8b);
+        }
+        \caption{EAS halogenation mechanism.}
+        \label{fig:EAShalogenationMechanism}
+    \end{figure}
+    \item For chlorination, we use catalytic \ce{AlCl3}.
+    \item For iodination, we use catalytic \ce{CuI2}.
+    \item Nitration.
+    \item General form.
+    \begin{equation*}
+        \ce{PhH + HNO3 ->[\text{cat.} H2SO4] PhNO2 + H2O}
+    \end{equation*}
+    \begin{itemize}
+        \item We start with nitric acid, but as before, the nitrogen is not electrophilic enough.
+        \item Thus, we add catalytic sulfuric acid. Since \ce{H2SO4} is stronger than \ce{HNO3}, it protonates nitric acid to \ce{H2NO3+}, which quickly splits into \ce{H2O + NO2+}, where \ce{NO2+} is the nitronium ion (a super electrophile!).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \footnotesize
+            \schemestart
+                \chemfig{\charge{90=\:,135:2pt=$\ominus$}{O}-[:30]\charge{-90:3pt=$\oplus$}{N}(=[2]O)-[:-30]@{O1}\charge{90=\:}{O}H}
+                \arrow{->[\chemfig{@{H2}H-[@{sb2}]@{O2}OSO_3H}][-\ce{HSO4-}]}[,1.8]
+                \chemfig{@{O3a}\charge{90=\:,135:2pt=$\ominus$}{O}-[@{sb3a}:30]\charge{-90:3pt=$\oplus$}{N}(=[2]O)-[@{sb3b}:-30]@{O3b}\charge{90:3pt=$\oplus$}{O}H_2}
+                \arrow{->[][-\ce{H2O}]}[,1.8]
+                \chemfig{O=[2]\charge{45:2pt=$\oplus$}{N}=[2]O}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[out=90,in=90,out looseness=4,in looseness=2] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend left=80,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3a) to[bend left=70,looseness=2.5] (sb3a);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3b) to[bend right=70,looseness=2.5] (O3b);
+            }
+            \caption{Nitronium ion formation.}
+            \label{fig:EASnitrationMechanisma}
+        \end{subfigure}
+    \end{figure}
+    \begin{figure}[H]
+        \ContinuedFloat
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \footnotesize
+            \schemestart
+                \chemfig{*6(-=-=[@{db1}]-=)}
+                \arrow{0}[,0.1]\+{,,2.7em}
+                \chemfig{@{O2}O=[@{db2}2]@{N2}\charge{45:2pt=$\oplus$}{N}=[2]O}
+                \arrow[,1.8]
+                \chemfig{*6(-=(-[:-50,,,,white]\phantom{H})-(-[:10]NO_2)(-[@{sb3a}:50]@{H3}H)-[@{sb3b}]\charge{90:3pt=$\oplus$}{}-=)}
+                \arrow{->[\chemfig{@{O4}\charge{90=\:,45:2pt=$\ominus$}{O}-SO_3H}][-\ce{H2SO4}]}[,1.8]
+                \chemfig{*6(-=(-[,,,,white]\phantom{NO_2})-(-NO_2)=-=)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db1) to[out=60,in=150,looseness=1.5] (N2);
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2) to[bend left=80,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[bend right=60,looseness=1.5] (H3);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3a) to[bend right=70,looseness=2] (sb3b);
+            }
+            \caption{Nitration of benzene.}
+            \label{fig:EASnitrationMechanismb}
+        \end{subfigure}
+        \caption{EAS nitration mechanism.}
+        \label{fig:EASnitrationMechanism}
+    \end{figure}
+\end{itemize}
+
+
+
+
+\end{document}

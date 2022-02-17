@@ -310,5 +310,445 @@
 
 
 
+\section{Aromaticity 2}
+\begin{itemize}
+    \item \marginnote{2/8:}Note that the bond lengths of benzene are equal because the two resonance structures each contribute equally, and we can measure the bond length via x-ray crystallography.
+    \item A magnetic field induces the $\pi$-electrons of aromatic compounds to circulate. This motion reinforces the magnetic field, leading to a substantial deshielding effect in NMR experiments.
+    \begin{itemize}
+        \item Indeed, NMR is one of our key tools for identifying aromatic compounds.
+    \end{itemize}
+    \item People in the 1820s thought that a compound had to smell to be aromatic. Of course, we now know that smell has nothing to do with chemical aromaticity.
+    \item \textbf{H\"{u}ckel's rules}: A set of rules that determines whether or not a compound is aromatic; a shortcut to the Frost diagram method.
+    \begin{itemize}
+        \item To apply H\"{u}ckel's rule, the molecule in question must be flat, cyclic, and have a $p$-orbital on each atom.
+        \item If one of these conditions does not apply, the molecule is simply non-aromatic.
+        \item If the conditions do apply, $4n+2$ $\pi$ electrons implies aromaticity and $4n$ ($n\in\N$) electrons implies anti-aromaticity (the number of atoms is less than 6) or non-aromaticity (the number of atoms is greater than 6).
+    \end{itemize}
+    \item Note that if we chose the bottom vertex of cyclotetradecaheptaene to be any other vertex than the one shown in Figure \ref{fig:frostCyclotetradecaheptaene} (or the one directly opposite it), we would end up with multiple lowest energy MOs (which would be incorrect).
+    \item Anti-aromatic molecules react in any way they can to avoid existing in such a state.
+    \begin{itemize}
+        \item Think of cyclobutadiene doing a self-Diels-Alder reaction to avoid being anti-aromatic.
+        \item Cyclooctatetraene is sufficiently big such that it need not react; it can just bend.
+    \end{itemize}
+    \item Tougher Frost diagrams:
+    \begin{itemize}
+        \item 5-membered ring: 3 bonding orbitals and 2 anti-bonding orbitals.
+        \item 7-membered ring: 3 bonding orbitals and 4 anti-bonding orbitals.
+    \end{itemize}
+    \item Based on first principles, a structure with a ring system and a number of electrons that makes reasonable sense for aromaticity is aromatic.
+    \begin{itemize}
+        \item However, in nature, 18 $\pi$-electrons tends to be the upper limit for aromaticity.
+        \item Chemists have gone up to 34 $\pi$-electrons and you can go even higher.
+        \item As long as the molecule is still flat, if everything else works, it is aromatic.
+    \end{itemize}
+    \item Today, we will discuss three new classes of molecules that have aromaticity.
+    \item Class 1: Anions/cations.
+    \begin{itemize}
+        \item Treating cyclopentadiene with an appropriate base yields the cyclopentadienyl anion, which is aromatic.
+        \begin{itemize}
+            \item The cyclopentadienyl anion has five equivalent resonance structures.
+            \item The Frost diagram analysis supports this claim, since the three bonding orbitals are completely filled and the two antibonding orbitals are empty.
+        \end{itemize}
+        \item Treating cycloheptatriene with the trityl cation abstracts a hydride leaving the tropylium ion, which is aromatic.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \chemnameinit{\chemfig{\charge{45:3pt=$\oplus$}{}(-[:-30]*6(=-=-=-))(-[2]*6(-=-=-=))(-[:210]*6(=-=-=-))}}
+            \schemestart
+                \chemname{\chemfig{[:-64.29]*7(=-=-=-(-[@{sb1}:70]H)(-[:110]H)-)}}{Cycloheptatriene}
+                \+{2em,2em}
+                \chemname{\chemfig{@{C2}\charge{45:3pt=$\oplus$}{}(-[:-30]*6(=-=-=-))(-[2]*6(-=-=-=))(-[:210]*6(=-=-=-))}}{Trityl cation}
+                \arrow(.mid east--.mid west){->[][-\ce{CHPh3}]}[,1.3]
+                \chemname{\chemfig{[:-64.29]*7(=-=-=-\charge{90:3pt=$\oplus$}{}-)}}{Tropylium ion}
+            \schemestop
+            \chemnameinit{}
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1) to[out=-30,in=150,out looseness=0.6,in looseness=1.3] (C2);
+            }
+            \caption{Aromaticity in the tropylium ion.}
+            \label{fig:aromaticityTropylium}
+        \end{figure}
+    \end{itemize}
+    \item When we have substituted compounds, we only care about the $\pi$-electrons in the ring system.
+    \begin{itemize}
+        \item For example, in tropone, we only count seven $\pi$-electrons.
+        \begin{figure}[H]
+            \centering
+            \footnotesize
+            \schemestart
+                \chemfig{[:38.57]*7(=-=-(=[@{db1}]@{O1}O)-=-)}
+                \arrow{<->}
+                \chemfig{[:38.57]*7(=-=-\charge{-90:3pt=$\oplus$}{}(-\charge{45=$\ominus$}{O})-=-)}
+                \arrow{<->}
+                \chemfig{[:38.57]**7(----(-\charge{45=$\ominus$}{O})---)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[bend right=90,looseness=3] (O1);
+                \node at (cyclecenter1) {$+$};
+            }
+            \caption{Aromaticity in tropone.}
+            \label{fig:aromaticityTropone}
+        \end{figure}
+        \begin{itemize}
+            \item However, if a molecule can become aromatic, it will. Thus, the actual structure of tropone is the right resonance structures above.
+        \end{itemize}
+    \end{itemize}
+    \item We can indeed have $2\pi$-electron aromatic systems \parencite{bib:Breslow}.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \setchemfig{atom sep=3em}
+        \schemestart
+            \chemfig{[:-30]*3(=(-[6,0.7,,,white]\phantom{Cl})-(-[,0.7]Cl)-)}
+            \arrow{->[\ce{SbCl5}][-\ce{SbCl6-}]}[,1.3]
+            \chemfig{[:-30]**3(---)}
+        \schemestop
+        \chemmove{
+            \node at (cyclecenter1) {+};
+        }
+        \vspace{-2.5em}
+        \caption{Aromaticity in the cyclopropenyl ion.}
+        \label{fig:aromaticityCyclopropenyl}
+    \end{figure}
+    \begin{itemize}
+        \item This was the crowning achievement of a push in the 1950s-60s by organic chemists to push the bounds of aromatic compounds. It was done by Ron Breslow of Columbia in 1967.
+    \end{itemize}
+    \item Joined rings can also rearrange \`{a} la tropone (Figure \ref{fig:aromaticityTropone}) into an aromatic system.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{[:38.57]*7(=-=-(=[@{db1}]@{C1}*5(-=-=-))-=-)}
+            \arrow{<->}
+            \chemfig{[:38.57]*7(=-=-\charge{-90:3pt=$\oplus$}{}(-\charge{90:3pt=$\ominus$}{}*5(-=-=-))-=-)}
+            \arrow{<->}
+            \chemfig{[:38.57]**7(----(-**5(-----))---)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=3pt,shorten >=3pt] (db1) to[bend right=90,looseness=4] (C1);
+            \node at (cyclecenter1) {$+$};
+            \node at (cyclecenter2) {$-$};
+        }
+        \caption{Aromaticity in sesquifulvalene.}
+        \label{fig:aromaticitySesquifulvalene}
+    \end{figure}
+    \begin{itemize}
+        \item Although we can call this molecule aromatic overall, it would be better to say each ring is separately aromatic.
+        \item In problems like this, get an initial electron count first (five for the top ring and seven for the bottom ring). This will then provide information about where you need to push electrons to create aromaticity. For example, seven is one too high and five is one too low, so we give one electron from the seven ring to the five ring to create two rings with six electrons.
+        \item Not all such systems do, however: Fulvalene\footnote{Fulvalene looks exactly like sesquifulvalene, except that both rings have only five carbons.}, for instance would have to rearrange into an aromatic ring \emph{and} an anti-aromatic ring, so it foregoes any rearrangement and is actually non-aromatic.
+        \item Take-away: If one ring becomes aromatic and one remains non-aromatic, that's fine. If both rings become aromatic, that's great. If one ring would have to become anti-aromatic for the other to become aromatic, that will not happen.
+    \end{itemize}
+    \item \textbf{Heterocyclic compound}: A cyclic compound containing atoms other than carbon and hydrogen. \emph{Also known as} \textbf{heterocycle}.
+    \item \textbf{Heteroatom}: Any atom that is not carbon or hydrogen.
+    \begin{itemize}
+        \item Commonly oxygen, sulfur, or nitrogen.
+    \end{itemize}
+    \item Class 2: Heterocyclic compounds.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.15\linewidth}
+            \centering
+            \chemfig{*6(-N=-=-=)}
+            \caption{Pyridine.}
+            \label{fig:commonHeterocyclesa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\linewidth}
+            \centering
+            \chemfig{[:-18]*5(-O-=-=)}
+            \caption{Furan.}
+            \label{fig:commonHeterocyclesb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\linewidth}
+            \centering
+            \chemfig{[:-18]*5(-\chembelow{N}{H}-=-=)}
+            \vspace{1em}
+            \caption{Pyrrole.}
+            \label{fig:commonHeterocyclesc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.15\linewidth}
+            \centering
+            \chemfig{[:-18]*5(-\chembelow{N}{H}-=N-=)}
+            \vspace{1em}
+            \caption{Imidazole.}
+            \label{fig:commonHeterocyclesd}
+        \end{subfigure}
+        \caption{Common heterocyclic compounds.}
+        \label{fig:commonHeterocycles}
+    \end{figure}
+    \item An analysis of pyridine.
+    \begin{figure}[h!]
+        \centering
+        \begin{tikzpicture}[scale=1.3]
+            \footnotesize
+            \begin{scope}[rotate=2.8,yscale=0.4,rotate=-7]
+                \draw (0:1) node(N)[fill=white]{\ce{N}}
+                    -- (60:1)  coordinate (C1)
+                    -- (120:1) coordinate (C2)
+                    -- (180:1) coordinate (C3)
+                    -- (240:1) coordinate (C4)
+                    -- (300:1) coordinate (C5)
+                    -- cycle
+                ;
+                \draw [blx,shorten <=4pt] (0:0.9) -- (60:0.9);
+                \draw [blx]
+                    (120:0.85) -- (180:0.85)
+                    (240:0.8) -- (300:0.8)
+                ;
+            \end{scope}
+    
+            \draw
+                (N.70) to[out=70,in=110,looseness=10] (N.110) (N.-70) to[out=-70,in=-110,looseness=10] (N.-110)
+                (C1) to[out=120,in=60,looseness=150] ++(0.01,0) to[out=-60,in=-120,looseness=150] cycle
+                (C2) to[out=120,in=60,looseness=150] ++(0.01,0) to[out=-60,in=-120,looseness=150] cycle
+                (C3) to[out=120,in=60,looseness=150] ++(0.01,0) to[out=-60,in=-120,looseness=150] cycle
+                (C4) to[out=120,in=60,looseness=150] ++(0.01,0) to[out=-60,in=-120,looseness=150] cycle
+                (C5) to[out=120,in=60,looseness=150] ++(0.01,0) to[out=-60,in=-120,looseness=150] cycle
+            ;
+            \node [above=4mm,circle,fill=blx,inner sep=0.5pt] at (N) {};
+            \node [above=3mm,circle,fill=blx,inner sep=0.5pt] at (C1) {};
+            \node [above=3mm,circle,fill=blx,inner sep=0.5pt] at (C2) {};
+            \node [above=3mm,circle,fill=blx,inner sep=0.5pt] at (C3) {};
+            \node [above=3mm,circle,fill=blx,inner sep=0.5pt] at (C4) {};
+            \node [above=3mm,circle,fill=blx,inner sep=0.5pt] at (C5) {};
+    
+            \draw (N.30) to[out=30,in=-30,looseness=10] (N.-30);
+            \node [right=6mm,yshift=0.5mm,circle,fill=blx,inner sep=0.5pt] at (N) {};
+            \node [right=6mm,yshift=-0.5mm,circle,fill=blx,inner sep=0.5pt] at (N) {};
+        \end{tikzpicture}
+        \caption{The structure of pyridine.}
+        \label{fig:pyridineStructure}
+    \end{figure}
+    \begin{itemize}
+        \item The three double bonds in pyridine contribute the six $\pi$-electrons necessary for it to be aromatic.
+        \item Importantly, this means that the lone pair of nitrogen is \emph{not} needed for aromaticity, so it sits outside the compound in an $sp^2$ orbital.
+        \item The fact that this lone pair is free implies that pyridine is an excellent base.
+    \end{itemize}
+    \item An analysis of pyrrole.
+    \begin{itemize}
+        \item The two double bonds \emph{plus} the lone pair of the nitrogen constitute the six $\pi$-electrons necessary for it to be aromatic.
+        \begin{itemize}
+            \item Although VSEPR theory suggests that the nitrogen would be $sp^3$ hybridized so as to get all electron pairs as far away as possible, the increase in energy by rehybridizing to $sp^2$ is more than compensated for by the aromatic stabilization energy.
+        \end{itemize}
+        \item For this reason, pyrrole is \emph{not} a good base.
+        \item Indeed, if the nitrogen picks up another hydrogen, you lose aromaticity and introduce a $+1$ formal charge on the nitrogen. Thus, since the hydrogen adduct is so unstable, it is a strong acid on the order of \ce{HCl} ($\pKa=0.9$).
+    \end{itemize}
+    \item An analysis of furan.
+    \begin{itemize}
+        \item The two double bonds plus one of the lone pairs of the oxygen constitute the six $\pi$-electrons necessary for it to be aromatic.
+        \item However, there is still a lone pair left over on the oxygen, so furan can still act like a base.
+    \end{itemize}
+    \item Adenine is a heterocyclic aromatic compound with 10 $\pi$-electrons. Some of its nitrogens contribute their lone pair electrons to the $\pi$-system, and others have them free to act as bases.
+    \item Heterocycles can be anti-aromatic as well.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{[:-18]*5(-B(-CH_3)-=-=)}
+        \caption{An anti-aromatic heterocycle.}
+        \label{fig:antiaromatiHeterocycle}
+    \end{figure}
+    \begin{itemize}
+        \item Boron is happy with three bonds, so it has an empty $p$-orbital.
+        \item Thus, this is a flat cyclic molecule with an uninterrupted chain of $p$ orbitals and $4n$ ($n=1$) $\pi$-electrons. But this implies that it is anti-aromatic.
+    \end{itemize}
+    \item Degrees of aromaticity.
+    \begin{itemize}
+        \item Benzene is "the most" aromatic compound.
+        \item All molecules with heteroatoms will have slightly different bond lengths and thus a lesser stabilization energy.
+        \item Indeed, under forcing enough conditions, we can make some of the heteroaromatics actually do reactions.
+        \begin{itemize}
+            \item For example, we can make furan do a Diels-Alder reaction at very high temperatures; this is never something we would see with benzene.
+        \end{itemize}
+    \end{itemize}
+    \item Class 3: Polycyclic aromatic hydrocarbons (PAHs).
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(=-(*6(-=-=-))=-=-)}
+            \caption{Naphthalene.}
+            \label{fig:commonPAHsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(=-(*6(-=(*6(-=-=-))-=-))=-=-)}
+            \caption{Anthracene.}
+            \label{fig:commonPAHsb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(=-(*6(-=-(*6(-=-=-))=-))=-=-)}
+            \caption{Phenanthrene.}
+            \label{fig:commonPAHsc}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(-=(*6(-=-(*6(=-=-(*6(=-=))-))-=))---=)}
+            \caption{Pyrene.}
+            \label{fig:commonPAHsd}
+        \end{subfigure}
+        \caption{Common PAHs.}
+        \label{fig:commonPAHs}
+    \end{figure}
+    \begin{itemize}
+        \item Naphthalene is used in mothballs.
+        \item These names won't be tested, but they're useful to know.
+    \end{itemize}
+    \item An analysis of naphthalene.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{*6()}
+        \setchemfig{autoreset cntcycle=false}
+        \schemestart
+            \chemfig{*6(-=(*6(-=-=-))-=-=)}
+            \arrow{<->}
+            \chemfig{*6(=-(*6(-=-=-))=-=-)}
+            \arrow{<->}
+            \chemfig{*6(=-(*6(=-=-=))--=-)}
+        \schemestop
+        \chemfig{*6()}
+        \chemmove{
+            \draw [orx,semithick,dashed]
+                ([xshift=7mm,yshift=7mm]cyclecenter2) rectangle ([xshift=-7mm,yshift=-7mm]cyclecenter2)
+                ([xshift=7mm,yshift=7mm]cyclecenter4) rectangle ([xshift=-7mm,yshift=-7mm]cyclecenter4)
+                ([xshift=7mm,yshift=7mm]cyclecenter5) rectangle ([xshift=-7mm,yshift=-7mm]cyclecenter5)
+                ([xshift=7mm,yshift=7mm]cyclecenter7) rectangle ([xshift=-7mm,yshift=-7mm]cyclecenter7)
+            ;
+        }
+        \caption{The structure of naphthalene.}
+        \label{fig:naphthaleneStructure}
+    \end{figure}
+    \begin{itemize}
+        \item Although Figure \ref{fig:commonPAHsa} shows that naphthalene is a 10 $\pi$-electron system, it can be useful to think of it as two separate benzene rings.
+        \item Doing so and drawing all resonance structures reveals that each ring only appears as benzene (as opposed to a diene) $2/3$ of the time.
+        \begin{itemize}
+            \item Every occurrence of a ring as benzene is boxed in Figure \ref{fig:naphthaleneStructure}. Notice how each ring is boxed twice and not boxed once (across the three resonance structures).
+        \end{itemize}
+        \item Thus, the aromatic stabilization of naphthalene is not twice benzene's $\SI[per-mode=symbol]{-36.5}{\kilo\calorie\per\mole}$ but rather $\frac{2}{3}\cdot 2\approx 1.33$ times benzene's $\SI[per-mode=symbol]{-36.5}{\kilo\calorie\per\mole}$.
+        \begin{itemize}
+            \item If we assign benzene an aromaticity value of 1, we would assign naphthalene 1.33.
+        \end{itemize}
+        \item The bonds in naphthalene alternate between $\SI{1.36}{\angstrom}$ and $\SI{1.42}{\angstrom}$, a $\SI{0.03}{\angstrom}$ perturbation from the bond lengths in benzene.
+    \end{itemize}
+    \item \textbf{Rocks of Gibraltar}: The molecules benzene, naphthalene, and pyrene, which in general will not undergo further chemical reactions due to the extent of their aromatic stabilization.
+    \item An analysis of pyrene.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \chemfig{@{C1}*6(-@{C2}=@{C3}(*6(-@{C4}=@{C5}-@{C6}(*6(=@{C7}-@{C8}=@{C9}-@{C10}(*6(=@{C11}-@{C12}=@{C13}))-))-=))---@{C14}=)}
+        \chemmove{
+            \draw [blx,-,line width=6mm,opacity=0.3] plot[smooth cycle] coordinates{(C1) (C2) (C3) (C4) (C5) (C6) (C7) (C8) (C9) (C10) (C11) (C12) (C13) (C14)};
+        }
+        \caption{The structure of pyrene.}
+        \label{fig:pyreneStructure}
+    \end{figure}
+    \begin{itemize}
+        \item Pyrene is aromatic, but it appears to have $16=4n$ $\pi$-electrons.
+        \item However, since one of the criteria for aromaticity is a \emph{cyclic} chain of $\pi$-orbitals, it is actually only the $14=4n+2$ $\pi$-electrons around the periphery that constitute the aromatic system. The $\pi$-bond in the center of the molecule is just a lone alkene with no aromatic stabilization.
+        \item You can hydrogenate the central double bond at very high pressures, but essentially for all intents and purposes, pyrene is a nonreactive molecule.
+    \end{itemize}
+    \item Diels-Alder reactivity of anthracene.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}[scale=1.4]
+            \node at (-3,0.5) {
+                \schemestart
+                    \chemfig{*6(-=(*6(-=(*6(-=-=-))-=-))-=-=)}
+                    \arrow{0}[,0]\+{1.5em,1em,3.3em}
+                    \chemfig{CO_2Me-[2]~[2]-[2]CO_2Me}
+                    \arrow{->[$\Delta$]}
+                \schemestop
+            };
+    
+            \begin{scope}[yscale=0.5,rotate=-10]
+                \draw (30:0.6) coordinate (C1a) -- (90:0.6) -- (150:0.6) -- (210:0.6) -- (270:0.6) -- (330:0.6) coordinate (C1b) -- cycle;
+                \draw
+                    (30:0.47) -- (90:0.47)
+                    (150:0.5) -- (210:0.5)
+                    (270:0.47) -- (330:0.47)
+                ;
+            \end{scope}
+            \begin{scope}[xshift=2.15cm,yshift=-0.1cm,yscale=0.5,rotate=-10]
+                \draw (30:0.6) -- (90:0.6) -- (150:0.6) coordinate (C2a) -- (210:0.6) coordinate (C2b) -- (270:0.6) -- (330:0.6) -- cycle;
+                \draw
+                    (30:0.47) -- (90:0.47)
+                    (150:0.5) -- (210:0.5)
+                    (270:0.47) -- (330:0.47)
+                ;
+            \end{scope}
+    
+            \draw
+                (C1a) -- ++(0.6,0.2) -- (C2a)
+                (C1b) -- ++(0.6,0.2) -- (C2b)
+            ;
+    
+            \draw [white,very thick,double=black,double distance=0.4pt]
+                (C1a) ++(0.6,0.2) -- ++(0,0.6)
+                (C1b) ++(0.6,0.2) -- ++(0,0.6)
+            ;
+            \draw ([xshift=6mm,yshift=8mm]C1b) -- ([xshift=6mm,yshift=8mm]C1a);
+            \draw [shorten >=10pt] ([xshift=6.5mm,yshift=7.5mm]C1b) -- ([xshift=6.5mm,yshift=7.5mm]C1a);
+    
+            \draw
+                ([xshift=6mm,yshift=8mm]C1a) -- ++(0.07,0.4) node[above,xshift=4mm]{\ce{CO2Me}}
+                ([xshift=6mm,yshift=8mm]C1b) -- ++(-0.07,0.4) node[above,xshift=-5mm]{\ce{MeO2C}}
+            ;
+        \end{tikzpicture}
+        \caption{Diels-Alder reactivity of anthracene.}
+        \label{fig:dielsAlderAnthracene}
+    \end{figure}
+    \begin{itemize}
+        \item Anthracene is finally destabilized enough to react in a Diels-Alder reaction.
+        \item When we look to predict products, we want to maximize the amount of aromaticity left over after the reaction (because this will be the most stable product).
+        \item If we perform the Diels-Alder reaction with the central diene, the product will have two benzene rings.
+    \end{itemize}
+    \item The char marks on grilled meat contain a number of PAHs, notably benzopyrene.
+    \begin{itemize}
+        \item Benzopyrene is one ring too far to be stable.
+        \item Since it is flat, it can intercolate in our DNA and cause a lot of issues, notably with regulating the cell cycle.
+        \item Thus, our bodies want to get rid of it, so it sends enzymes to epoxidize the benzene hanging off the pyrene.
+        \item Now that the molecule is polar, it can be excreted, but this is a risky strategy because epoxides are highly reactive and can damage other things.
+    \end{itemize}
+    \item Vioxx vs. Celebrex.
+    \begin{itemize}
+        \item It is possible that the reason that Vioxx is harmful and Celebrex is not is that Vioxx has a ring that is not aromatic whereas all of Celebrex's rings are aromatic.
+    \end{itemize}
+    \item Special considerations.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{[:-30]*6(---(-~-*6(-----(-~-*6(-----(-~-)=))=))=--)}
+            \caption{}
+            \label{fig:specialConsiderationsa}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.3\linewidth}
+            \centering
+            \chemfig{[:-180]*6(-=-=-(*6(=-=-=(-[7,0.7]H)))(-[3,0.7]H))}
+            \caption{}
+            \label{fig:specialConsiderationsb}
+        \end{subfigure}
+        \caption{Special considerations for determining aromaticity.}
+        \label{fig:specialConsiderations}
+    \end{figure}
+    \begin{itemize}
+        \item Triple bonds: A triple bond in the $\pi$-system still only contributes two electrons. This is because its other two $\pi$ electrons are perpendicular to the $\pi$-system in question.
+        \begin{itemize}
+            \item The compound in Figure \ref{fig:specialConsiderationsa} has 12 $\pi$-electrons but is still non-aromatic because the number of atoms is greater than six (it can bend).
+        \end{itemize}
+        \item Sterics: If sterics prevent a molecule from being flat, it cannot be aromatic.
+        \begin{itemize}
+            \item The compound in Figure \ref{fig:specialConsiderationsb} cannot lie flat due to the steric clashing of the two indicated hydrogens. Note that this clashing is unavoidable due to the conformation and the lack of freedom of rotation about the double bonds.
+        \end{itemize}
+    \end{itemize}
+    \item Next week is all about the reactions of benzene.
+\end{itemize}
+
+
+
 
 \end{document}

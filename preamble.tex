@@ -4,6 +4,8 @@
 \usepackage{marginnote}
 \usepackage{enumitem}
 \usepackage{xr}
+\usepackage{scrextend}
+\usepackage[bottom]{footmisc}
 \usepackage[style=chem-acs]{biblatex}
 \usepackage{float,subcaption}
 \usepackage{graphicx}
@@ -11,7 +13,7 @@
 \usepackage{siunitx}
 \usepackage{amsmath,amssymb}
 \usepackage{bm}
-\usepackage{mhchem,chemfig}
+\usepackage{mhchem,chemfig,chemmacros}
 \usepackage[hidelinks]{hyperref}
 
 \MakeOuterQuote{"}
@@ -30,6 +32,9 @@
 \reversemarginpar
 
 \setitemize[3]{label={\scriptsize$\blacksquare$}}
+
+\deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
+\deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
 
 \DefineBibliographyStrings{english}{bibliography={References}}
 

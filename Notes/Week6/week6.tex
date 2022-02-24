@@ -123,7 +123,7 @@
             \footnotesize
             \schemestart
                 \chemfig{\charge{90=\:,135:2pt=$\ominus$}{O}-[:30]\charge{-90:3pt=$\oplus$}{N}(=[2]O)-[:-30]@{O1}\charge{90=\:}{O}H}
-                \arrow{->[\chemfig{@{H2}H-[@{sb2}]@{O2}OSO_3H}][-\ce{HSO4-}]}[,1.8]
+                \arrow{->[\chemfig{@{H2}H-[@{sb2}]@{O2}O_4SH}][-\ce{HSO4-}]}[,1.8]
                 \chemfig{@{O3a}\charge{90=\:,135:2pt=$\ominus$}{O}-[@{sb3a}:30]\charge{-90:3pt=$\oplus$}{N}(=[2]O)-[@{sb3b}:-30]@{O3b}\charge{90:3pt=$\oplus$}{O}H_2}
                 \arrow{->[][-\ce{H2O}]}[,1.8]
                 \chemfig{O=[2]\charge{45:2pt=$\oplus$}{N}=[2]O}
@@ -164,6 +164,358 @@
         \caption{EAS nitration mechanism.}
         \label{fig:EASnitrationMechanism}
     \end{figure}
+\end{itemize}
+
+
+
+\section{Electrophilic Aromatic Substitution 2}
+\begin{itemize}
+    \item \marginnote{2/17:}Problem set 4 posted today.
+    \begin{itemize}
+        \item We will have all the material for it by the end of Tuesday.
+    \end{itemize}
+    \item Today:
+    \begin{itemize}
+        \item We run through a bunch of use cases of EAS (putting different functional groups on an aromatic ring).
+        \item Regioselectivity, reaction rates, etc. at the end of class.
+    \end{itemize}
+    \item Sulfation.
+    \item General form.
+    \begin{equation*}
+        \ce{PhH + SO3 ->[\text{cat.} H2SO4] PhSO3H}
+    \end{equation*}
+    \begin{itemize}
+        \item Important for making detergents --- sulfates are highly soluble, so we use them to solvate the constituent lipids.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{S(=[:-30]O)(=[2]O)(=[:210]O)}
+            \arrow{0}[,0]\+
+            \chemfig{H_2SO_4}
+            \arrow
+            \chemfig{@{S3}S(=[:210]O)(=[2]O)=[@{db3}:-30]@{O3}\charge{-90:3pt=$\oplus$}{O}-[:30]H}
+            \arrow{0}[,0]\+{1em}
+            \chemfig{HS@{O4}\charge{45:1pt=$\ominus$}{O}_4}
+            \arrow(@c1--){0}[-100,1.5]
+            \chemfig{*6(-=-=[@{db5}]-=)}
+            \arrow
+            \chemfig{*6(-=(-[0,,,,white]\phantom{S}=[6,,,,white]\phantom{O})-(-[0]S(=[2]O)(-[0]OH)(=[6]O))(-[@{sb6a}:80]@{H6}H)-[@{sb6b}]\charge{90:3pt=$\oplus$}{}-=)}
+            \arrow
+            \chemfig{[:-30]*6(-=-(-S(=[6]O)(=[2]O)-OH)=-=)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db5) to[out=60,in=-90,in looseness=0.8] (S3);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db3) to[out=60,in=90,looseness=3] (O3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (O4) to[out=-90,in=60] (H6);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb6a) to[bend right=70,looseness=2.5] (sb6b);
+        }
+        \caption{EAS sulfation mechanism.}
+        \label{fig:EASsulfationMechanism}
+    \end{figure}
+    \begin{itemize}
+        \item As with nitration (Figure \ref{fig:EASnitrationMechanism}), we use sulfuric acid to protonate a species that will then interact with benzene.
+    \end{itemize}
+    \item Friedel-Crafts acylation.
+    \item General form.
+    \begin{equation*}
+        \ce{PhH + RCOCl ->[AlCl3] PhCOR + HCl}
+    \end{equation*}
+    \begin{itemize}
+        \item The acid chloride is a very strong electrophile, but it needs to be even stronger. We can make it stronger with the \ce{AlCl3} catalyst.
+        \item This reaction is incredibly useful because it forms a new \ce{C-C} bond.
+        \item Limitation: You cannot have an EWG on the ring (the ring needs to be nucleophilic).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](=[2]O)-[:-30]@{Cl1}\charge{90=\:}{Cl}}
+                \arrow{->[\chemfig{@{Al2}AlCl_3}]}[,1.1]
+                \chemfig{R-[:30](=[@{db3}2]@{O3}\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[@{sb3}:-30]@{Cl3}\charge{-90:3pt=$\oplus$}{Cl}-[:30]\charge{90:3pt=$\ominus$}{Al}Cl_3}
+                \arrow
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{R-~[@{tb4}]@{O4}\charge{90:3pt=$\oplus$}{O}}
+                        \arrow{<->}[-90]\arrow{0}[-90,0.1]
+                        \chemfig{R-[:30]\charge{90:3pt=$\oplus$}{}=_[:-30]O}
+                    }
+                \chemright{]}
+                \arrow{0}[,0]\+{,,-3em}
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{@{Cl6}Cl-[@{sb6}]\charge{90:3pt=$\ominus$}{Al}Cl_3}
+                        \arrow{<->}[-90]
+                        \subscheme{
+                            \chemfig{\charge{45:1pt=$\ominus$}{Cl}}
+                            \+{1em,,0em}
+                            \chemfig{AlCl_3}
+                        }
+                    }
+                \chemright{]}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl1) to[out=90,in=180,looseness=1.5] (Al2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (O3) to[out=135,in=180,looseness=4] (db3);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[out=60,in=90,looseness=2.5] (Cl3);
+                \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (tb4) to[bend right=90,looseness=3] (O4);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb6) to[bend left=90,looseness=3] (Cl6);
+            }
+            \caption{Acylium ion formation.}
+            \label{fig:FCacylationMechanisma}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(-=-=[@{db1}]-=)}
+                \+{,,0.8em}
+                \chemfig{R-[:30]@{C2}\charge{90:3pt=$\oplus$}{}=_[:-30]O}
+                \arrow[,1.1]
+                \chemfig{*6(-=-(-[0](=[:60]O)-[:-60]R)(-[@{sb3a}:80]@{H3}H)-[@{sb3b}]\charge{90:3pt=$\oplus$}{}-=)}
+                \arrow{->[\chemfig{@{Cl4}\charge{45:2pt=$\ominus$,90=\:}{Cl}}][-\ce{HCl}]}[,1.1]
+                \chemfig{*6(-=-(-(=[2]O)-[:-30]R)=-=)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=2pt,shorten >=3pt] (db1) to[out=60,in=170] (C2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl4) to[out=90,in=60,looseness=1.5] (H3);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3a) to[bend right=70,looseness=2.5] (sb3b);
+            }
+            \caption{Acylation of benzene.}
+            \label{fig:FCacylationMechanismb}
+        \end{subfigure}
+        \caption{Friedel-Crafts acylation mechanism.}
+        \label{fig:FCacylationMechanism}
+    \end{figure}
+    \begin{itemize}
+        \item The reaction with the catalyst makes the carbon center in \ce{O=C^+-R} extremely electrophilic.
+    \end{itemize}
+    \item Friedel-Crafts alkylation.
+    \item General form.
+    \begin{equation*}
+        \ce{PhH + RCl ->[AlCl3] PhR + HCl}
+    \end{equation*}
+    \begin{itemize}
+        \item Again, F-C alkylation is useful because it forms a \ce{C-C} bond.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item Mostly analogous to Figure \ref{fig:FCacylationMechanism}.
+        \item Problems:
+        \begin{itemize}
+            \item EWGs (you need a nucleophilic aromatic ring as with F-C acylation).
+            \item Selectivity (you get a mixture of products due to hydride/methyl shifts since the mechanism proceeds through a carbocation intermediate).
+        \end{itemize}
+        \item Additional issue: Over-alkylation. The products are more reactive because the electron-donating alkyl groups increase the nucleophilicity of the aromatic ring. Thus, we get ortho- and para-dialkyl compounds in addition to the monosubstituted products.
+        \begin{itemize}
+            \item Note that this is not a problem with the other reactions we've learned so far (everything else added EWGs).
+        \end{itemize}
+        \item Note that since all we need to run the reaction is a carbocation, the other carbocation generation methods we've learned can also lead to F-C alkylation (if an aromatic compound is present in solution).
+        \begin{itemize}
+            \item For example, mixing 2-methylpropene and acid generates a tertiary CC+ that can react with benzene to yield $t$-butylbenzene.
+            \item Intramolecular reactions can also occur this way --- if a CC+ is formed on a substituent in an aromatic molecule, it can react with the aromatic ring in a ring-closing mechanism.
+        \end{itemize}
+    \end{itemize}
+    \item More on the selectivity issue with F-C alkylation.
+    \begin{itemize}
+        \item For example, reacting benzene with 1-chloropropane under F-C alkylation conditions will yield isopropylbenzene as the major product and propylbenzene as the minor product.
+        \item Thus, don't use F-C alkylation for linear $n$-alkyl compounds. It should be reserved for if you want to add a $t$-butyl group or another alkyl group with symmetric hydrogens.
+        \item If you \emph{do} want to create propylbenzene, make use of the much more controllable F-C acylation reaction. Indeed, react benzene with propionyl chloride under F-C acylation conditions, and then either hydrogenate (\ce{H2}/\ce{Pd}) or perform a \textbf{Clemmensen reduction}.
+    \end{itemize}
+    \item \textbf{Clemmensen reduction}: The selective hydrogenation of a ketone using \ce{Zn(Hg) + HCl}\footnote{Note that \ce{Zn(Hg)} is zinc amalgam.}.
+    \begin{itemize}
+        \item If there is an alkene in the acid chloride added to the benzene that you don't want to hydrogenate, you will have to use the Clemmensen reduction (as it will only hydrogenate the unwanted ketone).
+    \end{itemize}
+    \item Example: Ring-closing acylation/alkylation reaction.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-=-=-=)}
+            \arrow{0}[,0]\+{1em,,1em}
+            \chemfig{Cl-[:30](=[2]O)-[:-30]-[:30]-[:-30](=[:30])-[6]}
+            \arrow{->[\ce{AlCl3}][-\ce{HCl}]}[,1.1]
+            \chemfig{*6(-=(-[,,,,white]=[6,,,,white]\phantom{O})-(-(=[2]O)-[:-30]--[:-30](=)-[6])=-=)}
+            \arrow{->[\ce{Zn(Hg)}][\ce{HCl}]}[,1.2]
+            \chemfig{*6(-=-(--[:-30]--[:-30](=)-[6])=-=)}
+            \arrow{->[*{0}\ce{H2SO4}]}[-90]
+            \subscheme{
+                \chemfig{*6(-=(-H)-(--[:-30]--[:-30]\charge{90:3pt=$\oplus$}{}(--[:-30]H)-[6])=-=)}
+                \arrow{0}[,0]\+{1em}
+                \chemfig{HS\charge{45:1pt=$\ominus$}{O}_4}
+            }
+            \arrow{->[][-\ce{H2SO4}]}[180,1.3]
+            \chemfig{*6(-=*6(-(-[:-70])(-[:-110])----)-=(-[:70,,,,white])-=)}
+        \schemestop
+        \caption{Ring-closing Friedel-Crafts mechanism.}
+        \label{fig:ringClosingFC}
+    \end{figure}
+    \begin{itemize}
+        \item The acylation product is formed. It can be hydrogenated with the Clemmensen reduction. Then we can turn the alkene into a carbocation with sulfuric acid and subject it to F-C alkylation conditions to yield a ring-closing reaction.
+    \end{itemize}
+    \item Forming a benzoic acid.
+    \begin{equation*}
+        \ce{PhR ->[KMnO4][H2O] PhCOOH}
+    \end{equation*}
+    \begin{itemize}
+        \item It is necessary to have a benzylic hydrogen for the mechanism to proceed (for example, \ce{PhBu^{$t$}} wouldn't react).
+        \item It is possible to convert multiple alkyl groups at the same time (for example, \ce{C6H4MePr -> C6H4(COOH)2} where the carboxylic acids wind up where the methyl and propyl groups originally were). 
+    \end{itemize}
+    \item Forming an amine (from a nitro group).
+    \begin{equation*}
+        \ce{PhNO2 ->[reagents] PhNH2}
+    \end{equation*}
+    \begin{itemize}
+        \item A number of reductive reagents can work here. Explicitly, we may use \ce{H2 + Pd/C}, \ce{H+} (acid), or \ce{SnCl2 + H2O}.
+        \item This reaction takes a strong EWG and turns it into an EDG.
+        \item The amine is also a gateway to a number of other functional groups, so being able to get one is very helpful.
+    \end{itemize}
+    \item Diazotization.
+    \item General form.
+    \begin{equation*}
+        \ce{PhNH2 ->[reagents] PhN2+ + X-}
+    \end{equation*}
+    \begin{itemize}
+        \item We use either \ce{NaNO2}/\ce{HCl} or \ce{HNO2} as the reagent(s).
+        \item Note that the product is a diazonium salt.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{\charge{45:1pt=$\oplus$}{Na}-[,0.8,,,white]@{O1}\charge{90=\:,135:1pt=$\ominus$}{O}-[:30]N=[:-30]O}
+                \arrow{0}[,0]\+
+                \chemfig{@{H2}H-[@{sb2}]@{Cl2}Cl}
+                \arrow{->[][-\ce{NaCl}]}[,1.1]
+                \chemfig{H-[:30]@{O3}\charge{90=\:}{O}-[:-30]N=[:30]O}
+                \arrow{->[\chemfig{@{H4}\charge{45:1pt=$\oplus$}{H}}]}
+                \chemfig{@{O5b}\charge{45:1pt=$\oplus$}{O}(-[:120]H)(-[:-120]H)-[@{sb5}]\charge{[extra sep=1.5pt]-45=\:}{N}=[@{db5}:60]@{O5a}\charge{0=\:,90=\:}{O}}
+                \arrow{->[][-\ce{H2O}]}
+                \chemfig{N~\charge{45:1pt=$\oplus$}{O}}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[bend left=90,looseness=1.5] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend left=90,looseness=3] (Cl2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3) to[bend left=90,looseness=1.5] (H4);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (O5a) to[out=90,in=150,out looseness=5,in looseness=3] (db5);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5) to[bend left=90,looseness=3] (O5b);
+            }
+            \caption{Nitrosonium ion formation.}
+            \label{fig:EASdiazotizationMechanisma}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(-=(-[,,,,white]\phantom{N})-(-@{N1}\charge{90=\:}{N}H_2)=-=)}
+                \arrow{->[\chemfig{@{N2}N~[@{tb2}]@{O2}\charge{45:1pt=$\oplus$}{O}}]}[,1.3]
+                \chemfig{*6(-=(-[,,,,white]\phantom{N}-[6,,,,white]\phantom{N}=[,,,,white]\phantom{O})-(-\charge{-90:1pt=$\oplus$}{N}H_2-[2]N=[:30]O)=-=)}
+                \arrow(--.-150){<=>[-\ce{H+}]}[,1.2]
+                \chemfig{*6(-=-(-@{N4}\charge{[extra sep=1.5pt]180=\:}{N}(-[@{sb4a}:-30]@{H4}H)-[@{sb4b}2]N=[@{db4}:30]@{O4}\charge{[extra sep=1.5pt]45=\:,-45=\:}{O})=-=)}
+                \arrow{<=>}[-90]
+                \chemfig{*6(-=(-[,,,,white]\phantom{N}-[6,,,,white]\phantom{N}=[,,,,white]\phantom{O})-(-N=[2]N-[:30]OH)=-=)}
+                \arrow{<=>[][*{0.90}\ce{H+}]}[180]
+                \chemfig{*6(-=(-[,,,,white]\phantom{N}-[6,,,,white]\phantom{N}=[,,,,white]\phantom{O})-(-@{N6}\charge{0=\:}{N}=[@{db6}2]N-[@{sb6}:30]@{O6}\charge{90:3pt=$\oplus$}{O}H_2)=-=)}
+                \arrow{->[][*{0.90}\ce{-H2O}]}[180]
+                \chemfig{*6(-=(-[,,,,white]\phantom{N}~[,,,,white]\phantom{N})-(-\charge{135:1pt=$\oplus$}{N}~N)=-=)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N1) to[out=90,in=90,looseness=2] (N2);
+                \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (tb2) to[bend left=90,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[bend left=45] (H4);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb4a) to[bend left=90,looseness=3] (N4);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N4) to[bend left=90,looseness=3] (sb4b);
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db4) to[bend left=90,looseness=3] (O4);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (N6) to[bend right=90,looseness=3] (db6);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb6) to[bend left=90,looseness=3] (O6);
+            }
+            \vspace{-3em}
+            \caption{Diazotization of aniline.}
+            \label{fig:EASdiazotizationMechanismb}
+        \end{subfigure}
+        \caption{EAS diazotization mechanism.}
+        \label{fig:EASdiazotizationMechanism}
+    \end{figure}
+    \begin{itemize}
+        \item Note that the \ce{HONO} intermediate in Figure \ref{fig:EASdiazotizationMechanisma} is called "HONO"\footnote{"HOE-NOE"}.
+        \item Excess strong acid is used here (we need two equivalents of acid at least to form the nitrosonium ion).
+        \item The nitrosonium ion is very unstable and reacts quickly with the relatively nucleophilic amine.
+        \item The last step being irreversible serves as the driving force for this reaction.
+    \end{itemize}
+    \item \textbf{Sandmeyer reaction}: Reacting an aryl diazonium salt with electrophiles in the presence of a copper catalyst substitutes those electrophiles for the diazonium group.
+    \item In particular, mixing \ce{PhN2+} with\dots
+    \begin{itemize}
+        \item \ce{Cu2O, H2O} makes \ce{PhOH}.
+        \item \ce{CuCl} makes \ce{PhCl}.
+        \item \ce{CuBr} makes \ce{PhBr}.
+        \item \ce{CuI} makes \ce{PhI}.
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item Complex; sort-of S\textsubscript{N}1-like.
+        \item The diazonium is a great leaving group, so it leaves, making a phenyl cation and \ce{N2}. At this point, a nucleophile can just swoop in and attack the phenyl cation.
+        \item Note that the phenyl cation intermediate is still aromatic --- the electron removed was taken from an $sp^2$ orbital, not a $p$ orbital.
+    \end{itemize}
+    \item We can hydrogenate our diazonium phenyl compound with \ce{H3PO2}.
+    \begin{equation*}
+        \ce{PhN2+ ->[H3PO2] PhH}
+    \end{equation*}
+    \item Why F-C alkylations lead to over-alkylation but others do not.
+    \begin{itemize}
+        \item Consider nitration.
+        \item Nitro groups are strongly electron withdrawing. Thus, they deactivate their host aromatic ring.
+        \begin{itemize}
+            \item Over a long time, however, we will see the formation of some meta-dinitrobenzene (not ortho or para).
+            \item This is because resonance gives us carbocations at the ortho and para positions. Thus, the molecule is \num{100000} times less reactive then benzene toward EAS overall, but the molecule is even less reactive (less nucleophilic) at the ortho and para positions.
+            \item Additionally, if we substitute ortho or para, we will have a resonance structure in the transition state with a carbocation directly adjacent to the positive nitrogen of the nitro group. This is no good, and another reason why EWGs are meta-directing.
+        \end{itemize}
+        \item Same for acyl groups and \ce{SO3H} groups.
+    \end{itemize}
+    \item With respect to ortho/para selectivity, sterics \emph{may} sometimes make ortho-substitution less likely.
+    \item Activators and deactivators.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}
+            \draw [stealth-stealth] (-7.5,0) node[above right,yshift=1mm]{deactivators} -- (7.5,0) node[above left,yshift=1mm]{activators};
+            \draw
+                (-7,0.1) -- ++(0,-0.2) node[below]{\ce{{}^+NR3}}
+                (-6,0.1) -- ++(0,-0.2) node[below]{\ce{NO2}}
+                (-5,0.1) -- ++(0,-0.2) node[below]{\ce{CN}}
+                (-4,0.1) -- ++(0,-0.2) node[below]{\ce{SO3H}}
+                (-3,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{O=(-[:60])(-[:-60]R)}}
+                (-2,0.1) -- ++(0,-0.2) node[below]{\ce{CO2H}}
+                (-1,0.1) -- ++(0,-0.2) node[below]{\ce{CHO}}
+                (0,0.2) -- ++(0,-0.4) node[below]{\chemfig[atom sep=1.4em]{*6(-=-=-=)}}
+                (1.2,0.1) -- ++(0,-0.2) node[below]{aryl}
+                (2.4,0.1) -- ++(0,-0.2) node[below]{alkyl}
+                (3.6,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{HN-[:-60](=[::-60]O)-[::60]R}}
+                (4.8,0.1) -- ++(0,-0.2) node[below]{\ce{OR}}
+                (6,0.1) -- ++(0,-0.2) node[below]{\ce{OH}}
+                (7,0.1) -- ++(0,-0.2) node[below]{\ce{NH2}}
+            ;
+        \end{tikzpicture}
+        \caption{Activators and deactivators.}
+        \label{fig:DeActivators}
+    \end{figure}
+    \begin{itemize}
+        \item Deactivators are meta-directors (the meta position is the most nucleophilic position in a deactivator-substituted molecule).
+        \item Activators won't break aromaticity as in resonance structures, but said structures can indicate trends. They are ortho/para directors.
+        \begin{itemize}
+            \item Convince yourself using resonance structures that ortho/para addition leads to 1 extra resonance structure.
+        \end{itemize}
+        \item Alkyl and aryl groups are ortho/para-directing activators.
+        \begin{itemize}
+            \item Ortho/para addition allows us to access a resonance structure where the carbocation intermediate is tertiary.
+            \item For example, toluene is about 25 times more reactive than benzene, and it is even more reactive at the ortho/para positions.
+        \end{itemize}
+    \end{itemize}
 \end{itemize}
 
 

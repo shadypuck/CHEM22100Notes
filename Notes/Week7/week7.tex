@@ -273,5 +273,128 @@
 
 
 
+\section{Review / Alcohols}
+\begin{itemize}
+    \item \marginnote{2/24:}Practice synthesis problems.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(-=-=-=)}
+            \arrow{->[\ce{HNO3, H2SO4}][-\ce{H2O}]}[,1.8]
+            \chemfig{*6(-=-=(-NO_2)-=)}
+            \arrow{->[\ce{Cl2}][\ce{AlCl3}]}
+            \chemfig{*6(-=(-Cl)-=(-NO_2)-=)}
+            \arrow{->[\ce{H2}][\ce{Pd/C}]}
+            \chemfig{*6(-=(-Cl)-=(-NH_2)-=)}
+            \arrow{->[\ce{NaNO2}][\ce{HCl}]}[,1.2]
+            \chemfig{*6(-=(-Cl)-=(-\charge{45:1pt=$\oplus$}{N}_2)-=)}
+            \arrow{->[\ce{Cu2O}][\ce{H2O}]}[,1.1]
+            \chemfig{*6(-=(-Cl)-=(-OH)-=)}
+        \schemestop
+    \end{center}
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(-(-[,,,,white]\phantom{O})=-=(-OMe)-=)}
+            \arrow{->[\ce{Cl2}][\ce{AlCl3}]}
+            \chemfig{*6(-(-Cl)=-=(-OMe)-=)}
+            \arrow{->[\ce{2HNO3, 2H2SO4}][-\ce{2H2O}]}[,2.1]
+            \chemfig{*6(-(-Cl)=-(-NO_2)=(-OMe)-(-O_2N)=)}
+            \arrow{->[\ce{H2}][\ce{Pd/C}]}
+            \chemfig{*6(-(-Cl)=-(-NH_2)=(-OMe)-(-H_2N)=)}
+        \schemestop
+    \end{center}
+    \item Takeaways.
+    \begin{itemize}
+        \item Don't be afraid to get another isomer than what you need and chuck it out if you have to.
+        \item It's always better to activate first and deactivate later if possible.
+    \end{itemize}
+    \item One new reaction.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(-(-[,,,,white]\phantom{O})=-=(-OMe)-=)}
+            \arrow{->[\ce{SO3}][\ce{H2SO4}]}[,1.1]
+            \chemfig{*6(-(-SO_3H)=-=(-OMe)-=)}
+            \arrow{->[\ce{HNO3}][\ce{H2SO4}]}[,1.2]
+            \chemfig{*6(-(-SO_3H)=-(-NO_2)=(-OMe)-(-O_2N)=)}
+            \arrow{->[\ce{H+ / H2O}][$\Delta$]}[,1.4]
+            \chemfig{*6(-(-[,,,,white]\phantom{O})=-(-NO_2)=(-OMe)-(-O_2N)=)}
+            % \arrow{->[\ce{Cl2}][\ce{AlCl3}]}
+            % \chemfig{*6(-(-Cl)=-(-NO_2)=(-OMe)-(-O_2N)=)}
+        \schemestop
+        \caption{Protecting groups.}
+        \label{fig:protectingGroup}
+    \end{figure}
+    \begin{itemize}
+        \item Make use of a protecting group.\par
+        \item Note that the sulfate group adds para due to sterics.
+        \item To finish the synthesis, just chlorinate para (\ce{Cl2 / AlCl3}) and reduce the nitro groups (\ce{H2 + Pd/C}).
+    \end{itemize}
+    \item If they want us to draw all of the resonance structures, they'll ask. Most likely yes in a mechanism but no in a synthesis.
+    \item Answer to PSet 4, Q6 given.
+    \item For PSet 4, Q7a, recall that you can't run F-C alkylation when you have EWGs on the ring.
+    \item PSet 4, Q7b's issue is not the reactivity. Guessing the actual product is p-bromoisopropylbenzene.
+    \item Hint for PSet 4, Q8: You can create an aromatic ring by brominating one of the alkenes in cyclohexa-1,4-diene and then doing E2 twice.
+    \begin{itemize}
+        \item Looks like Dickinson may be asking us to invent new stuff on PSets and the exam.
+    \end{itemize}
+    \item Synthesis and reactivity of alcohols.
+    \item Alcohols have unique properties.
+    \begin{itemize}
+        \item Boiling points: Alcohols significantly raise the boiling points of the compounds to which they're attached (because of hydrogen bonding).
+    \end{itemize}
+    \item General reactivity of alcohols.
+    \begin{itemize}
+        \item Adding acid to an alcohol makes water a leaving group, yielding an alkyl carbocation that can then react with nucleophiles.
+        \item Adding a very strong base/good nucleophile (a Grignard reagent) leads to the creation of an alkoxide (and the fully protonated Grignard species as a side product).
+    \end{itemize}
+    \item Relative strengths of nucleophiles.
+    \begin{equation*}
+        \ce{{}^-NRH} > \ce{RO- / HO-}
+        > \ce{Br-}
+        > \ce{NR3}
+        > \ce{Cl-}
+        > \ce{F-}
+        > \ce{H2O / ROH}
+        > \text{alkene}
+        > \text{benzene}
+    \end{equation*}
+    \item Acidity effects.
+    \begin{itemize}
+        \item $1^\circ>2^\circ>3^\circ$.
+        \item More inductive donating effects (e.g., from alkyl groups) means more destabilization of the conjugate base.
+        \item On the other hand, \ce{CF3CH2OH} has a much lower $\pKa$ because of the strong inductive withdrawing effects and resultant delocalization.
+        \item Similarly, phenoxide is stabilized via resonance.
+        \item At the extreme, \ce{(CF3)3COH} is a true acid (will be predominantly deprotonated in water).
+        \item Inductive and resonance effects can be mixed, too: 2,4,6-trinitrophenol\footnote{Also known as picric acid.} is a very strong acid ($\pKa=0.6$).
+    \end{itemize}
+    \item Alkoxide generation.
+    \begin{enumerate}
+        \item \ce{EtOH + NaOH <=> NaOEt + H2O}.
+        \item \ce{EtOH + Na${}^\circ$ -> NaOEt + \frac{1}{2}H2}.
+        \begin{itemize}
+            \item \ce{Na${}^\circ$} is sodium metal.
+            \item This is a strongly exothermic reaction and a dangerous one (since \ce{H2} is explosive).
+            \item It is common in laboratory use, though.
+        \end{itemize}
+        \item \ce{CyOH + NaNH2 <=>> NaOCy + NH3}.
+        \begin{itemize}
+            \item A more common form of this reaction uses LDA (lithium diisopropylamine), a sterically hindered strong base, instead of \ce{NaNH2}.
+        \end{itemize}
+        \item \ce{$i$-BuOH + NaH <=>> NaOBu^{$i$} + H2}.
+        \item \ce{CH3OH + LiMe <=>> LiOMe + CH4}.
+        \begin{itemize}
+            \item We can also use \ce{LiBu}, \ce{MeMgBr}, etc. as other sources of carbanions.
+        \end{itemize}
+        \item \ce{PhOH + NaOH <=>> NaOPh + H2O}.
+    \end{enumerate}
+\end{itemize}
+
+
+
 
 \end{document}

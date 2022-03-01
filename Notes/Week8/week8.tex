@@ -1,0 +1,86 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{7}
+
+\begin{document}
+
+
+
+
+\chapter{Alcohols, Ethers, and Epoxides}
+\section{Office Hours (Salinas)}
+\begin{itemize}
+    \item \marginnote{2/28:}Does \ce{H2 + Pd/C} hydrogenate ketones or not? Conflict between Lecture 11 and 2020 Exam 2A Q1e.
+    \begin{itemize}
+        \item Either way.
+        \item \ce{H2 + Pd/C} hydrogenates \emph{benzylic} ketones only; it will leave ketones that are farther away from the benzene ring alone.
+        \item \ce{Zn(Hg) + HCl} hydrogenates all ketones, but nothing else.
+    \end{itemize}
+    \item When do alkenes in PAHs get hydrogenated?
+    \begin{itemize}
+        \item Ones that are added onto the Rocks of Gibraltar molecules.
+    \end{itemize}
+    \item Do we have to know that aryl amines present a problem in F-C alkyl/arylations? It seems like there's a lot of content on this exam that BCD never went over.
+    \begin{itemize}
+        \item Things like this probably won't show up on the exam.
+    \end{itemize}
+    \item Can we use \ce{HCN + \ce{NaCN}} to substitute \ce{CN}?
+    \begin{itemize}
+        \item This would work, but Sandmeyer is the go-to.
+    \end{itemize}
+    \item How do you indicate you want to do something twice (e.g., bromination on 2020 Exam 2A Q3a)?
+    \begin{itemize}
+        \item Write (2x): For example, "\ce{Br2 / FeBr3} (2x)".
+    \end{itemize}
+    \item Is it \ce{KMnO4} (2020 Exam 2A answer key), \ce{KMnO4 / H2O} (class), \ce{KMnO4 / NaOH + $\Delta$} (PSet 4 key), or \ce{KMnO4 / NaOH + $\Delta$} followed by \ce{H3O+} (PSet 4 key) for benzoic acid formation?
+    \begin{itemize}
+        \item \ce{KMnO4 + H2O} is pretty solid.
+    \end{itemize}
+    \item 2020 Exam 2A Q3c: Is it preferable to use S\textsubscript{N}Ar or a novel Sandmeyer reaction? What are the limits of the Sandmeyer reaction?
+    \begin{itemize}
+        \item Note that we can achieve meta addition of an amine when an o/p-director is present by brominating para and then using the benzyne intermediate.
+    \end{itemize}
+    \item 2020 Exam 2A Q3d: Is \ce{SnCl2 / H2O} selective reduction of nitro groups?
+    \begin{itemize}
+        \item Perhaps, Omar will get back to me on whether to use \ce{SnCl2 / H2O} or \ce{H2 + Pd/C}.
+    \end{itemize}
+    \item When adding an alkane via F-C alkylation to later be transformed into a benzoic acid, is it preferable to use 2-chloropropane for some reason?
+    \begin{itemize}
+        \item Anything's fine.
+    \end{itemize}
+    \item PSet 4 2021 1f/h:
+    \begin{figure}[H]
+        \centering
+        \begin{tikzpicture}
+            \footnotesize
+            \node at (0,0) {\chemfig{*6(-(-)=-=(-[,,,,white])-=)}};
+            \draw (1,0) -- node[above]{\ce{Br2}} node[below]{\ce{FeBr3}} ++(1,0);
+            \draw [CF-CF] (3,3) -- ++(-1,0) -- ++(0,-6) -- ++(1,0);
+    
+            \node at (4,3) {\chemfig{*6(-(-\phantom{Br})=(-Br)-=(-[,,,,white])-(-[,,,,white]\phantom{Br})=)}};
+            \node at (4,-3) {\chemfig{*6(-(-\phantom{Br})=-=(-Br)-=)}};
+            \draw (6,3) -- node[above]{\ce{HNO3}} node[below]{\ce{H2SO4}} ++(1,0);
+            \draw [CF-CF] (8,4.5) -- ++(-1,0) -- ++(0,-3) -- ++(1,0);
+            \draw (5,-3) -- node[above]{\ce{HNO3}} node[below]{\ce{H2SO4}} ++(2,0);
+            \draw [CF-CF] (8,-1.5) -- ++(-1,0) -- ++(0,-3) -- ++(1,0);
+    
+            \node at (10,4.5) {\chemfig{O_2N-[:30]*6(-(-)=(-[,,,,white]\phantom{NO_2})(-Br)-=(-[,,,,white])-=)}};
+            \node at (10,1.5) {\chemfig{\phantom{Br}-[:30,,,,white]*6(-(-[,,,,white]\phantom{NO_2})(-)=(-Br)-=(-NO_2)-=)}};
+            \node at (10,-1.5) {\chemfig{*6(-(-\phantom{Br})=-(-NO_2)=(-Br)-(-[,,,,white]\phantom{O_2N})=)}};
+            \node at (10,-4.5) {\chemfig{*6(-(-\phantom{Br})=-(-[,,,,white]\phantom{NO_2})=(-Br)-(-O_2N)=)}};
+        \end{tikzpicture}
+        \caption{Major and minor synthesis products.}
+        \label{fig:majorMinor}
+    \end{figure}
+    \begin{itemize}
+        \item When asked to determine major/minor when it could be kind of ambiguous, assume equimolar concentrations of reactants after the step before the last step.
+        \item In the example above, notice how the two products on the bottom are identical, so they constitute the major product.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

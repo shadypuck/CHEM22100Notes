@@ -79,6 +79,194 @@
         \item In the example above, notice how the two products on the bottom are identical, so they constitute the major product.
     \end{itemize}
 \end{itemize}
+\newpage
+
+
+
+\section{Exam 2 Cheat Sheet}
+\textbf{Reactions}:
+\begin{itemize}
+    \item \ce{C6H6 ->[D3O+] C6D6}
+    \item \ce{PhH ->[Br2][FeBr3] PhBr}
+    \begin{itemize}
+        \item \ce{AlCl3}, \ce{CuI2}.
+    \end{itemize}
+    \item \ce{PhH ->[HNO3][H2SO4] PhNO2}
+    \item \ce{PhH ->[SO3][H2SO4] PhSO3H}
+    \item \ce{PhH ->[RCOCl][AlCl3] PhCOR}
+    \item \ce{PhH ->[RCl][AlCl3] PhR}
+    \item \ce{\text{benzylic carbonyl} ->[Zn(Hg)][HCl] \text{reduced carbon}}
+    \item \ce{PhR ->[KMnO4][H2O] PhCOOH}
+    \begin{itemize}
+        \item Needs benzylic hydrogen.
+    \end{itemize}
+    \item \ce{PhNO2 ->[\text{reagents}] PhNH2}
+    \begin{itemize}
+        \item \ce{H2 + Pd/C} or \ce{SnCl2 + H2O} (selective).
+    \end{itemize}
+    \item \ce{PhNH2 ->[NaNO2][HCl] PhN2+ + X-}
+    \begin{itemize}
+        \item Mechanism has many equilibrium steps (only first and last are not).
+    \end{itemize}
+    \item \ce{PhN2+ ->[Cu2O][H2O] PhOH}
+    \begin{itemize}
+        \item \ce{PhN2+ ->[CuCl] PhCl}
+        \item \ce{PhN2+ ->[CuBr] PhBr}
+        \item \ce{PhN2+ ->[CuI] PhI}
+        \item \ce{PhN2+ ->[CuCN] PhCN}
+    \end{itemize}
+    \item \ce{PhN2+ ->[D3PO2] PhD}
+    \item \ce{PhBr ->[NaNH2][NH3] PhNH2}
+    \item \ce{PhCl ->[NaNu][NuH] PhNu}
+    \item \ce{PhH ->[Pd][$>1000\,\text{psi}$] CyH}
+    \item \ce{\text{benzene} ->[2Li][NH3 / EtOH] \text{cyclohexa-1,4-diene} + 2LiOEt}
+\end{itemize}
+
+\textbf{Reminders}:
+\begin{itemize}
+    \item Aromatic stabilization of benzene: \SI[per-mode=symbol]{-36.5}{\kilo\calorie\per\mole}.
+    \item Frost method: Point down, MOs at the carbons.
+    \begin{itemize}
+        \item 5-membered rings: 3 bonding / 2 antibonding. 7-membered: 3 bonding / 4 antibonding.
+    \end{itemize}
+    \item Aromaticity checklist: Flat, cyclic, conjugated, uninterrupted flow of $p$-orbitals, $(4n+2)$-rule.
+    \item $(+/-)$ for Diels-Alder reactions!
+    \item F-C reactions happen ONLY IF there is not an EWG on the ring.
+    \item Add stronger EWGs later.
+    \item Nucleophile strengths.
+    \begin{equation*}
+        \ce{{}^-NRH} > \ce{RO- / HO-}
+        > \ce{Br-}
+        > \ce{NR3}
+        > \ce{Cl-}
+        > \ce{F-}
+        > \ce{H2O / ROH}
+        > \text{alkene}
+        > \text{benzene}
+    \end{equation*}
+    \item Breslow (1967), Faraday (1825), Kekul\'{e} (1865), Jack Roberts (benzyne).
+\end{itemize}
+
+\begin{figure}[h!]
+    \centering
+    \footnotesize
+    \begin{tikzpicture}
+        \draw [stealth-stealth] (-9.5,0) node[above right,yshift=1mm]{deactivators} -- (6.5,0) node[above left,yshift=1mm]{activators};
+
+        \draw
+            (-9,0.1) -- ++(0,-0.2) node[below]{\ce{{}^+NR3}}
+            (-8,0.1) -- ++(0,-0.2) node[below]{\ce{NO2}}
+            (-7,0.1) -- ++(0,-0.2) node[below]{\ce{CN}}
+            (-6,0.1) -- ++(0,-0.2) node[below]{\ce{SO3H}}
+            (-5,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{O=(-[:60])(-[:-60]R)}}
+            (-4,0.1) -- ++(0,-0.2) node[below]{\ce{CO2H}}
+            (-3,0.1) -- ++(0,-0.2) node[below]{\ce{CHO}}
+            (-2.25,0.1) -- ++(0,-0.2) node[below]{\ce{I}}
+            (-1.75,0.1) -- ++(0,-0.2) node[below]{\ce{Br}}
+            (-1.25,0.1) -- ++(0,-0.2) node[below]{\ce{Cl}}
+            (-0.75,0.1) -- ++(0,-0.2) node[below]{\ce{F}}
+            (0,0.2) -- ++(0,-0.4) node[below]{\chemfig[atom sep=1.4em]{*6(-=-=-=)}}
+            (1,0.1) -- ++(0,-0.2) node[below]{aryl}
+            (2,0.1) -- ++(0,-0.2) node[below]{alkyl}
+            (3,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{HN-[:-60](=[::-60]O)-[::60]R}}
+            (4,0.1) -- ++(0,-0.2) node[below]{\ce{OR}}
+            (5,0.1) -- ++(0,-0.2) node[below]{\ce{OH}}
+            (6,0.1) -- ++(0,-0.2) node[below]{\ce{NH2}}
+        ;
+
+        \draw [decorate,decoration={brace,mirror}] (-9.4,-1.5) -- node[below=1mm]{m-directing} (-2.6,-1.5);
+        \draw [decorate,decoration={brace,mirror}] (-2.4,-1.5) -- node[below=1mm]{o/p-directing} (-0.6,-1.5);
+        \draw [decorate,decoration={brace,mirror}] (0.6,-1.5) -- node[below=1mm]{o/p-directing} (6.4,-1.5);
+    \end{tikzpicture}
+    \caption*{Activators and deactivators.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \footnotesize
+    \schemestart
+        \chemfig{*6(-@{C1b}=[@{db1b}]-[@{sb1}]=[@{db1a}]@{C1a}-=)}
+        \arrow{->[\chemfig{@{Li2}\charge{0=\.}{Li}}][-\ce{Li+}]}[,1.5]
+        \chemfig{*6(-@{C3}\charge{-45=\:,-135:3pt=$\ominus$}{}(-H)-=-\charge{45=\.}{}(-H)-=)}
+        \arrow{->[\chemfig{Et@{O4}O-[@{sb4}]@{H4}H}][-\ce{EtO-}]}[,1.5]
+        \chemfig{*6(-(-[:-70]H)(-[:-110]H)-=-@{C5}\charge{45=\.}{}(-H)-=-)}
+        \arrow{->[\chemfig{@{Li6}\charge{0=\.}{Li}}][-\ce{Li+}]}[,1.5]
+        \chemfig{*6(-(-[:-70]H)(-[:-110]H)-=-@{C7}\charge{45=\:,135:3pt=$\ominus$}{}(-H)-=)}
+        \arrow{->[\chemfig{Et@{O8}O-[@{sb8}]@{H8}H}][-\ce{EtO-}]}[,1.5]
+        \chemfig{*6(--=--=)}
+    \schemestop
+    \chemmove{
+        \draw [rex,semithick,shorten <=2pt,shorten >=2pt,arrows={-Stealth[harpoon,swap]}] ([xshift=3pt]Li2.east) to[bend right=60] (C1a);
+        \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1a) to[bend right=60,looseness=2] (sb1);
+        \draw [rex,semithick,shorten <=4pt,shorten >=4pt] (db1b) to[bend right=90,looseness=4] (C1b);
+        \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (C3) to[out=-45,in=120,out looseness=1.5,in looseness=3.5] (H4);
+        \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb4) to[bend right=70,looseness=2.5] (O4);
+        \draw [rex,semithick,shorten <=2pt,shorten >=6pt,arrows={-Stealth[harpoon,swap]}] ([xshift=3pt]Li6.east) to[bend right=60] (C5);
+        \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (C7) to[out=45,in=120,looseness=1.2] (H8);
+        \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8) to[bend right=70,looseness=2.5] (O8);
+    }
+    \caption*{Birch reduction mechanism.}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \footnotesize
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]@{Cl1}\charge{90=\:}{Cl}}
+            \arrow{->[\chemfig{@{Al2}AlCl_3}]}[,1.1]
+            \chemfig{R-[:30](=[@{db3}2]@{O3}\charge{[extra sep=1.5pt]45=\:,135=\:}{O})-[@{sb3}:-30]@{Cl3}\charge{-90:3pt=$\oplus$}{Cl}-[:30]\charge{90:3pt=$\ominus$}{Al}Cl_3}
+            \arrow
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{R-~[@{tb4}]@{O4}\charge{90:3pt=$\oplus$}{O}}
+                    \arrow{<->}[-90]\arrow{0}[-90,0.1]
+                    \chemfig{R-[:30]\charge{90:3pt=$\oplus$}{}=_[:-30]O}
+                }
+            \chemright{]}
+            \arrow{0}[,0]\+{,,-3em}
+            \chemleft{[}
+                \subscheme{
+                    \chemfig{@{Cl6}Cl-[@{sb6}]\charge{90:3pt=$\ominus$}{Al}Cl_3}
+                    \arrow{<->}[-90]
+                    \subscheme{
+                        \chemfig{\charge{45:1pt=$\ominus$}{Cl}}
+                        \+{1em,,0em}
+                        \chemfig{AlCl_3}
+                    }
+                }
+            \chemright{]}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl1) to[out=90,in=180,looseness=1.5] (Al2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (O3) to[out=135,in=180,looseness=4] (db3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[out=60,in=90,looseness=2.5] (Cl3);
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (tb4) to[bend right=90,looseness=3] (O4);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb6) to[bend left=90,looseness=3] (Cl6);
+        }
+        \caption{Acylium ion formation.}
+    \end{subfigure}\\[2em]
+    \begin{subfigure}[b]{\linewidth}
+        \centering
+        \schemestart
+            \chemfig{*6(-=-=[@{db1}]-=)}
+            \+{,,0.8em}
+            \chemfig{R-[:30]@{C2}\charge{90:3pt=$\oplus$}{}=_[:-30]O}
+            \arrow[,1.1]
+            \chemfig{*6(-=-(-[0](=[:60]O)-[:-60]R)(-[@{sb3a}:80]@{H3}H)-[@{sb3b}]\charge{90:3pt=$\oplus$}{}-=)}
+            \arrow{->[\chemfig{@{Cl4}\charge{45:2pt=$\ominus$,90=\:}{Cl}}][-\ce{HCl}]}[,1.1]
+            \chemfig{*6(-=-(-(=[2]O)-[:-30]R)=-=)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=2pt,shorten >=3pt] (db1) to[out=60,in=170] (C2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl4) to[out=90,in=60,looseness=1.5] (H3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3a) to[bend right=70,looseness=2.5] (sb3b);
+        }
+        \caption{Acylation of benzene.}
+    \end{subfigure}
+    \caption*{Friedel-Crafts acylation mechanism.}
+\end{figure}
 
 
 

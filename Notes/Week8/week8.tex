@@ -267,6 +267,498 @@
     \end{subfigure}
     \caption*{Friedel-Crafts acylation mechanism.}
 \end{figure}
+\setcounter{figure}{1}
+\newpage
+
+
+
+\section{Alcohols, Ethers, and Epoxides 1}
+\begin{itemize}
+    \item \marginnote{3/3:}Alcohol chemistry today.
+    \item A fifth optional problem set will be posted today.
+    \item Review of ways to add \ce{C-O} bonds into molecules.
+    \item \textbf{Dihydroxylation}: The treatment of an alkene with \ce{OsO4} followed by \ce{NaHSO3}, yielding a cis-1,2-diol.
+    \item \textbf{Oxidative cleavage}: The treatment of an alkene with \ce{KMnO4, OH^-, $\Delta$} followed by \ce{H3O+}, yielding a ketone.
+    \item Alcohol formation.
+    \begin{enumerate}
+        \item Acid-catalyzed hydration.
+        \begin{itemize}
+            \item Generally not so useful due to the possibility of rearrangements (CC+ intermediate).
+        \end{itemize}
+        \item Hydroboration/oxidation.
+        \begin{itemize}
+            \item Syn-addition and anti-Markovnikov.
+        \end{itemize}
+        \item Oxymercuration/demercuration.
+        \begin{itemize}
+            \item Markovnikov addition with no rearrangements.
+        \end{itemize}
+    \end{enumerate}
+    \item Now that we know how to make alcohols, we look into what we can do with them.
+    \item Conversion of alcohols into alkyl halides.
+    \item General form.
+    \begin{equation*}
+        \ce{ROH ->[HBr] RBr}
+    \end{equation*}
+    \item Mechanism.
+    \begin{itemize}
+        \item For a primary alcohol, we use an S\textsubscript{N}2 mechanism.
+        \begin{itemize}
+            \item Before the main step, however, we need to make the alcohol into a better leaving group. To do so, we protonate the alcohol, converting it into an \ce{H2O+} group.
+        \end{itemize}
+        \item Secondary, tertiary, benzylic, and allylic alcohols can perform an S\textsubscript{N}1 reaction.
+        \begin{itemize}
+            \item Hydride shifts are important! They will happen if a $2^\circ$ CC+ is created next to a $3^\circ$ carbon, and will make the tertiary product the major one.
+            \item Additionally, the S\textsubscript{N}1 mechanism erases stereochemical information in the reactant.
+            \item As such, we should avoid reactions in which this mechanism would take place if at all possible.
+        \end{itemize}
+    \end{itemize}
+    \item Because of the limitations of the above mechanism, we introduce an alternate way to transform alcohols into good leaving groups without passing through a CC+ intermediate.
+    \item Use \ce{SOCl2} as a chlorinating reagent.
+    \item General form.
+    \begin{equation*}
+        \ce{ROH + SOCl2 ->[Py] RCl + SO2 + Cl- + PyH+}
+    \end{equation*}
+    \begin{itemize}
+        \item There is an inversion of stereochemistry from the alcohol to the alkyl halide.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \vspace{1em}
+        \schemestart
+            \subscheme{
+                \chemfig{-[:30](<[2]@{O1}\charge{90=\:}{O}H)-[:-30]}
+                \arrow{0}[,0.5]
+                \chemfig{@{S2}S(-[:-30]Cl)(=[@{db2}2]@{O2}O)(-[:-150]Cl)}
+            }
+            \arrow[90]
+            \chemfig{-[:30](<[2]@{O3}\charge{90:3pt=$\oplus$}{O}(-[@{sb3}:150]@{H3}H)(-[:30]S(-[6]Cl)(-Cl)(-[2]\charge{45:1pt=$\ominus$}{O})))-[:-30]}
+            \arrow{-U>[\chemfig[atom sep=1.4em]{*6(-=-=@{N4}\charge{90=\:}{N}-=)}][\chemfig[atom sep=1.4em]{*6(-=-=\chemabove{\charge{45:1pt=$\oplus$}{N}}{H}-=)}]}[,1.5]
+            \chemfig{-[:30](<[2]O-[:30]S(-[6]Cl)(-[@{sb6b}]@{Cl6}Cl)(-[@{sb6a}2]@{O6}\charge{180=\:,45:1pt=$\ominus$}{O}))-[:-30]}
+            \arrow{-U>[][\chemfig{@{Cl7}\charge{0=\:,45:1pt=$\ominus$}{Cl}}]}[,1.5]
+            \chemfig{-[:30]@{C8}(<[@{sb8a}2]O-[@{sb8b}:30]S(=[2]O)-[@{sb8c}:-30]@{Cl8}Cl)-[:-30]}
+            \arrow[-90]
+            \subscheme{
+                \chemfig{-[:30](<:[2]Cl)-[:-30]}
+                \arrow{0}[,0.1]\+{,,2.6em}
+                \chemfig{O=[2]S=[2]O}
+                \arrow{0}[,0.1]\+
+                \chemfig{\charge{45:1pt=$\ominus$}{Cl}}
+            }
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[out=90,in=150,out looseness=2] (S2);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2) to[bend right=90,looseness=3] (O2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N4) to[out=90,in=90] (H3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[bend right=80,looseness=2.5] (O3);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O6) to[bend right=90,looseness=3] (sb6a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb6b) to[bend left=90,looseness=3] (Cl6);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl7) to[out=0,in=150] (C8);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (sb8a) to[bend right=60,looseness=1.5] (sb8b);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8c) to[bend right=90,looseness=3] (Cl8);
+        }
+        \caption{Chlorination of an alcohol via the \ce{SOCl2} mechanism.}
+        \label{fig:SOCl2}
+    \end{figure}
+    \begin{itemize}
+        \item The structure of \ce{SOCl2}.
+        \begin{itemize}
+            \item The polar \ce{S=O} bond makes sulfur electrophilic, which is why the lone pair on the alcohol attacks it in the first step.
+            \item Chlorine, in addition to being the halogen we are trying to add to our reactant, is a good leaving group, which is necessary for this mechanism to proceed.
+        \end{itemize}
+        \item The general idea of the reaction is to convert the alcohol into a good leaving group and then perform an S\textsubscript{N}2 reaction, thereby avoiding a CC+ intermediate.
+        \item Indeed, the second-to-last intermediate contains a very good leaving group (\ce{SO2Cl}), which is easily pushed out in an S\textsubscript{N}2 fashion by \ce{Cl-}.
+    \end{itemize}
+    \item Use \ce{PBr3} for bromination and \ce{PI3} for iodination.
+    \item The intermediate with the \ce{SO2Cl} leaving group is far too reactive to ever be isolated. However, there are mechanisms that can convert an alcohol into a good leaving group without sacrificing stability (i.e., so that the compound can be transformed further at a later date).
+    \item We utilize a 2-step mechanism with tosylate.
+    \begin{equation*}
+        \ce{ROH + Nu ->[TsCl][NEt3] RNu + HCl}
+    \end{equation*}
+    \begin{itemize}
+        \item This reaction also has an inversion of stereochemistry.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30]-[:-30]-[:30](<[2]OH)-[:-30]}
+            \arrow{->[\chemfig[atom sep=1.4em]{Cl-S(=[2]O)(=[6]O)-**6(---(-CH_3)---)}][\ce{NEt3}]}[,3]
+            \chemfig{-[:30]-[:-30]-[:30](<[2]O-[:30]S(=[2]O)(=[6]O)-**6(---(-CH_3)---))-[:-30]-[:-150,,,,white]\phantom{S}=[6,,,,white]\phantom{O}}
+            \arrow{0}[,0.1]\+
+            \chemfig{HCl}
+            \arrow{->[\ce{Nu-}]}
+            \chemfig{-[:30]-[:-30]-[:30](<:[2]Nu)-[:-30]}
+        \schemestop
+        \vspace{-3em}
+        \caption{Nucleophilation of an alcohol via tosylate mechanism.}
+        \label{fig:tosylate}
+    \end{figure}
+    \begin{itemize}
+        \item As before, we begin by using a chlorocompound and a weak base to convert the alcohol into a leaving group. This first step yields an isolable compound.
+        \item In the second step, which does not need to be performed immediately, we just add the desired nucleophile and S\textsubscript{N}2 proceeds.
+        \item \ce{Br-}, \ce{I-}, \ce{CN-} are all good nucleophiles. \ce{Cl-} is not.
+        \item Note that we can fine tune the aromatic system in tosylate to suit the conditions of a specific reaction better as needed.
+    \end{itemize}
+    \item Creating alkenes from alcohols.
+    \item Old way.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[:-110])(-[:-70]OH)-[:30]}
+            \arrow{->[\ce{H+}]}
+            \chemfig{-[:30]=_[:-30](-[6])-[:30]}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Works only with $3^\circ$ alcohols.
+        \item You get a mixture of products.
+    \end{itemize}
+    \item These issues are solved the same way as halogenation, i.e., by activating the alcohol, hence avoiding CC+ intermediates and allowing the elimination to proceed in a controlled process.
+    \item New way.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[6]OH)-[:30]}
+            \arrow{->[\ce{POCl3}][\ce{Py}]}[,1.2]
+            \chemfig{-[:30]=_[:-30]-[:30]}
+            \+
+            \chemfig{HCl}
+            \+
+            \chemfig{PO_2Cl}
+            \+
+            \chemfig{\charge{45:1pt=$-$}{Cl}}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Uses phosphoryl chloride (\ce{POCl3}).
+        \item We use pyridine as our base because it is weak and not very nucleophilic (you want to avoid competition from S\textsubscript{N}2).
+    \end{itemize}
+    \item The mechanism is analogous to Figure \ref{fig:SOCl2}, except that it ends with E2.
+    \item Having discussed the reactivity of alcohols with respect to substitution and elimination, we now discuss the reactivity of alcohols as nucleophiles.
+    \item Williamson Ether Synthesis.
+    \item General form.
+    \begin{equation*}
+        \ce{ROH ->[NaH][MeI] ROMe + H2 + NaI}
+    \end{equation*}
+    \begin{itemize}
+        \item \ce{NaH} is a very strong base (\ce{H} does not like to be negative).
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{-[:30](-[2]@{O1}O-[@{sb1}:30]@{H1}H)-[:-30]}
+            \arrow{->[\chemfig{\charge{45:1pt=$\oplus$}{Na}-[,0.4,,,white]@{H2}\charge{90=\:,45:1pt=$\ominus$}{H}}][-\ce{H2}, \ce{Na+}]}[,1.3]
+            \chemfig{-[:30](-[2]@{O3}\charge{0=\:,45:1pt=$\ominus$}{O})-[:-30]}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{C4}CH_3-[@{sb4}]@{I4}I}][-\ce{I-}]}[,1.3]
+            \chemfig{-[:30](-[2]O-[:30]CH_3)-[:-30]}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (H2) to[out=90,in=0,out looseness=1.5] (H1);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1) to[bend right=90,looseness=3] (O1);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O3) to[out=0,in=180] (C4);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb4) to[bend left=90,looseness=3] (I4);
+        }
+        \caption{Williamson ether synthesis mechanism.}
+        \label{fig:WilliamsonEther}
+    \end{figure}
+    \begin{itemize}
+        \item S\textsubscript{N}2, so use $1^\circ$ or $2^\circ$ if needed.
+        \begin{itemize}
+            \item For example, \ce{$t$-BuOH + MeI} proceeds but \ce{$t$-BuI + MeOH} will not proceed.
+        \end{itemize}
+    \end{itemize}
+    \item The Williamson Ether Synthesis is a reversible process, however.
+    \item Reversal of ethers: Acid-catalyzed cleavage.
+    \item General form.
+    \begin{equation*}
+        \ce{ROR$'$ ->[HBr] RBr + R$'$OH}
+    \end{equation*}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(---(--[:-30]@{O1}\charge{90=\:}{O}-(-[2])-[:-30])---)}
+            \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{Br2}Br}]}[,1.3]
+            \chemfig{*6(---(-@{C3}-[@{sb3}:-30]@{O3}\charge{90:3pt=$\oplus$}{O}(-[6]H)-(-[2])-[:-30])---)}
+            \arrow{0}[,0.1]\+
+            \chemfig{@{Br4}\charge{90=\:,45:1pt=$\ominus$}{Br}}
+            \arrow
+            \chemfig{*6(---(--[:-30]Br)---)}
+            \arrow{0}[,0.1]\+
+            \chemfig{HO-(-[:60])-[:-60]}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[bend left=80,looseness=2] (H2);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend left=90,looseness=3] (Br2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Br4) to[bend right=80,looseness=1.5] (C3);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[bend right=90,looseness=3] (O3);
+        }
+        \caption{Acid-catalyzed cleavage of ethers mechanism.}
+        \label{fig:acidEtherCleavage}
+    \end{figure}
+    \begin{itemize}
+        \item Must have \ce{Br-} or \ce{I-} to proceed; \ce{Cl-} is not nucleophilic enough.
+    \end{itemize}
+    \item Protecting groups.
+    \begin{itemize}
+        \item Can be added to inactivate reactive sites.
+        \item For example, you can turn an alcohol \ce{ROH} into \ce{ROPg} where \ce{Pg} is a protecting group. This will inactivate the alcohol so that the rest of the molecule can react under conditions that would usually make the alcohol react. When you are finished tuning the rest of the molecule, you can then remove the protecting group and react the alcohol, if desired.
+        \item Different protecting groups suit different reactions.
+    \end{itemize}
+    \item \textbf{Protection}: Adding a protecting group.
+    \item \textbf{Deprotection}: Removing a protecting group.
+    \item \textbf{Epoxide}: A cyclic ether with a three-atom ring.
+    \item \textbf{mCPBA}: meta-Chloroperoxybenzoic acid, the peroxy acid most commonly used to create epoxides from alkenes. \emph{Structure}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{*6(-(-Cl)=-(-(=[2]O)-[:-30]O-O-[:-30]H)=-=)}
+        \caption{meta-Chloroperoxybenzoic acid (mCPBA).}
+        \label{fig:mCPBA}
+    \end{figure}
+    \item Creating epoxides from alkenes.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30]=_[:30]-[:-30]}
+            \arrow{->[mCPBA][-mCBA]}[,1.3]
+            % \chemfig{-[:30]-[:-30](-[:-30]O?)-[:30]?-[2]}
+            \chemfig[atom sep=1.6em]{-[:30,0.85]-[:-30,0.85]*3(-O-(-[,0.85])-)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Epoxides are formed from a reactive carbon-carbon system, e.g., an alkene that interacts with an oxygen donor group.
+        \item Their formation is formally an oxidation.
+        \item To add into the carbon-carbon system, the oxygen must be both nucleophilic and electrophilic.
+        \item A peroxy acid fits the bill because oxygen-oxygen single bonds are good oxidants. In particular, the oxygen further away from the carbonyl is electrophilic, and the ester to which it's bonded is a good leaving group.
+        \item Relative to peroxy acids, alkenes are nucleophilic.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R_3>:[:70]@{C1}(<[:-70]R_4)=_[@{db1}2](<:[:110]R_2)(<[:70]R_1)}
+            \arrow{0}[,0.5]
+            % \chemfig{@{O2a}O(-[@{sb2c}:-60]@{H2}H-[,,,,white]-[:-60,,,,white]\phantom{R})-[@{sb2a}:60]O-[@{sb2b}](=[@{db2}:-60]O)-[:60]R}
+            \chemfig[atom sep=3em]{R-[:-144,0.6]*5(-[@{sb2b}]O-[@{sb2a}]@{O2a}O-[@{sb2c}]@{H2}H-[,,,,white]@{O2b}\charge{[extra sep=1.5pt]-135=\:}{O}=_[@{db2}])}
+            \arrow
+            \chemfig[atom sep=2.3em]{*3((<[:-100,0.9]R_4)(<:[:-140,0.9]R_3)-O-(<[:100,0.9]R_1)(<:[:140,0.9]R_2)-)}
+            \arrow{0}[,0.1]\+{,,1.7em}
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1) to[bend left=30] (O2a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2a) to[bend right=60,looseness=1.5] (sb2b);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (db2) to[bend right=70,looseness=2] (O2b);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O2b) to[bend left=30,looseness=1.2] (H2);
+            \draw [rex,semithick,shorten <=2pt,shorten >=4pt] (sb2c) to[bend left=30] (C1);
+        }
+        \caption{Creating epoxides from alkenes mechanism.}
+        \label{fig:alkeneEpoxide}
+    \end{figure}
+    \begin{itemize}
+        \item A concerted mechanism.
+        \item Stereospecific (chirality is maintained).
+        \item Note that the most nucleophilic alkenes will react the fastest.
+        \begin{figure}[h!]
+            \centering
+            \footnotesize
+            \begin{subfigure}[b]{\linewidth}
+                \centering
+                \begin{equation*}
+                    \schemestart[][.-165]
+                        \chemfig{RO-[:30]=^[2]-[:150,,,,white]\phantom{RO}}
+                    \schemestop
+                    \quad>\quad
+                    \schemestart[][.-165]
+                        \chemfig{R-[:30]=^[2]-[:150,,,,white]\phantom{R}}
+                    \schemestop
+                    \quad>\hspace{-1.5em}
+                    \schemestart[][.-165]
+                        \chemfig{\phantom{R}-[:30,,,,white]=[2]-[:150,,,,white]\phantom{R}}
+                    \schemestop
+                    \quad>\quad
+                    \schemestart[][.-165]
+                        \chemfig{EWG-[:30]=^[2]-[:150,,,,white]\phantom{EWG}}
+                    \schemestop
+                \end{equation*}
+                \caption{Substituent types.}
+                \label{fig:alkeneNucleophilicitya}
+            \end{subfigure}
+            \begin{subfigure}[b]{\linewidth}
+                \centering
+                \begin{equation*}
+                    \schemestart[][.-165]
+                        \chemfig{-[:30](-[:-30])=[2](-[:150])(-[:30])}
+                    \schemestop
+                    \quad>\quad
+                    \schemestart[][.-165]
+                        \chemfig{-[:30](-[:-30])=_[2](-[:30])}
+                    \schemestop
+                    \quad>\quad
+                    \schemestart[][.-165]
+                        \chemfig{-[:30](-[:-30])=[2](-[:30,,,,white])}
+                    \schemestop
+                    \quad\approx\quad
+                    \schemestart[][.-165]
+                        \chemfig{-[:30]=^[2](-[:150])}
+                    \schemestop
+                    \quad\approx\quad
+                    \schemestart[][.-165]
+                        \chemfig{-[:30]=_[2](-[:30])}
+                    \schemestop
+                    \quad>\quad
+                    \schemestart[][.-165]
+                        \chemfig{-[:30]=^[2](-[:150,,,,white])}
+                    \schemestop
+                    \quad>\hspace{-1em}
+                    \schemestart[][.-165]
+                        \chemfig{-[:30,,,,white]=[2]-[:150,,,,white]}
+                    \schemestop
+                \end{equation*}
+                \caption{Substitutions.}
+                \label{fig:alkeneNucleophilicityb}
+            \end{subfigure}
+            \caption{Alkene nucleophilicity.}
+            \label{fig:alkeneNucleophilicity}
+        \end{figure}
+        \begin{itemize}
+            \item Note that all of the alkenes in Figure \ref{fig:alkeneNucleophilicityb} would rank behind the resonance EDG and ahead of the EWG in Figure \ref{fig:alkeneNucleophilicitya}.
+            \item Knowing the relative reactivity of alkenes allows us to predict the major/minor products in polyenes. In particular, the more nucleophilic, reactive alkene will be converted into an epoxide more often.
+        \end{itemize}
+    \end{itemize}
+    \item Creating diols from epoxides.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            % \chemfig{*6(--(<[:25]O?)-?[,4]---)}
+            \chemfig[bond offset=1pt]{*6(--*3(<O>)----)}
+            \arrow{->[\ce{H+}][\ce{H2O}]}
+            \chemfig{*6(--(<OH)-(<:OH)---)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Creates a cis-diol.
+    \end{itemize}
+    \item Mechanism.
+    \vspace{1em}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{*6(--*3(<@{O1}\charge{[extra sep=1.5pt]45=\:}{O}>)----)}
+            \arrow{->[\chemfig{@{H2}H-[@{sb2}]@{O2}\charge{45:1pt=$\oplus$}{O}_2H}][-\ce{H2O}]}[,1.5]
+            \chemfig{*6(--*3(<@{O3}\charge{45:1pt=$\oplus$}{O}(-H)>[@{sb3}])-@{C3}---)}
+            \arrow{->[\chemfig{H_2@{O4}\charge{90=\:}{O}}]}
+            \chemfig{*6(--(<OH)-(<:@{O5}\chemabove{\charge{135:2pt=$\oplus$}{O}}{H}-[@{sb5}0]@{H5}H)---)}
+            \arrow{->[\chemfig{H_2@{O6}\charge{90=\:}{O}}][-\ce{H3O+}]}[,1.1]
+            \chemfig{*6(--(<OH)-(<:OH)---)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=5pt,shorten >=2pt] (O1) to[out=45,in=90,in looseness=4] (H2);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[out=105,in=120,looseness=2.5] (O2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[bend right=90,looseness=1.5] (C3);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (sb3) to[bend left=70,looseness=2.5] (O3);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O6) to[bend right=70,looseness=1.5] (H5);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5) to[bend left=90,looseness=3] (O5);
+        }
+        \caption{Creating diols from epoxides mechanism.}
+        \label{fig:epoxideDiol}
+    \end{figure}
+    \begin{itemize}
+        \item $1^\circ$ or $2^\circ$ epoxides.
+        \begin{itemize}
+            \item The mechanism will primarily be S\textsubscript{N}2.
+            \item Given the choice, the nucleophile will attack the less substituted carbon.
+        \end{itemize}
+        \item Epoxides with at least one $3^\circ$ carbon.
+        \begin{itemize}
+            \item The S\textsubscript{N}1 mechanism will be active.
+            \item Even in this case, though, we will form a cis-product due to the steric bulk of the alcohol group hindering attacks on its face of the molecule.
+        \end{itemize}
+    \end{itemize}
+    \item We can use the same mechanism with \ce{HCl} or \ce{HBr} instead of \ce{H2O} to yield a halohydrin with cis stereochemistry.
+    \item Acid- and base-catalyzed ring openings.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}
+            \node{\chemfig[atom sep=2.5em]{[:-30]*3((<:[:-170,0.8])(<[:-130,0.8])--O-)}};
+    
+            \draw (1,0) -- ++(1,0);
+            \draw [CF-CF] (4,1.5) -- node[above]{\ce{H+}} node[below]{\ce{CH3CH2OH}} ++(-2,0) -- ++(0,-3) -- node[above]{\ce{CH3CH2O-}} node[below]{\ce{EtOH}} ++(2,0);
+            \node at (6,1.5) {\chemfig{-[:60]-O-[:60](<[:140])(<:[:100])--[:60]OH}};
+            \node at (6,-1.5) {\chemfig{HO-[:-60](<[:-100])(<:[:-140])--[:-60]O--[:-60]}};
+        \end{tikzpicture}
+        \caption{Acid- and base-catalyzed epoxide ring openings.}
+        \label{fig:acidBaseEpoxideOpening}
+    \end{figure}
+    \begin{itemize}
+        \item Under acidic conditions, carbocation stability drives the reaction.
+        \begin{itemize}
+            \item In the acidic reaction in Figure \ref{fig:acidBaseEpoxideOpening}, we form a formal $3^\circ$ CC+. This intermediate is subsequently attacked by ethanol, which is then deprotonated.
+        \end{itemize}
+        \item Under basic conditions, the alkoxide ion attacks less hindered carbon via S\textsubscript{N}2.
+        \begin{itemize}
+            \item In the basic reaction in Figure \ref{fig:acidBaseEpoxideOpening}, the ethoxide engages in an S\textsubscript{N}2 reaction with the $1^\circ$ epoxide position.
+        \end{itemize}
+        \item If there aren't strong driving forces, though, we can get a mixture of products.
+    \end{itemize}
+    \item Epoxide ring openings can be triggered by nucleophiles other than alkoxides, too.
+    \item For example, we can add alkenes into the epoxide with Grignard reagents.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \vspace{1em}
+        \schemestart
+            \chemfig{*6(--(<:[,0.75]CH_3)*3(<@{O1}O>[@{sb1}]-[,,,,white])-@{C1}---)}
+            \arrow{->[\chemfig{=_[:30]@{C2}\charge{45:4pt=$\delta^-$}{}-[:-30]\charge{90:3pt=$\delta^+$}{Mg}Br}]}[,2]
+            \chemfig{*6(--(<:[:-50]CH_3)(<[:-10]OH)-(<:=^[:-30])(-[:50,,,,white]\phantom{C})---)}
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (C2) to[bend right=90,looseness=1.5] (C1);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (sb1) to[bend left=90,looseness=3] (O1);
+        }
+        \caption{Epoxide ring-opening via a Grignard reagent mechanism.}
+        \label{fig:epoxideGrignard}
+    \end{figure}
+    \begin{itemize}
+        \item This is important as another \ce{C-C} bond-forming reaction.
+        \item It is stereoselective, as with the related preceding reactions.
+        \item It yields a quite complex molecule that can react further in a number of ways.
+    \end{itemize}
+    \item Creating epoxides from halohydrins.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(--(<:Cl)-(<OH)---)}
+            \arrow{->[\ce{NaOH}][-\ce{H2O, NaCl}]}[,1.6]
+            \chemfig[bond offset=1pt]{*6(--*3(<O>)----)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item This reaction is not reversible under basic conditions because \ce{Cl-} is not nucleophilic enough to attack one of the epoxide carbons without the epoxide oxygen first having been protonated (by an acid).
+        \item The reactant \emph{must} be a cis-halohydrin because after the alcohol is deprotonated, it reacts with the $\alpha$-carbon through a backside attack (i.e., in an S\textsubscript{N}2 fashion).
+    \end{itemize}
+\end{itemize}
 
 
 

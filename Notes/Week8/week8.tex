@@ -337,7 +337,9 @@
             \chemfig{-[:30](<[2]@{O3}\charge{90:3pt=$\oplus$}{O}(-[@{sb3}:150]@{H3}H)(-[:30]S(-[6]Cl)(-Cl)(-[2]\charge{45:1pt=$\ominus$}{O})))-[:-30]}
             \arrow{-U>[\chemfig[atom sep=1.4em]{*6(-=-=@{N4}\charge{90=\:}{N}-=)}][\chemfig[atom sep=1.4em]{*6(-=-=\chemabove{\charge{45:1pt=$\oplus$}{N}}{H}-=)}]}[,1.5]
             \chemfig{-[:30](<[2]O-[:30]S(-[6]Cl)(-[@{sb6b}]@{Cl6}Cl)(-[@{sb6a}2]@{O6}\charge{180=\:,45:1pt=$\ominus$}{O}))-[:-30]}
-            \arrow{-U>[][\chemfig{@{Cl7}\charge{0=\:,45:1pt=$\ominus$}{Cl}}]}[,1.5]
+            \arrow
+            \chemfig{@{Cl7}\charge{0=\:,45:1pt=$\ominus$}{Cl}}
+            \arrow{0}[,0.5]
             \chemfig{-[:30]@{C8}(<[@{sb8a}2]O-[@{sb8b}:30]S(=[2]O)-[@{sb8c}:-30]@{Cl8}Cl)-[:-30]}
             \arrow[-90]
             \subscheme{
@@ -359,7 +361,7 @@
             \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (sb8a) to[bend right=60,looseness=1.5] (sb8b);
             \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb8c) to[bend right=90,looseness=3] (Cl8);
         }
-        \caption{Chlorination of an alcohol via the \ce{SOCl2} mechanism.}
+        \caption{Chlorination of an alcohol via the \ce{} mechanism.}
         \label{fig:SOCl2}
     \end{figure}
     \begin{itemize}
@@ -435,6 +437,8 @@
             \chemfig{PO_2Cl}
             \+
             \chemfig{\charge{45:1pt=$-$}{Cl}}
+            \+
+            \chemfig{Py\charge{45:1pt=$+$}{H}}
         \schemestop
     \end{center}
     \begin{itemize}
@@ -758,6 +762,157 @@
         \item This reaction is not reversible under basic conditions because \ce{Cl-} is not nucleophilic enough to attack one of the epoxide carbons without the epoxide oxygen first having been protonated (by an acid).
         \item The reactant \emph{must} be a cis-halohydrin because after the alcohol is deprotonated, it reacts with the $\alpha$-carbon through a backside attack (i.e., in an S\textsubscript{N}2 fashion).
     \end{itemize}
+\end{itemize}
+
+
+
+\section{Chapter 11: Alcohols and Ethers}
+\emph{From \textcite{bib:SolomonsEtAl}.}
+\begin{itemize}
+    \item \marginnote{3/7:}\textbf{Alcohol}: A hydroxyl group bonded to a saturated carbon atom.
+    \item Alcohol nomenclature.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \captionsetup{justification=centering}
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \chemfig{-[:-30](-[6])-[:30]-[:-30](-[6])-[:30]-[:-30]OH}
+            \vspace{1em}
+            \caption{\\2,4-Dimethyl-1-pentanol\\(2,4-dimethylpentan-1-ol)}
+            \label{fig:alcoholNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\linewidth}
+            \centering
+            \chemfig{-[:-30](-[6]OH)-[:30]-[:-30](-[6]C_6H_5)-[:30]}
+            \vspace{1em}
+            \caption{\\4-Phenyl-2-pentanol\\(4-phenylpentan-2-ol)}
+            \label{fig:alcoholNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \chemfig{-[:-30](-[6]OH)-[:30]-[:-30]-[:30]}
+            \vspace{1em}
+            \caption{\\4-Penten-2-ol\\(pent-4-en-2-ol}
+            \label{fig:alcoholNomenclaturec}
+        \end{subfigure}
+        \caption{Alcohol nomenclature.}
+        \label{fig:alcoholNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item The parent chain is the longest chain to which the hydroxyl group is attached.
+        \item Number it so as to give the carbon bearing the hydroxyl group the lowest number.
+        \item The hydroxyl group has precedence over double bonds and triple bonds in deciding which functional group to name as the suffix.
+    \end{itemize}
+    \item Ether nomenclature.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \chemfig{-[:30]-[:-30]OCH_3}
+            \vspace{1em}
+            \caption{Ethyl methyl ether.}
+            \label{fig:etherNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.32\linewidth}
+            \centering
+            \chemfig{-[:30]-[:-30]O-[:30]-[:-30]}
+            \vspace{1em}
+            \caption{Diethyl ether.}
+            \label{fig:etherNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.33\linewidth}
+            \centering
+            \chemfig{-[:-30](-[6]OCH_3)-[:30]-[:-30]-[:30]}
+            \vspace{1em}
+            \caption{2-Methoxypentane.}
+            \label{fig:etherNomenclaturec}
+        \end{subfigure}
+        \caption{Ether nomenclature.}
+        \label{fig:etherNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item List (in alphabetical order) both groups that are attached to the oxygen and append the word "ether."
+        \item For more complicated ones, name the ether as an alkoxy substituent.
+    \end{itemize}
+    \item \textbf{Replacement nomenclature}: A method of naming cyclic ethers via relating the compound in question to the correspondign hydrocarbon ring system and using the prefix oxa- to indicate that an oxygen atom replaces a \ce{CH2} group.
+    \item Cyclic ether nomenclature.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \captionsetup{justification=centering}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[2]*3(-O--)}
+            \vspace{1em}
+            \caption{\\Oxacyclopropane\\(oxirane / ethylene oxide)}
+            \label{fig:cyclicEtherNomenclaturea}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*4(---O-)}
+            \vspace{1em}
+            \caption{\\Oxacyclobutane\\(oxetane)}
+            \label{fig:cyclicEtherNomenclatureb}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{[:-18]*5(-O----)}
+            \vspace{1em}
+            \caption{\\Oxacyclopentane\\(tetrahydrofuran)}
+            \label{fig:cyclicEtherNomenclaturec}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.24\linewidth}
+            \centering
+            \chemfig{*6(-O---O--)}
+            \vspace{1em}
+            \caption{\\1,4-Dioxacyclohexane\\(1,4-dioxane)}
+            \label{fig:cyclicEtherNomenclatured}
+        \end{subfigure}
+        \caption{Cyclic ether nomenclature.}
+        \label{fig:cyclicEtherNomenclature}
+    \end{figure}
+    \begin{itemize}
+        \item The above lists several examples of replacement nomenclature, as well as the common names.
+    \end{itemize}
+    \item Methanol was originally synthesized by burning wood in the absence of air, hence why it is known as wood alcohol.
+    \begin{itemize}
+        \item It is now synthesized industrially by hydrogenating \ce{CO} at high temperatures and pressures.
+        \item Methanol is highly toxic, even in small quantities.
+    \end{itemize}
+    \item Ethanol was originally synthesized by fermenting sugars from grains, hence why it is known as grain alcohol.
+    \begin{itemize}
+        \item It is now synthesized industrially via the acid-catalyzed hydration of ethene.
+        \item Ethanol is \textbf{hypnotic}.
+    \end{itemize}
+    \item \textbf{Hypnotic} (compound): A compound that depresses brain activity even as it give the illusion of being a stimulant.
+    \item Ethylene glycol is a good antifreeze, since it has a low molecular weight, high boiling point, and is readily miscible with water.
+    \begin{itemize}
+        \item However, it is highly toxic and has thus been largely phased out in favor of the less toxic, more environmentally friendly propylene glycol.
+    \end{itemize}
+    \item Diethyl ether is a low boiling, highly flammable liquid.
+    \item \textbf{Autoxidation}: A radical process in which an ether reacts slowly with oxygen to form hydroperoxides and peroxides.
+    \begin{itemize}
+        \item Most ethers participate in autoxidation.
+        \item Hydroperoxides and peroxides accumulate when ethers are stored with air (even just the air at the top of a bottle), and are dangerously explosive.
+        \item \textcite{bib:SolomonsEtAl} gives the mechanism.
+    \end{itemize}
+    \item Basic reactivity of alcohols.
+    \begin{enumerate}
+        \item The oxygen atom of the hydroxyl group is nucleophilic and weakly basic.
+        \item The hydrogen atom of the hydroxyl group is weakly acidic.
+        \item The hydroxyl group can be converted to a leaving goup so as to allow substitution or elimination reactions.
+    \end{enumerate}
+    \item Alkoxide ions are used as bases when we need something stronger than hydroxide but not super strong, and when we have to carry out a reaction in alcohol solution instead of water for solubility reasons.
+    \item For the conversion of alcohols to alkyl halides, $3^\circ>2^\circ>1^\circ$ and $\ce{HI}>\ce{HBr}>\ce{HCl}$ in terms of reactivity.
+    \begin{itemize}
+        \item We can also use a mixture of a sodium or potassium halide and sulfuric acid.
+        \item When the S\textsubscript{N}1 mechanism is active, the leaving of the \ce{H2O} group is the RDS.
+    \end{itemize}
+    \item \ce{ZnCl2}, a weak Lewis acid, can accelerate the formation of primary alkyl chlorides.
+    \item Tosylates, mesylates, and triflates are all leaving group derivatives of alcohols.
+    \item Ethers can also be synthesized by alkoxymercuration/demercuration.
 \end{itemize}
 
 

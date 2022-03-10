@@ -1,0 +1,306 @@
+\documentclass[../notes.tex]{subfiles}
+
+\pagestyle{main}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername\ \thechapter\ (#1)}{}}
+\setcounter{chapter}{8}
+
+\begin{document}
+
+
+
+
+\chapter{Oxidation/Reduction and Organometallics}
+\section{Oxidation/Reduction of Carbonyls}
+\begin{itemize}
+    \item \marginnote{3/8:}In general chemistry, oxidation and reduction referred to the loss and gain of electrons, respectively.
+    \begin{itemize}
+        \item In organic chemistry, we think about it differently.
+    \end{itemize}
+    \item \textbf{Organic oxidation}: Increasing the number of bonds to oxygen or decreasing the number of bonds to hydrogen.
+    \item \textbf{Organic reduction}: Decreasing the bonds to oxygen or increasing the bonds to hydrogen.
+    \item Example: Ethene to ethanol is neither an oxidation or reduction since the \ce{C-O} bond formed is cancelled by the \ce{C-H} bond formed.
+    \item We now transition to carbonyl chemistry, which will also be really important next quarter.
+    \item \textbf{Carbonyl}: Any carbon-oxygen double-bonded system.
+    \begin{itemize}
+        \item Important derivatives include aldehydes, ketones, carboxylic acids, esters, and amides.
+        \item A defining character of carbonyls is their resonance, which we can formalize by representing them as an oxygen anion and a carbocation.
+    \end{itemize}
+    \item General reactivity of carbonyls.
+    \begin{enumerate}
+        \item Nucleophiles can add to the carbonyl carbon. A slightly acidic aqueous workup from here can form an alcohol.
+        \item Oxidation/reduction. Alcohol to carbonyl and vice versa.
+    \end{enumerate}
+    \item Reduction of aldehydes and ketones.
+    \item General form.
+    \begin{equation*}
+        \ce{RCOR$'$ ->[\text{reagents}] RC(OH)HR$'$}
+    \end{equation*}
+    \begin{itemize}
+        \item This is a two-step process. We first need a source of \ce{H-}, and then an acidic workup.
+        \begin{itemize}
+            \item Possible hydride sources are \ce{NaBH4} (a weak source) and \ce{LiAlH4} (a strong source).
+            \item The acidic workup reagents are always \ce{H3O+, H2O}.
+        \end{itemize}
+    \end{itemize}
+    \item Mechanism.
+    \begin{itemize}
+        \item We use the hydride as a nucleophile to attack the carbonyl carbon, and then the acid to protonate the alkoxide intermediate.
+    \end{itemize}
+    \item Varying types of carbonyls.
+    \begin{itemize}
+        \item Aldehydes and ketones go through the full reaction with both reagents.
+        \item Esters do not react with \ce{NaBH4} (not powerful enough), but do react with \ce{LiAlH4}. However, they form a primary alcohol in this case.
+    \end{itemize}
+    \item Reactivity of carbonyls.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{equation*}
+            \schemestart[][.-165]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \schemestop
+            \quad>\quad
+            \schemestart[][.-165]
+                \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \schemestop
+            \quad>\quad
+            \schemestart[][.-165]
+                \chemfig{R-[:30](=[2]O)-[:-30]O-[:30]R'}
+            \schemestop
+            \quad>\quad
+            \schemestart[][.-165]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+        \end{equation*}
+        \caption{Reactivity of carbonyls.}
+        \label{fig:carbonylReactivity}
+    \end{figure}
+    \begin{itemize}
+        \item \ce{NaBH4} stops working after ketones.
+    \end{itemize}
+    \item Reduction of esters.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30]R'}
+            \arrow{->[1. \ce{LiAlH4}][2. \ce{H3O+, H2O}]}[,1.8]
+            \chemfig{R-[:30]-[2]OH}
+            \+
+            \chemfig{HO-R'}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \schemestart
+            \chemfig{R-[:30]@{C1}(=[@{db1}2]O)-[:-30]O-[:30]R'}
+            \arrow{->[*{0}\chemfig{@{Li2}\charge{45:1pt=$\oplus$}{Li}-[,0.35,,,white]-[2,0.5,,,white]}][*{0}\chemfig{@{H3}\charge{-90=\:,45=$\ominus$}{H}-[2,0.3,,,white]}]}[90]
+            \chemfig{R-[:30](-[2]O-[:30]Li)(-[:-70]H)(-[:-30]OR')}
+            \arrow{<=>}
+            \chemfig{R-[:30](-[@{sb5a}2]@{O5a}\charge{180=\:,45:1pt=$\ominus$}{O}-[,0.5,,,white]\charge{45:1pt=$\oplus$}{Li})(-[:-70]H)(-[@{sb5b}:-30]@{O5b}OR')}
+            \arrow{->[][-\ce{Li+}]}
+            \chemfig{R-[:30]@{C6}(=[@{db6}2]@{O6}O)-[:-30]H}
+            \arrow{0}[,0.1]\+
+            \chemfig{\charge{135:1pt=$\ominus$}{O}R'}
+            \arrow{->[\chemfig{@{H8}\charge{90=\:,45=$\ominus$}{H}}]}
+            \subscheme{
+                \chemfig{R-[:30](-[2]@{O9}\charge{180=\:,45:1pt=$\ominus$}{O})(-[:-70]H)(-[:-30]H)}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{O10}\charge{-90=\:,135:1pt=$\ominus$}{O}R'}
+            }
+            \arrow{->[*{0}\chemfig{@{H11}H-[@{sb11}]@{O11}\charge{90:3pt=$\oplus$}{O}H_2}][*{0}\chemfig{@{H12}H-[@{sb12}]@{O12}\charge{90:3pt=$\oplus$}{O}H_2}]}[-90]
+            \subscheme{
+                \chemfig{R-[:30]-[2]OH}
+                \arrow{0}[,0.1]\+
+                \chemfig{HOR'}
+                \+
+                2\,\chemfig{H_2O}
+            }
+        \schemestop
+        \chemmove{
+            \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (H3) to[out=-90,in=30] (C1);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[bend left=60,looseness=1.4] (Li2);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O5a) to[bend right=90,looseness=3] (sb5a);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5b) to[bend left=90,looseness=3] (O5b.100);
+            \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (H8) to[out=90,in=30] (C6);
+            \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db6) to[bend left=90,looseness=3] (O6);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O9) to[out=180,in=90,out looseness=1.3] (H12);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb12) to[bend right=90,looseness=3] (O12);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O10) to[out=-90,in=90] (H11);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb11) to[bend right=90,looseness=3] (O11);
+        }
+        \caption{Reduction of esters mechanism.}
+        \label{fig:esterReduction}
+    \end{figure}
+    \begin{itemize}
+        \item Positive lithium ions combine with the oxygen of the carbonyl in the first step. This activates the \ce{C=O} bond, making the carbon more electrophilic.
+        \begin{itemize}
+            \item Thus, by using \ce{LiAlH4}, we both make the electrophile stronger and introduce a stronger nucleophile.
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{Chemoselective} (reaction): React with one group in the presence of other "related" groups.
+    \begin{itemize}
+        \item For example, if we have a ketone and ester in the same molecule, reacting with \ce{NaBH4} / \ce{H3O+, H2O} will yield a chemoselective reduction of the ketone in the presence of an ester. (Reacting with \ce{LiAlH4} / \ce{H3O+, H2O} will alter both groups in a non-chemoselective fashion.)
+    \end{itemize}
+    \item Note that we can reduce alkyl halides to hydrocarbons with \ce{LiAlH4} / \ce{H3O+, H2O}.
+    \item Reactivity of an $\alpha$-$\beta$ unsaturated compound.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \begin{tikzpicture}
+            \node{\chemfig{*6(--=-(=O)-(-=^[:-150])-)}};
+            \draw (1,0) -- ++(1,0);
+            \draw [CF-CF] (4,1.5) -- node[above]{1. \ce{NaBH4}} node[below]{2. \ce{H3O+, H2O}} ++(-2,0) -- ++(0,-3) -- node[above]{1. \ce{LiAlH4}} node[below]{2. \ce{H3O+, H2O}} ++(2,0);
+    
+            \node at (6.5,1.5) {
+                \schemestart
+                    \chemname{\chemfig{*6(--=-(-OH)-(-=^[:-150])-)}}{Minor product}
+                    \+{1em,1em}
+                    \chemname{\chemfig{*6(----(-OH)-(-=^[:-150])-)}}{Major product}
+                \schemestop
+            };
+            \node at (6.5,-1.5) {
+                \schemestart
+                    \chemname{\chemfig{*6(--=-(-OH)-(-=^[:-150])-)}}{Major product}
+                    \+{1em,1em}
+                    \chemname{\chemfig{*6(----(-OH)-(-=^[:-150])-)}}{Minor product}
+                \schemestop
+            };
+        \end{tikzpicture}
+    \end{center}
+    \begin{itemize}
+        \item With \ce{NaBH4}, the major product has been reduced both at the ketone and the alkene.
+        \item With \ce{LiAlH4}, the major product has been reduced at the ketone only.
+        \item Note that the alkene that is not conjugated with the carbonyl is untouched.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(--@{C1}\charge{-90:3pt=$\delta^+$}{}=[@{db1a}]-[@{sb1}](=[@{db1b}]@{O1}\charge{45:2pt=$\delta^-$}{O})-(-=^[:-150])-)}
+                \arrow{->[\chemfig{@{H2}\charge{180=\:,45:1pt=$\ominus$}{H}}]}
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{*6(---@{C3}=[@{db3}](-[@{sb3}]@{O3}\charge{180=\:,45:1pt=$\ominus$}{O})-(-=^[:-150]-[4,0.2,,,white])-)}
+                        \arrow{<->}
+                        \chemfig{*6(--(-[0,0.6,,,white])-\charge{45:1pt=$\ominus$}{}-@{C4}(=[@{db4}]@{O4}O)-(-=^[:-150])-)}
+                    }
+                \chemright{]}
+                \arrow{->[\chemfig{@{H5}\charge{90=\:,45:1pt=$\ominus$}{H}}]}
+                \chemfig{*6(---\charge{45:1pt=$\ominus$}{}-(-\charge{45:1pt=$\ominus$}{O})-(-=^[:-150])-)}
+                \arrow{->[\ce{H3O+}][\ce{H2O}]}
+                \chemfig{*6(----(-OH)-(-=^[:-150])-)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (H2) to[out=180,in=-30,looseness=2.5] (C1);
+                \draw [rex,semithick,shorten <=4pt,shorten >=2pt] (db1a) to[bend left=60,looseness=2] (sb1);
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1b) to[bend left=90,looseness=3] (O1);
+                \draw [blx,semithick,shorten <=6pt,shorten >=2pt] (O3) to[bend right=90,looseness=3] (sb3);
+                \draw [blx,semithick,shorten <=4pt,shorten >=4pt] (db3) to[bend right=90,looseness=5] (C3);
+                \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (H5) to[out=90,in=30] (C4);
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db4) to[bend left=90,looseness=3] (O4);
+            }
+            \caption{Reduction via \ce{NaBH4}.}
+            \label{fig:alphaBetaa}
+        \end{subfigure}\\[4em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{*6(--=-(=[@{db1}]O)-(-=^[:-150])-)}
+                \arrow{->[\chemfig{@{Li2}\charge{45:1pt=$\oplus$}{Li}}]}
+                \chemleft{[}
+                    \subscheme{
+                        \chemfig{*6(--=[@{db3}]-[@{sb3}]@{C3}\charge{135:3pt=$\oplus$}{}(-\charge{45:1pt=$\ominus$}{O}-[0,0.5,,,white]\charge{45:1pt=$\oplus$}{Li})-(-=^[:-150])-)}
+                        \arrow{<->}
+                        \chemfig{*6(--\charge{-45:3pt=$\oplus$}{}-(-[,0.6,,,white])=(-\charge{45:1pt=$\ominus$}{O}-[0,0.5,,,white]\charge{45:1pt=$\oplus$}{Li})-(-=^[:-150])-)}
+                    }
+                \chemright{]}
+                \arrow{->[\chemfig{@{H5}\charge{90=\:,45:1pt=$\ominus$}{H}}][-\ce{Li+}]}
+                \chemfig{*6(--=-(-\charge{45:1pt=$\ominus$}{O})-(-=^[:-150])-)}
+                \arrow{->[\ce{H3O+}][\ce{H2O}]}
+                \chemfig{*6(--=-(-OH)-(-=^[:-150])-)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[bend left=45,looseness=1.2] (Li2);
+                \draw [blx,semithick,shorten <=4pt,shorten >=2pt] (db3) to[bend left=60,looseness=2] (sb3);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (H5) to[out=90,in=30] (C3);
+            }
+            \caption{Reduction via \ce{LiAlH4}}
+            \label{fig:alphaBetab}
+        \end{subfigure}
+        \caption{Reduction of an $\alpha$-$\beta$ unsaturated compound mechanism.}
+        \label{fig:alphaBeta}
+    \end{figure}
+    \begin{itemize}
+        \item On Figure \ref{fig:alphaBetaa}.
+        \begin{itemize}
+            \item In the leftmost molecule, resonance draws charge toward the electronegative oxygen, making the carbon at the end of the conjugated chain the most electrophilic site in the molecule. Thus, hydride attacks there.
+            \item The resulting molecule has a ketone as one of its resonance structures, so since ketones are reactive to further hydride attacks, we take this to be the major contributor and react the molecule with hydride again.
+            \item The $2-$ product can how be reduced with acid and water.
+        \end{itemize}
+        \item On Figure \ref{fig:alphaBetab}.
+        \begin{itemize}
+            \item When \ce{Li+} bonds to the oxygen, it creates a formal carbocation in the ring system that can be delocalized by resonance.
+            \item However, the carbocation will preferentially exist as a $3^\circ$ carbocation, so the $\alpha$-carbon is the most electrophilic site in the molecule in this case, making hydride attack there.
+        \end{itemize}
+    \end{itemize}
+    \item Grignard reagents provide a new way to form \ce{C-C} bonds.
+    \item \textbf{Grignard reagent}: An alkyl magnesium halide compound.
+    \begin{itemize}
+        \item Creates carbanions that are both strong bases and strong nucleophiles.
+    \end{itemize}
+    \item Forming Grignard reagents.
+    \begin{equation*}
+        \ce{RBr ->[Mg^\circ][Et2O] RMgBr}
+    \end{equation*}
+    \begin{itemize}
+        \item We need an aprotic solvent such as diethyl ether to stabilize the positive \ce{Mg}.
+        \begin{itemize}
+            \item If there are acidic protons present, the Grignard will just deprotonate them.
+        \end{itemize}
+    \end{itemize}
+    \item Common Grignard reagents.
+    \begin{itemize}
+        \item To add phenyl groups to systems, use phenylmagnesium chloride.
+        \item To add alkenes to systems, use allylmagnesium bromide.
+    \end{itemize}
+    \item Making a Grignard reagent basically inverts the reactivity of the precursor: While the precursor alkyl halide is electrophilic, Grignards are very nucleophilic.
+    \item Grignards can be made out of iodides, bromides, and chlorides.
+    \begin{itemize}
+        \item Iodides are more reactive than bromides, are more reactive than chlorides.
+        \item We commonly find them as bromides, though.
+    \end{itemize}
+    \item We can use Grignards as nucleophiles in the reduction of formaldehyde.
+    \begin{itemize}
+        \item Creates primary alcohols.
+    \end{itemize}
+    \item Using an aldehyde makes a secondary alcohol.
+    \item Using a ketone makes a tertiary alcohol.
+    \item Using an ester adds the Grignard twice and kicks out an alcohol.
+    \item Using a carboxylic acid protonates the alkyl part of the Grignard, releases a magnesium salt, and regenerates the carboxylic acid.
+    \item Since Grignards deprotonate any acids present, we can't use them on molecules that contain alcohols, thiols, carboxylic acids, phenols, amines, and acetylenes.
+    \item Organolithium reagents are conceptually identical to Grignards, but even more ionic/reactive.
+    \item Forming organolithium reagents.
+    \begin{equation*}
+        \ce{RBr ->[2Li^\circ][Et2O] RLi + LiBr}
+    \end{equation*}
+    \begin{itemize}
+        \item Organolithium reagents are more ionic than Grignards.
+        \begin{itemize}
+            \item They are 40\% ionic; Grignards are much less.
+        \end{itemize}
+        \item Very reactive (nucleophile and base), but very dangerous, too.
+    \end{itemize}
+\end{itemize}
+
+
+
+
+\end{document}

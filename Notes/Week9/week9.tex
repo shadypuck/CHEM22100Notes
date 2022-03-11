@@ -302,10 +302,350 @@
 
 
 
+\section{Oxidation of Alcohols}
+\begin{itemize}
+    \item \marginnote{3/10:}Alcohol oxidation often occurs with the help of chromium (VI) reagents, of which there are three "flavors."
+    \item \textbf{Collins reagent}: The compound \ce{CrO3}.
+    \item General form.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]OH}
+                \arrow{->[\ce{CrO3, Py}][\ce{CH2Cl2}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \schemestop
+            \caption{Anhydrous oxidation of a primary alcohol.}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[2]OH)-[:-30]R'}
+                \arrow{->[\ce{CrO3, Py}][\ce{CH2Cl2}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \schemestop
+            \caption{Anhydrous oxidation of a secondary alcohol.}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]OH}
+                \arrow{->[\ce{CrO3, Py}][\ce{H2O}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \caption{Aqueous oxidation of a primary alcohol.}
+        \end{subfigure}
+    \end{figure}
+    \item Mechanism.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \subscheme{
+                    \chemfig{R-[:30]-[:-30]@{O1}\charge{-90=\:}{O}-[:30]H}
+                    \arrow{0}[,0.5]
+                    \chemfig{@{Cr2}Cr(=[:-30]O)(=[@{db2}2]@{O2}O)(=[:-150]O)}
+                }
+                \arrow[-90]
+                \chemfig{R-[:30]-[:-30]\charge{90:3pt=$\oplus$}{O}(-[6]H)-[:30]Cr(=[6]O)(=O)(-[2]\charge{45:1pt=$\ominus$}{O})}
+                \arrow{<=>}
+                \chemfig{R-[:30](-[@{sb4a}:70]@{H4}H)(-[:110]H)-[@{sb4b}:-30]O-[@{sb4c}:30]@{Cr4}Cr(=[6]O)(=O)(-[2]OH)}
+                \arrow{-U>[\chemfig[atom sep=1.4em]{*6(-=-=@{N5}\charge{90=\:}{N}-=)}][\chemfig[atom sep=1.4em]{*6(-=-=\chemabove{\charge{45:2pt=$\oplus$}{N}}{H}-=)}]}[,1.5]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+                \arrow{0}[,0.1]\+{,,0.5em}
+                \chemfig{Cr(-[:-30]OH)(=[2]O)(=[:-150]O)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[out=-90,in=150,looseness=1.3] (Cr2);
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db2) to[bend right=90,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N5) to[out=90,in=90] (H4);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb4a) to[bend left=70,looseness=2] (sb4b);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb4c) to[bend left=70,looseness=2] (Cr4);
+            }
+            \caption{Anhydrous oxidation of a primary alcohol.}
+            \label{fig:CollinsReagenta}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \subscheme{
+                    \chemfig{R-[:30](=[2]O)-[:-30]H}
+                    \arrow{0}[,0.5]
+                    \chemfig{Cr(-[:-30]OH)(=[2]O)(=[:-150]O)}
+                }
+                \arrow{<=>[*{0}\ce{H2O}]}[-90]
+                \chemfig{R-[:30](-[:70]OH)(-[:110]HO)-[:-30]H}
+                \arrow{0}[,0.5]
+                \chemfig{Cr(-[:-30]OH)(=[2]O)(=[:-150]O)}
+                \arrow
+                \chemfig{R-[:30](-[:-30]H)(-[:110]HO)-[:70]O-Cr(=[6]O)(-OH)(=[2]O)}
+                \arrow{-U>[\chemfig[atom sep=1.4em]{*6(-=-=@{N5}\charge{90=\:}{N}-=)}][\chemfig[atom sep=1.4em]{*6(-=-=\chemabove{\charge{45:2pt=$\oplus$}{N}}{H}-=)}]}[,1.5]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+                \arrow{0}[,0.1]\+
+                \chemfig{Cr(-[:-30]OH)(=[2]O)(=[:-150]O)}
+            \schemestop
+            \caption{Aqueous oxidation of a primary alcohol.}
+            \label{fig:CollinsReagentb}
+        \end{subfigure}
+        \caption{Alcohol oxidation via Collins reagent mechanism.}
+        \label{fig:CollinsReagent}
+    \end{figure}
+    \begin{itemize}
+        \item On Figure \ref{fig:CollinsReagenta}.
+        \begin{itemize}
+            \item The reversible proton shift may be a 1- or 2-step process.
+            \item Having a leaving group on the oxygen makes the protons on the $\alpha$ carbon weakly acidic, so pyridine can attack them.
+        \end{itemize}
+        \item On Figure \ref{fig:CollinsReagentb}.
+        \begin{itemize}
+            \item This reaction picks up directly where the other one left off. Essentially, if water is absent, the mechanism will stop after the sequence of steps in Figure \ref{fig:CollinsReagenta}, and if water is present, the mechanism will continue through the sequence of steps in Figure \ref{fig:CollinsReagenta}.
+            \item In the beginning, we note that aldehydes are one of the most electrophilic carbon compounds.
+            \item Thus, in the presence of water, aldehydes exist in equilibrium with \textbf{acetals}.
+            \item Any acetal that is generated can react with chromium again and another equivalent of pyridine as in the previous mechanism, but this time to generate a carboxylic acid.
+        \end{itemize}
+    \end{itemize}
+    \item Since water has such an effect on the mechanism, we should be sure specify in the case of oxidation reactions whether the reaction is run under aqueous or anhydrous conditions.
+    \item \textbf{Jones reagent}: The mixture \ce{CrO3 + H2SO4_{(aq)}}.
+    \item The general form is the same as with Collins reagent, except obviously for the reagents used. In particular\dots
+    \begin{itemize}
+        \item $1^\circ$ alcohols go to carboxylic acids (water is present).
+        \item $2^\circ$ alcohols will go to ketones.
+    \end{itemize}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Cr(=[:-30]O)(=[2]O)(=[@{db1}:-150]O)}
+                \arrow{->[\chemfig[atom sep=1.4em]{@{H2}H-[@{sb2}]@{O2}OSO_3H}][-\ce{HSO4-}]}[,1.6]
+                \chemfig{@{Cr3}\charge{135:1pt=$\oplus$}{Cr}(=[:-30]O)(=[2]O)(-[:-150]HO)}
+                \arrow{->[\chemfig{@{O4}\charge{90=\:}{O}H_2}]}
+                \chemfig{HO-Cr(=[6]O)(=[2]O)-\charge{135:1pt=$\oplus$}{O}(-[:60]H)(-[:-60]H)}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db1) to[out=120,in=90,looseness=2] (H2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend left=90,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[out=90,in=30,looseness=1.5] (Cr3);
+            }
+            \caption{Protonated chromic acid formation.}
+            \label{fig:JonesReagenta}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]@{O1}\charge{90=\:}{O}H}
+                \arrow{->[\chemfig[atom sep=1.4em]{HO-@{Cr2}Cr(=[6]O)(=[2]O)-[@{sb2}]@{O2}\charge{90:3pt=$\oplus$}{O}H_2}][-\ce{H2O, H+}]}[,2]
+                \chemfig{R-[:30](-[@{sb3a}2]@{H3}H)-[@{sb3b}:-30]O-[@{sb3c}:30]@{Cr3}Cr(=[6]O)(=[2]O)-OH}
+                \arrow{->[\chemfig[atom sep=1.4em]{HS@{O4}\charge{90=\:,45:1pt=$\ominus$}{O}_4}][-\ce{HCrO3}]}[,1.2]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+                \arrow{->[\ce{H2O}]}
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[out=90,in=-135] (Cr2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend right=90,looseness=3] (O2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O4) to[bend right=70] (H3);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3a) to[bend left=60,looseness=1.5] (sb3b);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3c) to[bend left=70,looseness=2] (Cr3);
+            }
+            \caption{Oxidation of a $1^\circ$ alcohol.}
+            \label{fig:JonesReagentb}
+        \end{subfigure}
+        \caption{Alcohol oxidation via Jones reagent mechanism.}
+        \label{fig:JonesReagent}
+    \end{figure}
+    \item \textbf{Pyridinium chlorochromate}: The mixture \ce{Py, HCl, CrO3}. \emph{Also known as} \textbf{PCC}.
+    \begin{itemize}
+        \item Mixing these three compounds together yields \ce{PyH+} and \ce{CrO3Cl-}.
+        \begin{itemize}
+            \item Note that the chloride is bonded to the chromium center and one of the oxygens adopts the negative charge.
+        \end{itemize}
+        \item We've essentially suped up chromium by adding chloride as a leaving group.
+        \item Running this in anhydrous conditions allows us to control reactivity (DCM is a good anhydrous solvent here).
+    \end{itemize}
+    \item As before, we take $1^\circ$ alcohols to carboxylic acids and $2^\circ$ alcohols to ketones.
+    \item \textbf{Oxalyl chloride}: The following compound. \emph{Structure}
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \chemfig{Cl-[:30](=[2]O)-[:-30](=[6]O)-[:30]Cl}
+        \caption{Oxalyl chloride.}
+        \label{fig:oxalylChloride}
+    \end{figure}
+    \item \textbf{Swern oxidation}: An eco-friendly alcohol oxidation mechanism that does away with toxic metal chromium.
+    \item General form.
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30]-[:-30]OH}
+            \arrow{->[1. DMSO, \ce{(COCl)2}][2. \ce{NEt3}\rule{5.1em}{0em}]}[,2.2]
+            \chemfig{R-[:30](=[2]O)-[:-30]H}
+        \schemestop
+    \end{center}
+    \item Mechanism.
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{Me-[:30]S(=[2]O)-[:-30]Me}
+                \arrow{0}[,0.1]\+{,,0.5em}
+                \chemfig{Cl-[:30](=[2]O)-[:-30](=[6]O)-[:30]Cl}
+                \arrow
+                \chemfig{Me-[:30]\charge{45:1pt=$\oplus$}{S}(-[2]Cl)-[:-30]Me}
+            \schemestop
+            \caption{Chlorodimethylsulfonium ion formation.}
+            \label{fig:swernOxidationa}
+        \end{subfigure}\\[2em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]@{O1}\charge{90=\:}{O}H}
+                \arrow{->[\chemfig[atom sep=1.4em]{Me-[:30]@{S2}\charge{-90:3pt=$\oplus$}{S}(-[@{sb2}2]@{Cl2}Cl)-[:-30]Me}]}[,1.6]
+                \chemfig{R-[:30]-[:-30]@{O3}\charge{90:3pt=$\oplus$}{O}(-[@{sb3}6]@{H3}H)-[:30]\charge{-90:3pt=$\oplus$}{S}(-[2]Me)-[:-30]Me}
+                \arrow{0}[,0.1]\+
+                \chemfig{@{Cl4}\charge{-90=\:,45:1pt=$\ominus$}{Cl}}
+                \arrow{->[][-\ce{HCl}]}
+                \chemfig{R-[:30](-[@{sb5a}2]@{H5}H)-[@{sb5b}:-30]O-[@{sb5c}:30]@{S5}\charge{-90:3pt=$\oplus$}{S}(-[2]Me)-[:-30]Me}
+                \arrow{->[\chemfig{@{N6}\charge{90=\:}{N}Et_3}][-\ce{HNEt3+, Me2S}]}[,1.9]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \schemestop
+            \chemmove{
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O1) to[out=90,in=150,looseness=1.3] (S2);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb2) to[bend right=90,looseness=3] (Cl2);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Cl4) to[out=-90,in=0] (H3);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3) to[bend left=90,looseness=3] (O3);
+                \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N6) to[out=90,in=90] (H5);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5a) to[bend left=70,looseness=2] (sb5b);
+                \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5c) to[bend left=80,looseness=2.5] (S5);
+            }
+            \caption{Oxidation of a $1^\circ$ alcohol.}
+            \label{fig:swernOxidationb}
+        \end{subfigure}
+        \caption{Swern oxidation mechanism.}
+        \label{fig:swernOxidation}
+    \end{figure}
+    \begin{itemize}
+        \item We won't worry about how the first step proceeds because it's pretty complicated. However, know that it generates an electrophilic sulfur analogous to the chromium.
+    \end{itemize}
+    \item A side note on biology.
+    \begin{itemize}
+        \item Alcohol dehydrogenase (ADH1), an enzyme in our body, deals with \ce{EtOH} and other harmful alcohols by transforming them into acetaldehyde.
+        \item Acetaldehyde is very toxic, though, but in the presence of ADH2 and \ce{H2O}, it will form acetic acid (vinegar, which is relatively nontoxic).
+        \item Being flushed when you drink is a result of having a deficiency of ADH2.
+        \begin{itemize}
+            \item Many of the problems associated with drinking come from a buildup of acetaldehyde!
+            \item You can take ADH1 inhibitors to keep the ethanol around for longer because that's safer than letting acetaldehyde build up.
+        \end{itemize}
+    \end{itemize}
+    \item Protecting groups.
+    \begin{itemize}
+        \item Trimethylsilyl chloride (\ce{TMSCl}) is a common one.
+        \item Adding it and then a weak base such as \ce{NEt3} with DCM as a solvent leads to the formation of a \textbf{silyl-protected alcohol} (see Figure \ref{fig:tosylate}).
+    \end{itemize}
+    \item \textbf{Silyl-protected alcohol}: A very stable form of an alcohol which allows the addition of Grignards, etc. to react with the rest of the compound in question. \emph{Given by}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \chemfig{R-[:30]O-[:-30]Si(-[6]Me)(-Me)(-[2]Me)}
+        \caption{Silyl-protected alcohol.}
+        \label{fig:silylProtectedAlcohol}
+    \end{figure}
+    \begin{itemize}
+        \item The silyl protecting group can be removed by acid (\ce{H3O+, H2O}). This kicks out TMSOH and the alcohol.
+        \item It can also be removed by fluoride (\ce{F-}) followed by acid. This kicks out TMSF and \ce{RO-} which is protonated to become \ce{ROH}.
+    \end{itemize}
+    \item Example of using protecting groups in a synthesis:
+    \begin{center}
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{H-[:-30](=[6]O)-[:30]*6(---(-OH)---)}
+            \arrow{->[*{0}\ce{TMSCl, NEt3}][*{0}\ce{CH2Cl2}]}[-90]
+            \chemfig{H-[:-30](=[6]O)-[:30]*6(---(-OTMS)---)}
+            \arrow{->[1. \ce{MeMgBr, Et2O}][2. \ce{H3O+, H2O}\rule{1.5em}{0pt}]}[,2]
+            \chemfig{-[:-30](-[6]OH)-[:30]*6(---(-OTMS)---)}
+            \arrow{->[PCC]}
+            \chemfig{-[:-30](=[6]O)-[:30]*6(---(-OTMS)---)}
+            \arrow{->[*{0}\ce{F-}][*{0}\ce{H3O+}]}[90]
+            \chemfig{-[:-30](=[6]O)-[:30]*6(---(-OH)---)}
+        \schemestop
+    \end{center}
+    \begin{itemize}
+        \item Remember: Grignards are bases (look out for acidic protons), and make sure there are no other reactive sites on your molecule.
+        \item You can get the products you want, though, via protection and deprotection.
+    \end{itemize}
+    \item Practice problem: Synthesize the end product using only carbon atoms from alcohols with 5 or fewer carbons.
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \begin{tikzpicture}
+            \node at (0,2) {
+                \schemestart
+                    \chemfig{HO-[:30]-[:-30]-[:30]-[:-30]}
+                    \arrow{->[1. \ce{PBr3, Py}\rule{0.8em}{0pt}][2. \ce{Mg${}^\circ$, Et2O}]}[,1.7]
+                    \chemfig{BrMg-[:30]-[:-30]-[:30]-[:-30]}
+                \schemestop
+            };
+            \node at (0,0) {
+                \schemestart
+                    \chemfig{[:15]*4(-(--[::-60]OH)---)}
+                    \arrow{->[PCC]}
+                    \chemfig{[:15]*4(-(-(=[::-60]O)-[::60]H)---)}
+                \schemestop
+            };
+            \draw (2.6,1.7) to[out=-85,in=180] (4,0);
+            \draw [-CF] (2.5,0) -- node[below]{2. \ce{H3O+, H2O}} ++(2,0);
+    
+            \node at (8,0) {
+                \schemestart
+                    \chemfig{OH-[2](-[:150]*4(----))-[:30]-[:-30]-[:30]-[:-30]}
+                    \arrow{->[\ce{H2CrO4}]}[,1.2]
+                    \chemfig{O=[2](-[:150]*4(----))-[:30]-[:-30]-[:30]-[:-30]}
+                \schemestop
+            };
+            \node at (13,0.5) {
+                \schemestart
+                    \chemfig{[:18]*5(--(-OH)---)}
+                    \arrow{->[*{0}2. \ce{Mg${}^\circ$, Et2O}][*{0}1. \ce{PBr3}]}[-90]
+                    \chemfig{[:18]*5(--(-MgBr)---)}
+                \schemestop
+            };
+            \draw (11.3,-0.8) to[out=-170,in=90] (10.07,-1.8);
+            \draw [-CF] (10.07,-1) -- node[left]{2. \ce{H3O+, H2O}} ++(0,-1);
+    
+            \node at (6,-3) {
+                \schemestart
+                    \chemfig{OH-[2](-[:-150]*5(-----))(-[2]*4(----))-[:-30]-[:30]-[:-30]-[:30]}
+                    \arrow{->[*{0.-90}\ce{POCl3}][*{0.90}\ce{Py}]}[180]
+                    \chemfig{(=[:-150]*5(-----))(-[2]*4(----))-[:-30]-[:30]-[:-30]-[:30]}
+                    \arrow{->[*{0.-90}mCPBA]}[180]
+                    \chemfig{[:-60]*3(([::180]*5(-----))-O-(-[2]*4(----))(-[:-30]-[:30]-[:-30]-[:30])-)}
+                \schemestop
+            };
+        \end{tikzpicture}
+    \end{figure}
+    \begin{itemize}
+        \item Zaitsev's rule eliminates one alkene and ring strain eliminates the other. Thus, the alkene that's formed is the most stable one.
+    \end{itemize}
+\end{itemize}
+
+
+
 \section{Chapter 12: Alcohols from Carbonyl Compounds}
 \emph{From \textcite{bib:SolomonsEtAl}.}
 \begin{itemize}
-    \item \marginnote{3/10:}Together, reduction of carbonyls and modification by Grignards and organolithium reagents fall under the category of \textbf{nucleophilic addition}.
+    \item Together, reduction of carbonyls and modification by Grignards and organolithium reagents fall under the category of \textbf{nucleophilic addition}.
     \item There exist lowest and highest oxidation states of an organic compound.
     \begin{figure}[H]
         \centering

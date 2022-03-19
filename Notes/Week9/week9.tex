@@ -111,7 +111,7 @@
                 \arrow{0}[,0.1]\+
                 \chemfig{@{O10}\charge{-90=\:,135:1pt=$\ominus$}{O}R'}
             }
-            \arrow{->[*{0}\chemfig{@{H11}H-[@{sb11}]@{O11}\charge{90:3pt=$\oplus$}{O}H_2}][*{0}\chemfig{@{H12}H-[@{sb12}]@{O12}\charge{90:3pt=$\oplus$}{O}H_2}]}[-90]
+            \arrow{->[*{0}\setchemfig{atom sep=1.4em}\chemfig{@{H11}H-[@{sb11}]@{O11}\charge{90:3pt=$\oplus$}{O}H_2}][*{0}\setchemfig{atom sep=1.4em}\chemfig{@{H12}H-[@{sb12}]@{O12}\charge{90:3pt=$\oplus$}{O}H_2}]}[-90]
             \subscheme{
                 \chemfig{R-[:30]-[2]OH}
                 \arrow{0}[,0.1]\+
@@ -127,7 +127,7 @@
             \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb5b) to[bend left=90,looseness=3] (O5b.100);
             \draw [rex,semithick,shorten <=6pt,shorten >=3pt] (H8) to[out=90,in=30] (C6);
             \draw [rex,semithick,shorten <=3pt,shorten >=2pt] (db6) to[bend left=90,looseness=3] (O6);
-            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O9) to[out=180,in=90,out looseness=1.3] (H12);
+            \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O9) to[out=180,in=90,out looseness=1.7] (H12);
             \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb12) to[bend right=90,looseness=3] (O12);
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (O10) to[out=-90,in=90] (H11);
             \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb11) to[bend right=90,looseness=3] (O11);
@@ -258,7 +258,7 @@
     \end{itemize}
     \item Forming Grignard reagents.
     \begin{equation*}
-        \ce{RBr ->[Mg^\circ][Et2O] RMgBr}
+        \ce{RBr ->[Mg${}^\circ$][Et2O] RMgBr}
     \end{equation*}
     \begin{itemize}
         \item We need an aprotic solvent such as diethyl ether to stabilize the positive \ce{Mg}.
@@ -289,7 +289,7 @@
     \item Organolithium reagents are conceptually identical to Grignards, but even more ionic/reactive.
     \item Forming organolithium reagents.
     \begin{equation*}
-        \ce{RBr ->[2Li^\circ][Et2O] RLi + LiBr}
+        \ce{RBr ->[2Li${}^\circ$][Et2O] RLi + LiBr}
     \end{equation*}
     \begin{itemize}
         \item Organolithium reagents are more ionic than Grignards.
@@ -639,6 +639,314 @@
         \item Zaitsev's rule eliminates one alkene and ring strain eliminates the other. Thus, the alkene that's formed is the most stable one.
     \end{itemize}
 \end{itemize}
+\newpage
+
+
+
+\section{Exam 3 Cheat Sheet}
+\begin{table}[h!]\marginnote{3/15:}
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.2}
+    \begin{tabular}{|l|l|}
+        \hline
+        \multicolumn{2}{|c|}{\textbf{COMMON ABSORPTIONS}}\\ \hline
+        Aromatic \ce{C-C} & Two peaks usually in the range of $\SIrange{1500}{1600}{\per\centi\meter}$\\ \hline
+        \ce{C=C} & $\sim\SI{1650}{\per\centi\meter}$\\ \hline
+        \ce{C=O} & $\sim\SI{1710}{\per\centi\meter}$ (shifts to $\sim\SI{1735}{\per\centi\meter}$ for esters)\\ \hline
+        \ce{C#C} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+        \ce{C#N} & $\SIrange{2100}{2300}{\per\centi\meter}$\\ \hline
+        \ce{C-H} (aldehyde) & Two peaks at $\SI{2170}{\per\centi\meter}$ and $\SI{2810}{\per\centi\meter}$\\ \hline
+        $sp^3$ \ce{C-H} & Just to the right of $\SI{3000}{\per\centi\meter}$\\ \hline
+        $sp^2$ \ce{C-H} & Just to the left of $\SI{3000}{\per\centi\meter}$\\ \hline
+        $sp$ \ce{C-H} & $\sim\SI{3300}{\per\centi\meter}$\\ \hline
+        \ce{N-H} & $\sim\SI{3300}{\per\centi\meter}$ (one peak for \ce{-NH-}, two peaks for \ce{-NH2})\\ \hline
+        \ce{O-H} (alcohol) & $\sim\SI{3400}{\per\centi\meter}$ (a broad, smooth peak)\\ \hline
+        \ce{O-H} (acid) & $\sim\SIrange{2500}{3500}{\per\centi\meter}$ (a very broad, ugly [not smooth] peak)\\ \hline
+    \end{tabular}
+    \caption*{Common IR spectroscopy absorptions.}
+\end{table}
+\begin{table}[h!]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|lc|lc|}
+        \hline
+        \rule{0pt}{2em}\textbf{Type of Proton} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}} & \textbf{Type of Proton} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}}\\
+        $\ang{1}$ Alkyl, {\sf\ce{RC{\color{rex}H}3}} & \numrange{0.8}{1.2} & Alkyl bromide, {\sf\ce{RC{\color{rex}H}2}Br} & \numrange{3.4}{3.6}\\
+        $\ang{2}$ Alkyl, {\sf\ce{RC{\color{rex}H}2R}} & \numrange{1.2}{1.5} & Alkyl chloride, {\sf\ce{RC{\color{rex}H}2}Cl} & \numrange{3.6}{3.8}\\
+        $\ang{3}$ Alkyl, {\sf\ce{R3C{\color{rex}H}}} & \numrange{1.4}{1.8} & Vinylic, {\sf\ce{R2C=C{\color{rex}H}2}} & \numrange{4.6}{5.0}\\
+        Allylic, {\sf\ce{R2C=CR-C{\color{rex}H}3}} & \numrange{1.6}{1.9} & Vinylic, {\sf\ce{R2C=CR{\color{rex}H}}} & \numrange{5.2}{5.7}\\
+        Ketone, {\sf\ce{RCOC{\color{rex}H}3}} & \numrange{2.1}{2.6} & Aromatic, {\sf\ce{Ar{\color{rex}H}}} & \numrange{6.0}{8.5}\\
+        Benzylic, {\sf\ce{ArC{\color{rex}H}3}} & \numrange{2.2}{2.5} & Aldehyde, {\sf\ce{RCO{\color{rex}H}}} & \numrange{9.5}{10.5}\\
+        Acetylenic, {\sf\ce{RC#C{\color{rex}H}}} & \numrange{2.5}{3.1} & Alcohol hydroxyl, {\sf\ce{RO{\color{rex}H}}} & \numrange{0.5}{6.0}\textsuperscript{*}\\
+        Alkyl iodide, {\sf\ce{RC{\color{rex}H}2I}} & \numrange{3.1}{3.3} & Amino, {\sf\ce{R-N{\color{rex}H}2}} & \numrange{1.0}{5.0}\textsuperscript{*}\\
+        Ether, {\sf\ce{ROC{\color{rex}H}2R}} & \numrange{3.3}{3.9} & Phenolic, {\sf\ce{ArO{\color{rex}H}}} & \numrange{4.5}{7.7}\textsuperscript{*}\\
+        Alcohol, {\sf\ce{HOC{\color{rex}H}2R}} & \numrange{3.3}{4.0} & Carboxylic, {\sf\ce{RCOO{\color{rex}H}}} & \numrange{10}{13}\textsuperscript{*}\\
+        \hline
+        \multicolumn{4}{l}{\footnotesize\textsuperscript{*}The chemical shifts of these protons vary in different solvents and with temperature and concentration.}
+    \end{tabular}
+    \caption*{Approximate proton chemical shifts.}
+\end{table}
+\begin{table}[h!]
+    \centering
+    \small
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|lc|}
+        \hline
+        \rule{0pt}{2em}\textbf{Type of Carbon} & \textbf{\shortstack{Chemical Shift\\($\bm{\delta}$, ppm)}}\\
+        $\ang{1}$ Alkyl, {\sf\ce{R{\color{rex}C}H3}} & \numrange{0}{40}\\
+        $\ang{2}$ Alkyl, {\sf\ce{R{\color{rex}C}H2R}} & \numrange{10}{50}\\
+        $\ang{3}$ Alkyl, {\sf\ce{R{\color{rex}C}HR2}} & \numrange{15}{50}\\
+        Alkyl halide or amine, {\sf\ce{R3{\color{rex}C}X}} ($\ce{X}=\ce{Cl},\ce{Br},\ce{NR$'$2}$) & \numrange{10}{65}\\
+        Alcohol or ether, {\sf\ce{R3{\color{rex}C}OR$'$}} & \numrange{50}{90}\\
+        Alkyne, {\sf\ce{R{\color{rex}C}#R$'$}} & \numrange{60}{90}\\
+        Alkene, {\sf\ce{R2{\color{rex}C}=R$'$}} & \numrange{100}{170}\\
+        Aryl, {\renewcommand*\printatom[1]{\ensuremath{\mathsf{#1}}}\chemfig[atom sep=1.4em]{[:30]**6(--{\color{rex}C}(-R)----)}} & \numrange{100}{170}\\
+        Nitrile, {\sf\ce{R{\color{rex}C}#N}} & \numrange{120}{130}\\
+        Amide, {\sf\ce{R{\color{rex}C}ONR$'$2}} & \numrange{150}{180}\\
+        Carboxylic acid or ester, {\sf\ce{R{\color{rex}C}OOR$'$}} & \numrange{160}{185}\\
+        Aldehyde or ketone, {\sf\ce{R{\color{rex}C}OR$'$}} & \numrange{182}{215}\\
+        \hline
+    \end{tabular}
+    \caption*{Approximate carbon-13 chemical shifts.}
+\end{table}
+
+\textbf{Reminders}:
+\begin{itemize}
+    \item Alkene reactions to know: hydrogenation (\ce{H2 + Pd}/\ce{C}), dihydroxylation (\ce{1. OsO4}, \ce{2. NaHSO3}), ozonolysis (\ce{O3 + Me2S}), hydrobromination (\ce{HBr}), and bromination (\ce{Br2}).
+    \begin{itemize}
+        \item Extra possibles: Acid-catalyzed hydration (\ce{H2SO4 + H2O}), oxymercuration/demercuration\\(\ce{1. Hg(OAc)2, H2O}, \ce{2. NaBH4}), hydroboration/oxidation (\ce{1. BH3}, \ce{2. H2O2, NaOH}), hydrogenation (\ce{H2 + \text{Lindlar's catalyst}} for alkynes to \emph{cis}-alkenes, \ce{2Na + 2NH3} for alkynes to \emph{trans}-alkenes), alkyne synthesis (terminal alkyne + \ce{1. NaNH2}, \ce{2. RBr}).
+        \item Make ketones/aldehydes with ozonolysis, acid-catalyzed hydration of alkynes, and hydroboration of alkynes (with \ce{(sia)2BH} for terminal alkynes to aldehydes).
+        \item Alkene to diene: \ce{1. Br2}, \ce{2. NaOH}.
+        \begin{itemize}
+            \item Alkene to alkyne: \ce{1. Br2}, \ce{2. 3NaNH2}.
+        \end{itemize}
+    \end{itemize}
+    \item Frost method: Point down, MOs at the carbons.
+    \begin{itemize}
+        \item 5-membered rings: 3 bonding / 2 antibonding. 7-membered: 3 bonding / 4 antibonding.
+    \end{itemize}
+    \item Aromaticity checklist: Flat, cyclic, conjugated, uninterrupted flow of $p$-orbitals, $(4n+2)$-rule.
+    \item $(+/-)$ for Diels-Alder reactions!
+    \item F-C reactions happen ONLY IF there is not an EWG on the ring.
+    \item Add stronger EWGs later.
+    \item Nucleophile strengths.
+    \begin{equation*}
+        \ce{{}^-NRH} > \ce{RO- / HO-}
+        > \ce{Br-}
+        > \ce{NR3}
+        > \ce{Cl-}
+        > \ce{F-}
+        > \ce{H2O / ROH}
+        > \text{alkene}
+        > \text{benzene}
+    \end{equation*}
+\end{itemize}
+
+\textbf{Reactions}:
+\begin{itemize}
+    \item \ce{=- ->[Br2][h\nu] =--Br}
+    \begin{itemize}
+        \item Chlorination problems: Polychlorination, selectivity.
+    \end{itemize}
+    \item \ce{-= ->[HBr, h\nu][air] ---Br}
+    \item \ce{C6H6 ->[D3O+] C6D6}
+    \item \ce{PhH ->[Br2][FeBr3] PhBr}
+    \begin{itemize}
+        \item \ce{AlCl3}, \ce{CuI2}.
+    \end{itemize}
+    \item \ce{PhH ->[HNO3][H2SO4] PhNO2}
+    \item \ce{PhH ->[SO3][H2SO4] PhSO3H}
+    \item \ce{PhH ->[RCOCl][AlCl3] PhCOR}
+    \item \ce{PhH ->[RCl][AlCl3] PhR}
+    \item \ce{\text{benzylic carbonyl} ->[Zn(Hg)][HCl] \text{reduced carbon}}
+    \item \ce{PhR ->[KMnO4][H2O] PhCOOH}
+    \begin{itemize}
+        \item Needs benzylic hydrogen.
+    \end{itemize}
+    \item \ce{PhNO2 ->[\text{reagents}] PhNH2}
+    \begin{itemize}
+        \item \ce{H2 + Pd/C} or \ce{SnCl2 + H2O} (selective).
+    \end{itemize}
+    \item \ce{PhNH2 ->[NaNO2][HCl] PhN2+ + X-}
+    \begin{itemize}
+        \item Mechanism has many equilibrium steps (only first and last are not).
+    \end{itemize}
+    \item \ce{PhN2+ ->[Cu2O][H2O] PhOH}
+    \begin{itemize}
+        \item \ce{PhN2+ ->[CuCl] PhCl}
+        \item \ce{PhN2+ ->[CuBr] PhBr}
+        \item \ce{PhN2+ ->[CuI] PhI}
+        \item \ce{PhN2+ ->[CuCN] PhCN}
+    \end{itemize}
+    \item \ce{PhN2+ ->[D3PO2] PhD}
+    \item \ce{PhBr ->[NaNH2][NH3] PhNH2}
+    \item \ce{PhCl ->[NaNu][NuH] PhNu}
+    \item \ce{PhH ->[Pd][$>1000\,\text{psi}$] CyH}
+    \item \ce{\text{benzene} ->[2Li][NH3 / EtOH] \text{cyclohexa-1,4-diene} + 2LiOEt}
+    \begin{figure}[h!]
+        \centering
+        \footnotesize
+        \begin{tikzpicture}
+            \draw [stealth-stealth] (-9.5,0) node[above right,yshift=1mm]{deactivators} -- (6.5,0) node[above left,yshift=1mm]{activators};
+    
+            \draw
+                (-9,0.1) -- ++(0,-0.2) node[below]{\ce{{}^+NR3}}
+                (-8,0.1) -- ++(0,-0.2) node[below]{\ce{NO2}}
+                (-7,0.1) -- ++(0,-0.2) node[below]{\ce{CN}}
+                (-6,0.1) -- ++(0,-0.2) node[below]{\ce{SO3H}}
+                (-5,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{O=(-[:60])(-[:-60]R)}}
+                (-4,0.1) -- ++(0,-0.2) node[below]{\ce{CO2H}}
+                (-3,0.1) -- ++(0,-0.2) node[below]{\ce{CHO}}
+                (-2.25,0.1) -- ++(0,-0.2) node[below]{\ce{I}}
+                (-1.75,0.1) -- ++(0,-0.2) node[below]{\ce{Br}}
+                (-1.25,0.1) -- ++(0,-0.2) node[below]{\ce{Cl}}
+                (-0.75,0.1) -- ++(0,-0.2) node[below]{\ce{F}}
+                (0,0.2) -- ++(0,-0.4) node[below]{\chemfig[atom sep=1.4em]{*6(-=-=-=)}}
+                (1,0.1) -- ++(0,-0.2) node[below]{aryl}
+                (2,0.1) -- ++(0,-0.2) node[below]{alkyl}
+                (3,0.1) -- ++(0,-0.2) node[below]{\chemfig[atom sep=1.4em]{HN-[:-60](=[::-60]O)-[::60]R}}
+                (4,0.1) -- ++(0,-0.2) node[below]{\ce{OR}}
+                (5,0.1) -- ++(0,-0.2) node[below]{\ce{OH}}
+                (6,0.1) -- ++(0,-0.2) node[below]{\ce{NH2}}
+            ;
+    
+            \draw [decorate,decoration={brace,mirror}] (-9.4,-1.5) -- node[below=1mm]{m-directing} (-2.6,-1.5);
+            \draw [decorate,decoration={brace,mirror}] (-2.4,-1.5) -- node[below=1mm]{o/p-directing} (-0.6,-1.5);
+            \draw [decorate,decoration={brace,mirror}] (0.6,-1.5) -- node[below=1mm]{o/p-directing} (6.4,-1.5);
+        \end{tikzpicture}
+        \caption*{Activators and deactivators.}
+    \end{figure}
+    \item \ce{ROH ->[HBr] RBr}
+    \item \ce{ROH + SOCl2 ->[Py] RCl + SO2 + Cl- + PyH+}
+    \begin{itemize}
+        \item \ce{PBr3}, \ce{PI3}.
+    \end{itemize}
+    \item \ce{ROH + Nu ->[TsCl][NEt3] RNu + HCl}
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[:-110])(-[:-70]OH)-[:30]}
+            \arrow{->[\ce{H+}]}
+            \chemfig{-[:30]=_[:-30](-[6])-[:30]}
+        \schemestop
+    }
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30](-[6]OH)-[:30]}
+            \arrow{->[\ce{POCl3}][\ce{Py}]}[,1.2]
+            \chemfig{-[:30]=_[:-30]-[:30]}
+            \+
+            \chemfig{HCl}
+            \+
+            \chemfig{PO_2Cl}
+            \+
+            \chemfig{\charge{45:1pt=$-$}{Cl}}
+            \+
+            \chemfig{Py\charge{45:1pt=$+$}{H}}
+        \schemestop
+    }
+    \item \ce{ROH ->[NaH][MeI] ROMe + H2 + NaI} --- Williamson Ether Synthesis.
+    \item \ce{ROR$'$ ->[HBr] RBr + R$'$OH}
+    \begin{itemize}
+        \item Must use \ce{HBr} or \ce{HI}, not \ce{HCl}.
+    \end{itemize}
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{-[:30]-[:-30]=_[:30]-[:-30]}
+            \arrow{->[mCPBA][-mCBA]}[,1.3]
+            \chemfig[atom sep=1.6em]{-[:30,0.85]-[:-30,0.85]*3(-O-(-[,0.85])-)}
+        \schemestop
+    }
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig[bond offset=1pt]{*6(--*3(<O>)----)}
+            \arrow{->[\ce{H+}][\ce{H2O}]}
+            \chemfig{*6(--(<OH)-(<:OH)---)}
+        \schemestop
+    }
+    \begin{itemize}
+        \item Can be trapped by \ce{HCl} or \ce{HBr}.
+        \item Acidic conditions $\to$ CC+ stability is important; basic $\to$ sterics.
+    \end{itemize}
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{*6(--(<:Cl)-(<OH)---)}
+            \arrow{->[\ce{NaOH}][-\ce{H2O, NaCl}]}[,1.6]
+            \chemfig[bond offset=1pt]{*6(--*3(<O>)----)}
+        \schemestop
+    }
+    \item \ce{RCOR$'$ ->[\text{reagents}] RC(OH)HR$'$}
+    \begin{itemize}
+        \item \ce{NaBH4} or \ce{LiAlH4}.
+    \end{itemize}
+    \item {
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \schemestart
+            \chemfig{R-[:30](=[2]O)-[:-30]O-[:30]R'}
+            \arrow{->[1. \ce{LiAlH4}][2. \ce{H3O+, H2O}]}[,1.8]
+            \chemfig{R-[:30]-[2]OH}
+            \+
+            \chemfig{HO-R'}
+        \schemestop
+    }
+    \item \ce{RBr ->[Mg${}^\circ$][Et2O] RMgBr}
+    \item \ce{RBr ->[2Li${}^\circ$][Et2O] RLi + LiBr}
+    \item Collins reagent:
+    \begin{figure}[H]
+        \centering
+        \footnotesize
+        \setchemfig{atom sep=1.4em}
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]OH}
+                \arrow{->[\ce{CrO3, Py}][\ce{CH2Cl2}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]H}
+            \schemestop
+            \caption{Anhydrous oxidation of a primary alcohol.}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30](-[2]OH)-[:-30]R'}
+                \arrow{->[\ce{CrO3, Py}][\ce{CH2Cl2}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]R'}
+            \schemestop
+            \caption{Anhydrous oxidation of a secondary alcohol.}
+        \end{subfigure}\\[1em]
+        \begin{subfigure}[b]{\linewidth}
+            \centering
+            \schemestart
+                \chemfig{R-[:30]-[:-30]OH}
+                \arrow{->[\ce{CrO3, Py}][\ce{H2O}]}[,1.3]
+                \chemfig{R-[:30](=[2]O)-[:-30]OH}
+            \schemestop
+            \caption{Aqueous oxidation of a primary alcohol.}
+        \end{subfigure}
+    \end{figure}
+    \begin{itemize}
+        \item Jones reagent: \ce{CrO3 + H2SO4_{(aq)}}; PCC: \ce{Py, HCl, CrO3}; Swern oxidation: \ce{1. DMSO, (COCl)2}, \ce{2. NEt3}.
+    \end{itemize}
+\end{itemize}
+
+% \begin{itemize}
+%     \item An epoxide and a Grignard adds a primary alcohol.
+%     \item Grignards always preferentially deprotonate hydrogens.
+%     \item To convert an alkene to a diene, brominate and then eliminate twice.
+% \end{itemize}
+\newpage
 
 
 

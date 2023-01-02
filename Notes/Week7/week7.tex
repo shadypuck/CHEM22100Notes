@@ -51,9 +51,9 @@
     \end{enumerate}
     \item Practice problem takeaways.
     \begin{itemize}
-        \item When you have an ortho/para-directing substituent, you don't have to indicate major/minor products.
-        \item However, when doing a synthesis, try and make the reaction more selective by precluding one of the sites with another functional group. You could synthesize ortho/para products and then purify (throw away half of your yield), and while this is an acceptable answer, it is not the best answer when there are other options.
-        \item $t$-butyl groups generate significant steric hindrance, so groups will avoid adding ortho to them (even though $t$-butyl is an ortho/para-director by induction).
+        \item When you have an \emph{ortho}/\emph{para}-directing substituent, you don't have to indicate major/minor products.
+        \item However, when doing a synthesis, try and make the reaction more selective by precluding one of the sites with another functional group. You could synthesize \emph{ortho}/\emph{para} products and then purify (throw away half of your yield), and while this is an acceptable answer, it is not the best answer when there are other options.
+        \item $t$-butyl groups generate significant steric hindrance, so groups will avoid adding \emph{ortho} to them (even though $t$-butyl is an \emph{ortho}/\emph{para}-director by induction).
         \item We will not see trick questions where something is so deactivating that we don't have a reaction; in these cases in reality, raising the temperature would suffice to force the reaction.
         \item Resonance donation outcompetes induction donation.
     \end{itemize}
@@ -62,7 +62,7 @@
         \item If all substituents direct to the same place, EAS happens there.
         \item If not, the strongest \emph{activator} wins.
         \begin{itemize}
-            \item This is because deactivators slow everything down (but just the meta site less) whereas activators specifically accelerate particular sites.
+            \item This is because deactivators slow everything down (but just the \emph{meta} site less) whereas activators specifically accelerate particular sites.
         \end{itemize}
         \item If one site is significantly more crowded than a second (out of two choices), sterics can play a role.
         \begin{itemize}
@@ -74,13 +74,13 @@
         \item Benzene to 3-bromoaniline.
         \item Preferentially use \ce{H2 + Pd/C} to form an amine from a nitro group. The others are less common.
     \end{itemize}
-    \item \textbf{Nucleophilic aromatic substitution}. \emph{Also known as} \textbf{NAS}, \textbf{S\textsubscript{N}Ar}.
+    \item \textbf{Nucleophilic aromatic substitution}. \emph{Also known as} \textbf{NAS}, \textbf{S\textsubscript{N}Ar}\footnote{Sometimes pronounced "SNARE."}.
     \item Reacting various aromatic compounds with methoxide and methanol.
     \begin{itemize}
         \item Chlorobenzene: No reaction.
-        \item para-chloronitrobenzene: The methoxide substitutes the chloride (at high temperatures).
+        \item \emph{para}-chloronitrobenzene: The methoxide substitutes the chloride (at high temperatures).
         \item 1-chloro-2,4-dinitrobenzene: The methoxide substitutes the chloride (much faster at lower temperatures).
-        \item meta-chloronitrobenzene: No reaction.
+        \item \emph{meta}-chloronitrobenzene: No reaction.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -91,7 +91,7 @@
             \arrow{->[\chemfig{@{Nu2}\charge{45:1pt=$\ominus$,90=\:}{Nu}}]}
             \chemleft{[}
                 \subscheme{
-                    \chemfig{*6(-(-\charge{45:1pt=$\oplus$}{N}(=[:-150]O)(-[:-30]\charge{45:1pt=$\ominus$}{O}))=-@{C3}\charge{45:1pt=$\ominus$}{}-[@{sb3a}](-[:70]Nu)(-[@{sb3b}:110]@{Cl3}Cl)-=)}
+                    \chemfig{*6(-(-[@{sb3a}]\charge{45:1pt=$\oplus$}{N}(=[@{db3a}:-150]@{O3}O)(-[:-30]\charge{45:1pt=$\ominus$}{O}))=[@{db3b}]-[@{sb3b}]@{C3}\charge{45:1pt=$\ominus$}{}-[@{sb3c}](-[:70]Nu)(-[@{sb3d}:110]@{Cl3}Cl)-=)}
                     \arrow{<->}
                     \chemname{\chemfig{*6(-(=\charge{45:1pt=$\oplus$}{N}(-[:-150]\charge{135:1pt=$\ominus$}{O})(-[:-30]\charge{45:1pt=$\ominus$}{O}))-=-(-[,2.5,,,white])(-[:70]Nu)(-[:110]Cl)-=)}}{Meisenheimer\\complex}
                 }
@@ -102,8 +102,11 @@
         \chemmove{
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (Nu2) to[out=90,in=45,looseness=1.5] (C1a);
             \draw [rex,semithick,shorten <=3pt,shorten >=3pt] (db1) to[bend right=90,looseness=4] (C1b);
-            \draw [rex,semithick,shorten <=10pt,shorten >=2pt] (C3) to[bend right=90,looseness=5] (sb3a);
-            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3b) to[bend left=90,looseness=3] (Cl3);
+            \draw [rex,semithick,shorten <=10pt,shorten >=2pt] (C3) to[bend right=90,looseness=5] (sb3c);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb3d) to[bend left=90,looseness=3] (Cl3);
+            \draw [blx,semithick,shorten <=8pt,shorten >=2pt] (C3) to[bend left=90,looseness=5] (sb3b);
+            \draw [blx,semithick,shorten <=2pt,shorten >=2pt] (db3b) to[bend left=45,looseness=1.5] (sb3a);
+            \draw [blx,semithick,shorten <=3pt,shorten >=2pt] (db3a) to[bend right=90,looseness=3] (O3);
         }
         \caption{Nucleophilic aromatic substitution mechanism.}
         \label{fig:NASmechanism}
@@ -113,7 +116,7 @@
         \begin{itemize}
             \item Between methoxide and chloride, for example, chloride is the better LG.
         \end{itemize}
-        \item To form the Meisenheimer complex, you need a strongly electron-withdrawing group (such as a nitro group) or an intramolecular kinetic driving force.
+        \item To form the \textbf{Meisenheimer complex}, you need a strongly electron-withdrawing group (such as a nitro group) or an intramolecular kinetic driving force.
         \begin{itemize}
             \item You also need the EWG in the right position to be able to accept electron density through resonance.
         \end{itemize}
@@ -122,7 +125,7 @@
     \begin{itemize}
         \item Can be isolated at very low temperatures.
     \end{itemize}
-    \item 1,2-dichloro-4-nitrobenzene becomes 2-chloro-1-methoxy-4-nitrobenzene due to the para-activation of the nitro group.
+    \item 1,2-dichloro-4-nitrobenzene becomes 2-chloro-1-methoxy-4-nitrobenzene due to the \emph{para}-activation of the nitro group.
     \item Reduction of aromatic compounds.
     \begin{itemize}
         \item Useful when you want to create a cyclohexane derivative --- you can put on functional groups with EAS and NAS, and then reduce at the end.
@@ -160,7 +163,7 @@
     \begin{itemize}
         \item Creates a singly-reduced, dearomatized system.
         \item Sodium and potassium metals can also be used (in place of lithium).
-        \item This is similar to alkyne reduction.
+        \item This is similar to dissolving metal reduction of alkynes.
     \end{itemize}
     \item Mechanism.
     \begin{figure}[h!]
@@ -191,7 +194,7 @@
         \label{fig:Birchmechanism}
     \end{figure}
     \begin{itemize}
-        \item Although we draw the lithium radical directly attacking benzene, in reality, lithium gives up one of its electrons to become a cation, and this electron is solvated by \ce{NH3}.
+        \item Although we draw the lithium radical directly attacking benzene, in reality, lithium gives up one of its electrons to become a cation, and this electron is solvated by \ce{NH3}. Think \textbf{electrides} from \textcite{bib:CHEM20100Notes}!
     \end{itemize}
     \item One more reaction.
     \item General form.
@@ -235,7 +238,7 @@
             \node{
                 \chemnameinit{}
                 \schemestart
-                    \chemfig{*6(=-(-[@{sb1}]@{H1}H)=[@{db1}](-Br)-=-)}
+                    \chemfig{*6(=-(-[@{sb1a}]@{H1}H)=[@{db1}](-[@{sb1b}]@{Br1}Br)-=-)}
                     \arrow{->[\chemfig{@{N2}\charge{180=\:,90:3pt=$\ominus$}{N}H_2}][-\ce{NH3}]}
                     \chemname[1em]{\chemfig{*6(=-@{C3b}~@{C3a}-(-[,,,,white])=-)}}{Benzyne}
                 \schemestop
@@ -248,11 +251,12 @@
             };
     
             \draw [-CF] (2.7,0) -- ++(1,0) -- ++(0,1) -- node[above]{\chemfig{@{N4}\charge{180=\:,90:3pt=$\ominus$}{N}H_2}} ++(1,0);
-            \draw [-CF] (3.7,0) -- ++(0,-1) -- node[below]{\chemfig{@{N5}\charge{180=\:,90:3pt=$\ominus$}{N}H_2}} ++(1,0);
+            \draw [-CF] (3.7,0) -- ++(0,-1) -- node[below]{\chemfig{@{N5}\charge{180=\:,-90:3pt=$\ominus$}{N}H_2}} ++(1,0);
         \end{tikzpicture}
         \chemmove{
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N2) to[out=180,in=90,looseness=1.5] (H1);
-            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1) to[bend right=60,looseness=1.5] (db1);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1a) to[bend right=60,looseness=1.5] (db1);
+            \draw [rex,semithick,shorten <=2pt,shorten >=2pt] (sb1b) to[bend left=90,looseness=3] (Br1);
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N4) to[out=180,in=60] (C3a);
             \draw [rex,semithick,shorten <=6pt,shorten >=2pt] (N5) to[out=180,in=-60] (C3b);
         }
@@ -267,7 +271,7 @@
     \begin{enumerate}
         \item Using the strong base \ce{KNH2}, we can generate the benzyne intermediate and then trap it with other nucleophiles, leading to an equimolar mixture of products.
         \item We can also trap benzyne by using it as the dieneophile in a Diels-Alder reaction.
-        \item Lastly, we note that 2-bromo-1,3-dimethylbenzene does not react under these conditions, confirming the need for an $\alpha$-proton to make the benzyne intermediate.
+        \item Lastly, we note that 2-bromo-1,3-dimethylbenzene does not react under these conditions, confirming the need for an $\alpha$ proton to make the benzyne intermediate.
     \end{enumerate}
 \end{itemize}
 
@@ -331,13 +335,13 @@
     \end{figure}
     \begin{itemize}
         \item Make use of a protecting group.\par
-        \item Note that the sulfate group adds para due to sterics.
-        \item To finish the synthesis, just chlorinate para (\ce{Cl2 / AlCl3}) and reduce the nitro groups (\ce{H2 + Pd/C}).
+        \item Note that the sulfate group adds \emph{para} due to sterics.
+        \item To finish the synthesis, just chlorinate \emph{para} (\ce{Cl2 / AlCl3}) and reduce the nitro groups (\ce{H2 + Pd/C}).
     \end{itemize}
     \item If they want us to draw all of the resonance structures, they'll ask. Most likely yes in a mechanism but no in a synthesis.
     \item Answer to PSet 4, Q6 given.
     \item For PSet 4, Q7a, recall that you can't run F-C alkylation when you have EWGs on the ring.
-    \item PSet 4, Q7b's issue is not the reactivity. Guessing the actual product is p-bromoisopropylbenzene.
+    \item PSet 4, Q7b's issue is not the reactivity. Guessing the actual product is \emph{p}-bromoisopropylbenzene.
     \item Hint for PSet 4, Q8: You can create an aromatic ring by brominating one of the alkenes in cyclohexa-1,4-diene and then doing E2 twice.
     \begin{itemize}
         \item Looks like Dickinson may be asking us to invent new stuff on PSets and the exam.
@@ -400,7 +404,8 @@
 \begin{itemize}
     \item Is the order of the deactivating halogens reversed?
     \begin{itemize}
-        \item Yes --- fluorine should be the most deactivating. The way I have it drawn in Figure \ref{fig:DeActivators} is correct.
+        \item Yes --- fluorine should be the most deactivating. The way I have it drawn in Figure \ref{fig:DeActivators} is incorrect.
+        \item Dickinson is wrong tho according to the internet and Mrs. Meer.
     \end{itemize}
     \item Why would the Clemmensen reduction work for reducing a nitro group to an amine --- isn't it for carbonyls?
     \begin{itemize}

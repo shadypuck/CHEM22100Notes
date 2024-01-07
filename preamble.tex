@@ -16,6 +16,7 @@
 \usepackage{bm}
 \usepackage{mhchem,chemfig}
 \usepackage[hidelinks]{hyperref}
+\usepackage{subfiles}
 
 \MakeOuterQuote{"}
 
@@ -37,6 +38,7 @@
 \deffootnotemark{\textsuperscript{\textup{[}\thefootnotemark\textup{]}}}
 \deffootnote[2.1em]{0em}{0em}{\textsuperscript{\thefootnote}}
 
+\addbibresource{\subfix{../main.bib}}
 \DefineBibliographyStrings{english}{bibliography={References}}
 
 \usetikzlibrary{positioning,decorations,arrows.meta,bending,calc,decorations.pathreplacing}
@@ -74,5 +76,3 @@
 \newcommand{\pKa}{\text{p}K_\text{a}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\e}[1][]{\text{e}^{#1}}
-
-\usepackage{subfiles}
